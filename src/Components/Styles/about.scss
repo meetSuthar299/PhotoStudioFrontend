@@ -1,0 +1,181 @@
+
+.about-us {
+  width: calc(100% - (400px));
+  margin-left: 400px;
+  height: 100vh;
+  display: flex;
+  .poster {
+    width: 50%;
+    height: 100%;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 4rem 6rem;
+
+    h1 {
+      font-size: 3rem;
+      color: $white;
+      span {
+        color: $yellow;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: $gray;
+    }
+    .team-text {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .our-team {
+      padding: 0 4rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+
+      .member {
+        margin: 1rem;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .member-image {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+        }
+        h2 {
+          color: $white;
+        }
+        h3 {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .about-us {
+    .info {
+      width: 80%;
+      padding: 2rem 2rem;
+      h1 {
+        font-size: 2.5rem;
+      }
+      .our-team {
+        padding: 0 1rem;
+        .member {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1350px) {
+  .about-us {
+    .poster {
+      width: 40%;
+    }
+    .info {
+      width: 100%;
+      padding: 2rem 2rem;
+      h1 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      .team-text {
+        margin-top: 0.3rem;
+      }
+      .our-team {
+        padding: 0 0.3rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1150px) {
+  .about-us {
+    flex-direction: column;
+    .poster {
+      width: 70%;
+      margin-left: 5rem;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-us {
+    width: calc(100% - (350px));
+    margin-left: 350px;
+    .poster {
+      width: 80%;
+      margin: auto;
+    }
+
+    .info {
+      padding: 2rem 1rem;
+      .our-team {
+        padding: 0 1rem;
+        .member {
+          margin: 0.8rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .about-us {
+    width: calc(100% - (60px));
+    margin-left: 60px;
+    .poster {
+      width: 90%;
+      height: 80%;
+    }
+    .info {
+      padding: 2rem 2rem;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .about-us {
+    .poster {
+      height: 70%;
+    }
+    .info {
+      .our-team {
+        padding: 0 0.4rem;
+        .member {
+          margin: 0.6rem;
+          .member-image {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .about-us {
+    .info {
+      .our-team {
+        .member {
+          margin: auto;
+          .member-image {
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+}

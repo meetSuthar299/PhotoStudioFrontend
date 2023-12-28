@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;300;400;500;600;700;800&display=swap');
+
+$yellow: #f3c623;
+$white: #d4d4d4;
+$gray: #5c5c5c;
+$black: rgb(17, 17, 17);
+$red: rgb(136, 18, 18);
+
+@mixin flex($justify: none, $align: none, $text: none) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  text-align: $text;
+}
+
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+body {
+  background-color: rgb(10, 10, 10);
+  font-family: 'Stick No Bills', sans-serif;
+  overflow-x: hidden;
+}

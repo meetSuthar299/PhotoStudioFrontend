@@ -1,0 +1,136 @@
+.photo-gallery {
+  width: calc(100% - (400px));
+  margin-left: 400px;
+  @include flex(flex);
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-item {
+    width: calc(100% / 3);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .details {
+      width: 80%;
+      opacity: 0;
+      @include position(absolute, $top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+      user-select: none;
+      transition: opacity 0.3s;
+
+      h3 {
+        color: $gray;
+        font-size: 2rem;
+      }
+
+      h1 {
+        color: $white;
+        font-size: 3rem;
+      }
+
+      button {
+        margin-top: 1rem;
+        padding: 1px 10px;
+        background-color: transparent;
+        color: $yellow;
+        border: 1px solid $yellow;
+        letter-spacing: 4px;
+        font-weight: 400;
+        box-shadow: 2px 2px 2px $yellow;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:active {
+          box-shadow: none;
+          transform: translate(2px, 2px);
+        }
+      }
+    }
+
+    &:hover .details {
+      opacity: 1;
+    }
+    &:hover img {
+      transform: scale(1.05);
+      filter: blur(2px);
+    }
+  }
+
+  .more-image {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    letter-spacing: 5px;
+    background-color: $yellow;
+    text-shadow: -2px -2px 2px $black;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1rem;
+    transition: font-size 0.2s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      transform: rotate(-45deg);
+      background-color: rgba(118, 118, 118, 0.303);
+      transition: left 0.5s, transform 0.5s;
+      z-index: 0;
+    }
+
+    &:hover {
+      font-size: 1.2rem;
+      text-shadow: -2px -2px 4px $black;
+    }
+    &:active {
+      font-size: 1rem;
+      text-shadow: -2px -2px 2px $black;
+    }
+
+    &:hover::before {
+      left: 96%;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .photo-gallery {
+    &-item {
+      width: calc(100% / 2);
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .photo-gallery {
+    width: calc(100% - (350px));
+    margin-left: 350px;
+    &-item {
+      width: calc(100% / 2);
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .photo-gallery {
+    width: calc(100% - (60px));
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .photo-gallery {
+    &-item {
+      width: 100%;
+    }
+  }
+}

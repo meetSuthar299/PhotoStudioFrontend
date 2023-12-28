@@ -1,0 +1,212 @@
+.contact-page {
+  width: calc(100% - (400px));
+  margin-left: 400px;
+  height: 100vh;
+  padding: 4rem 6rem;
+  color: white;
+  display: flex;
+  overflow-x: hidden;
+
+  .left-side {
+    width: 40%;
+    padding: 2rem 4rem;
+    background-color: $yellow;
+    color: $black;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    .opening {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .contact-items {
+      width: 100%;
+      text-align: right;
+
+      strong {
+        display: none;
+      }
+
+      .contact-item {
+        @include flex(space-between, center);
+        margin: 2rem 0;
+
+        i {
+          font-size: 1.6rem;
+          margin-right: 2rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  form {
+    width: 60%;
+    padding: 2rem 4rem;
+    color: $gray;
+
+    h1 {
+      font-size: 3rem;
+      color: $white;
+      text-transform: uppercase;
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .input {
+      @include flex(space-between);
+      margin: 2rem 0;
+      position: relative;
+
+      label {
+        font-size: 1.5rem;
+        width: 30%;
+      }
+
+      input {
+        width: 70%;
+        background-color: transparent;
+        border-bottom: 1px solid $gray;
+        padding: 0rem 1rem;
+        outline: none;
+        color: $white;
+        font-size: 1rem;
+      }
+
+      .error {
+        position: absolute;
+        right: -5rem;
+        bottom: 20%;
+        color: $red;
+      }
+    }
+
+    .input-textarea {
+      @extend .input;
+
+      .error {
+        right: -5rem;
+        bottom: 50%;
+        color: $red;
+      }
+
+      textarea {
+        @extend input;
+        height: 4rem;
+        resize: none;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 0.2rem 0.4rem;
+      background-color: $yellow;
+      border-radius: 2rem;
+      font-size: 1.2rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 4px 4px 2px $red;
+
+      &:active {
+        box-shadow: none;
+        transform: translate(2px, 2px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .contact-page {
+    padding: 3rem 4rem;
+    .left-side {
+      padding: 1.5rem 1rem;
+    }
+    form {
+      padding: 1.5rem 1.5rem;
+      .input {
+        flex-direction: column;
+        label {
+          margin-bottom: 1rem;
+        }
+        input {
+          padding: 0;
+        }
+        .error {
+          right: 0;
+        }
+      }
+      .input-textarea {
+        .error {
+          right: 0;
+          bottom: 0;
+        }
+      }
+      button {
+        width: 70%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contact-page {
+    padding: 2rem 3rem;
+    .left-side {
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+        i {
+          margin-bottom: 1rem;
+        }
+        strong {
+          display: inline;
+        }
+      }
+    }
+
+    form {
+      .input {
+        input {
+          width: 100%;
+        }
+      }
+      .error {
+        top: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact-page {
+    width: calc(100% - (350px));
+    margin-left: 350px;
+    flex-direction: column;
+    .left-side {
+      width: 100%;
+    }
+    form {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-page {
+    width: calc(100% - (60px));
+    margin-left: 60px;
+    padding: 2rem 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact-page {
+    padding: 1rem 1rem;
+  }
+}

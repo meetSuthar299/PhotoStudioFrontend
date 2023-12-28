@@ -1,0 +1,16 @@
+@import '../Styles/components.scss';
+@import '../Styles/reset.scss';
+@import '../Styles/home.scss';
+@import '../Styles/gallery.scss';
+@import '../Styles/about.scss';
+@import '../Styles/pricing.scss';
+@import '../Styles/photoPage.scss';
+@import '../Styles/navbar.scss';
+@import '../Styles/contact.scss';
+
+.main {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
