@@ -44,7 +44,7 @@ const MobileNav = () => {
             <Link to='about' smooth={true} duration={1000}>About</Link>
           </li>
           <li>
-            <Link to='portfolio' smooth={true} duration={1000}>Portfolio</Link>
+            <Link to='gallery' smooth={true} duration={1000}>Portfolio</Link>
           </li>
           <li>
             <Link to='contact' smooth={true} duration={1000}>Contact</Link>
