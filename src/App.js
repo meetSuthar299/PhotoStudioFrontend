@@ -1,20 +1,35 @@
 import React from 'react';
 import Header from "./Components/Header"
 import About from './Pages/About';
-import Gallery from './Pages/Gallery';
+import Gallery from './Pages/Gallery/Gallery';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Footer from './Components/Footer';
 
+import { BrowserRouter, Route, Routes, useLocatio } from "react-router-dom";
+
+import Services from "./Pages/Services/Services"
+import AutomotiveShotsService from './Pages/Services/AutomotiveShotsService';
+import CommercalShotsService from './Pages/Services/CommercalShotsService';
+import EditingService from './Pages/Services/EditingService';
+import EventShotsService from './Pages/Services/EventShotsService';
+import PortraitShotsService from './Pages/Services/PortraitShotsService';
+
+
 
 const App = () => {
   return <>
-      <Header />
-      <Home />
-      <About />
-      <Gallery />
-      <Contact />
-      <Footer/>
+    <Header />
+    <Routes>
+      <Route path={"/"} element={<Home/>}/>
+      <Route path='/automotiveService' element={<AutomotiveShotsService />} />
+      <Route path='/commercalShotsService' element={<CommercalShotsService />} />
+      <Route path='/editingService' element={<EditingService />} />
+      <Route path='/eventShotsService' element={<EventShotsService />} />
+      <Route path='/PortraitShotsService' element={<PortraitShotsService />} />
+      <Route path='/gallery' element={<Gallery />} />
+    </Routes>
+    <Footer />
   </>;
 };
 

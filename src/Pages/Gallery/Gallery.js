@@ -4,17 +4,16 @@ import {
   getProducts,
   selectIsLoading,
   selectProducts,
-} from "../redux/productSlice";
+} from "../../redux/productSlice";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import ItemCard from "../Components/ItemCard";
 
-import portraitImg from "../img/gallery/portrait-img.jpg"
-import printImg from "../img/gallery/print-img.jpg"
-import autoImg from "../img/gallery/auto-img.jpg"
-import editingImg from "../img/gallery/editing-img.jpg"
-import eventImg from "../img/gallery/event-img.jpg"
-import commercialImg from "../img/gallery/Commercia-Img.jpg"
+// import portraitImg from "../img/gallery/portrait-img.jpg"
+// import printImg from "../img/gallery/print-img.jpg"
+// import autoImg from "../img/gallery/auto-img.jpg"
+// import editingImg from "../img/gallery/editing-img.jpg"
+// import eventImg from "../img/gallery/event-img.jpg"
+// import commercialImg from "../img/gallery/Commercia-Img.jpg"
 
 const Gallery = () => {
   const dispatch = useDispatch();
@@ -47,7 +46,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id='gallery' className='px-20 pt-28 bg-zinc-300'>
+    <section id='gallery' className='section px-20 pt-28 bg-zinc-300'>
       <h1 className='text-4xl lg:text-6xl leading-tight lg:mb-8 items-center w-full text-center cursor-default'>
         Gallery
       </h1>
@@ -89,39 +88,6 @@ const Gallery = () => {
             )}
           </div>
         )}
-      </div>
-      {/* /// */}
-      <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <ItemCard
-          imgSrc={eventImg}
-          firstP="Event Photography"
-          secondP="Preserve your special moments from weddings, parties, conferences, and other occasions with professional event photography services. From candid shots to capturing the ambiance, I ensure every important detail is beautifully documented."
-        />
-        <ItemCard
-          imgSrc={portraitImg}
-          firstP="Portrait Photography"
-          secondP="Capture the essence and personality of individuals, families, and couples through stunning portrait sessions that create cherished memories."
-        />
-        <ItemCard
-          imgSrc={commercialImg}
-          firstP="Commercial Photography"
-          secondP="Provide high-quality images for businesses, including product photography, corporate headshots, and branding visuals. Create captivating visuals that effectively represent your brand and enhance your marketing efforts."
-        />
-        <ItemCard
-          imgSrc={autoImg}
-          firstP="Automotive Photography"
-          secondP="Specialize in capturing the elegance, power, and detail of performance cars. From sleek sports cars to vintage classics, I create dynamic images that showcase the unique personality of each vehicle."
-        />
-        <ItemCard
-          imgSrc={editingImg}
-          firstP="Photo Editing and Retouching"
-          secondP="Provide professional photo editing and retouching services to enhance the visual appeal and quality of images. From color correction to removing imperfections, I ensure the final images meet the highest standards."
-        />
-        <ItemCard
-          imgSrc={printImg}
-          firstP="Photo Prints and Custom Framing"
-          secondP="I offer high-quality prints of photographs along with custom framing options. Providing clients with a complete service, allowing them to display their favorite images as stunning pieces of art."
-        />
       </div>
     </section>
   );

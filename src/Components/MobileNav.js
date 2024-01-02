@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { CgMenuRight } from 'react-icons/cg';
-import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 
 const menuVariants = {
@@ -36,18 +35,18 @@ const MobileNav = () => {
           }}>
           <IoMdClose />
         </div>
-        <ul className='cursor-pointer h-full flex flex-col justify-center items-center gap-y-8 text-primary font-primary font-bold text-3xl'>
+        <ul className='h-full flex flex-col justify-center items-center gap-y-8 text-primary  font-bold text-3xl'>
           <li>
-            <Link to='home' smooth={true} duration={1000}>Home</Link>
+            <a href='/#about' key='/#about'>About</a>
           </li>
           <li>
-            <Link to='about' smooth={true} duration={1000}>About</Link>
+            <a href='/#services' key='/#services'>Services</a>
           </li>
           <li>
-            <Link to='gallery' smooth={true} duration={1000}>Portfolio</Link>
+            <a href='/#contact' key='/#contact'>Contact</a>
           </li>
           <li>
-            <Link to='contact' smooth={true} duration={1000}>Contact</Link>
+            <a href='/gallery' key='/gallery'>Gallery</a>
           </li>
         </ul>
       </motion.div>
