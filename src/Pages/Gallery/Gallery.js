@@ -6,7 +6,7 @@ import {
   selectProducts,
 } from "../../redux/Product/productSlice";
 import Lightbox from 'react-image-lightbox';
-
+import 'react-image-lightbox/style.css';
 import Loader from "../../Components/Loader";
 
 
