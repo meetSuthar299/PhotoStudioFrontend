@@ -35,3 +35,35 @@
 html {
   scroll-behavior: smooth;
 }
+.loader-container {
+  @apply flex justify-center items-center;
+}
+
+.loader {
+  @apply relative w-48 h-48 rounded-full bg-gradient-to-br from-red-500 via-blue-500 to-green-500 animate-spin;
+  @apply border-4 border-white;
+}
+
+.loader-span {
+  @apply absolute w-full h-full rounded-full bg-gradient-to-br from-red-500 via-blue-500 to-green-500;
+}
+
+.loader-span:nth-child(1) {
+  @apply blur-md;
+}
+
+.loader-span:nth-child(2) {
+  @apply blur-lg;
+}
+
+.loader-span:nth-child(3) {
+  @apply blur-xl;
+}
+
+.loader-span:nth-child(4) {
+  @apply blur-2xl;
+}
+
+.loader:after {
+  @apply absolute top-4 left-4 right-4 bottom-4 bg-gray-100 border-solid border-4 border-white rounded-full;
+}

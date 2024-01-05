@@ -4,16 +4,11 @@ import {
   getProducts,
   selectIsLoading,
   selectProducts,
-} from "../../redux/productSlice";
+} from "../../redux/Product/productSlice";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import Loader from "../../Components/Loader";
 
-// import portraitImg from "../img/gallery/portrait-img.jpg"
-// import printImg from "../img/gallery/print-img.jpg"
-// import autoImg from "../img/gallery/auto-img.jpg"
-// import editingImg from "../img/gallery/editing-img.jpg"
-// import eventImg from "../img/gallery/event-img.jpg"
-// import commercialImg from "../img/gallery/Commercia-Img.jpg"
 
 const Gallery = () => {
   const dispatch = useDispatch();
@@ -47,12 +42,12 @@ const Gallery = () => {
 
   return (
     <section id='gallery' className='section px-20 pt-28 bg-zinc-300'>
-      <h1 className='text-4xl lg:text-6xl leading-tight lg:mb-8 items-center w-full text-center cursor-default'>
-        Gallery
+      <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-3'>
+        Photo Gallery
       </h1>
       <div>
         {products.length === 0 ? (
-          <p>No products found.</p>
+          <Loader />
         ) : (
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pt-10">
             {products?.map((product, index) => (
