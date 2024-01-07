@@ -35,10 +35,10 @@ const Contact = () => {
         <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
           Let's Connect!
         </h1>
-        <h1 className="mb-4 text-xl pb-5 pr-5">If you have any questions, collaboration opportunities, or just want to say hi, feel free to shoot me an email!</h1>
+        <h1 className="mb-4 text-xl pb-5 pr-5">If you have any questions, collaboration opportunities, or just want to say hi, feel free to shoot us an email!</h1>
         <div className="flex items-center mb-4 text-left text-xl">
           <FaMailBulk className="mr-3" />
-          <p>mkstudios@gmail.com</p>
+          <p>contact@arkticstudios.com</p>
         </div>
         <div className="flex items-center mb-4 text-left text-xl">
           <SocualMediaLinks />
