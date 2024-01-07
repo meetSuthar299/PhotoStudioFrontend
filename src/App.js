@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import Loader from './Components/Loader';
 
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 import Services from "./Pages/Services/Services"
 import AutomotiveShotsService from './Pages/Services/AutomotiveShotsService';
@@ -30,10 +31,18 @@ const App = () => {
   }, []);
 
   return <>
+
     {isLoading ? (
       <Loader />
     ) : (
       <>
+        <Helmet>
+          <title>Arktic Studios</title>
+          <meta
+            name="description"
+            content="Arktic Studios - A creative studio specializing in Photography, Videography, Social Media Management, SEO, and web design. Providing high-quality services to capture your special moments and enhance your online presence."
+          />
+        </Helmet>
         <Header />
         <Routes>
           <Route path={"/"} element={<Home />} />

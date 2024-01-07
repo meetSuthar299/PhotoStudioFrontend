@@ -8,6 +8,7 @@ import {
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Loader from "../../Components/Loader";
+import { Helmet } from "react-helmet";
 
 
 const Gallery = () => {
@@ -42,6 +43,13 @@ const Gallery = () => {
 
   return (
     <section id='gallery' className='section px-20 pt-28 bg-zinc-300'>
+      <Helmet>
+          <title>Arktic Studios Gallery</title>
+          <meta
+            name="description"
+            content="Arktic Studios Gallery - Buy high quality prints of Arktic Studios photography, shipped directly to you."
+          />
+      </Helmet>
       <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-3'>
         Photo Gallery
       </h1>
