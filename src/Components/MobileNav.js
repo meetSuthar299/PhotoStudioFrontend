@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
+import Socials from "./SocialMediaLinks"
 
 const menuVariants = {
   hidden: {
@@ -35,20 +36,27 @@ const MobileNav = () => {
           }}>
           <IoMdClose />
         </div>
-        <ul className='h-full flex flex-col justify-center items-center gap-y-8 text-primary  font-bold text-3xl'>
-          <li>
-            <a href='/#about' key='/#about'>About</a>
-          </li>
-          <li>
-            <a href='/#services' key='/#services'>Services</a>
-          </li>
-          <li>
-            <a href='/#contact' key='/#contact'>Contact</a>
-          </li>
-          <li>
-            <a href='/gallery' key='/gallery'>Gallery</a>
-          </li>
-        </ul>
+        <div className='h-full flex flex-col'>
+          <ul className='h-full flex flex-col justify-center items-center gap-y-8 text-primary  font-bold text-3xl'>
+            <li>
+              <a href='/#about' key='/#about'>About</a>
+            </li>
+            <li>
+              <a href='/#services' key='/#services'>Services</a>
+            </li>
+            <li>
+              <a href='/#contact' key='/#contact'>Contact</a>
+            </li>
+            <li>
+              <a href='/portfolio' key='/portfolio'>Our Work</a>
+            </li>
+            <li>
+              <a href='/gallery' key='/gallery'>Gallery</a>
+            </li>
+            <Socials/>
+          </ul>
+          
+        </div>
       </motion.div>
     </nav>
   );

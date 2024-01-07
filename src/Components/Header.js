@@ -1,5 +1,5 @@
 import React from 'react';
-import Socials from "./SocualMediaLinks"
+import Socials from "./SocialMediaLinks"
 import Logo from "../img/header/Logo.png"
 import MobileNav from "./MobileNav"
 
@@ -14,9 +14,13 @@ const Header = () => {
         <a href='/#services' key='/#services' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Services</a>
         <a href='/#contact' key='/#contact' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Contact</a>
         <a href='/gallery' key='/gallery' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Gallery</a>
+        <a href='/portfolio' key='/portfolio' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Our Work</a>
       </nav>
     </div>
-    <Socials />
+    <div className="hidden xl:flex text-primary">
+      <Socials />
+    </div>
+
     <MobileNav />
   </header>;
 };

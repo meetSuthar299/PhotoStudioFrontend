@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { FaMailBulk } from 'react-icons/fa';
-import SocualMediaLinks from '../Components/SocualMediaLinks';
+import SocualMediaLinks from '../Components/SocialMediaLinks';
 //import emailjs from 'emailjs-com';
 
 const Contact = () => {

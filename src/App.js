@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from "./Components/Header"
 import About from './Pages/About';
 import Gallery from './Pages/Gallery/Gallery';
+import Portfolio from './Pages/Portfolio/Portfolio'
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Footer from './Components/Footer';
@@ -52,6 +53,7 @@ const App = () => {
           <Route path='/eventShotsService' element={<EventShotsService />} />
           <Route path='/PortraitShotsService' element={<PortraitShotsService />} />
           <Route path='/gallery' element={<Gallery />} />
+          <Route path='/portfolio' element={<Portfolio />}/>
         </Routes>
         <Footer />
       </>
