@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { FaMailBulk } from 'react-icons/fa';
-import SocualMediaLinks from '../Components/SocialMediaLinks';
+import SocialMediaLinks from '../Components/SocialMediaLinks';
 //import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -41,8 +41,7 @@ const Contact = () => {
           <p>contact@arkticstudios.com</p>
         </div>
         <div className="flex items-center mb-4 text-left text-xl">
-          <SocualMediaLinks />
-          <p className="ml-2">@arkticstudios</p>
+          <SocialMediaLinks />
         </div>
 
       </div>
