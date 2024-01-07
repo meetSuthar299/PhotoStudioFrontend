@@ -42,7 +42,7 @@ const Contact = () => {
         </div>
         <div className="flex items-center mb-4 text-left text-xl">
           <SocualMediaLinks />
-          <p className="ml-2">@MK.Studios</p>
+          <p className="ml-2">@arkticstudios</p>
         </div>
 
       </div>

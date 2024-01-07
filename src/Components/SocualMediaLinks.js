@@ -6,7 +6,7 @@ function SocualMediaLinks() {
         <div className="hidden xl:flex">
             <ul className='flex gap-x-4'>
                 <li className='text-2xl  transition-all hover:scale-125 shadow-xl'>
-                    <a href="https://www.instagram.com/meetsuthar/" >
+                    <a href="https://www.instagram.com/arkticstudios/" >
                         <FaInstagram />
                     </a>
                 </li>
