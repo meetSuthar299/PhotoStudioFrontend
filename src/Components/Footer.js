@@ -14,12 +14,14 @@ function Footer() {
       <div className="text-sm mt-6">
         <div className="flex space-x-4 justify-center">
           <a href="/#about" className="hover:text-gray-400">About</a>
-          <a href="/#contact" className="hover:text-gray-400">Contact</a>
           <a href="/#services" className="hover:text-gray-400">Services</a>
+          <a href="/#contact" className="hover:text-gray-400">Contact</a>
+          <a href="/gallery" className="hover:text-gray-400">Gallery</a>
+          <a href="/portfolio" className="hover:text-gray-400">Portfolio</a>
         </div>
         <div className="flex space-x-4 justify-center pt-5">
-          <a href="/legal" className="hover:text-gray-400">Legal</a>
-          <a href="/privacy" className="hover:text-gray-400">Privacy Policy</a>
+          <a href="/termsOfService" className="hover:text-gray-400">Terms of Service</a>
+          <a href="/privacyPolicy" className="hover:text-gray-400">Privacy Policy</a>
         </div>
 
         <p className="mt-4">

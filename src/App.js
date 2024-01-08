@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Footer from './Components/Footer';
 import Loader from './Components/Loader';
+import PrivacyPolicy from './Pages/Legal/PrivacyPolicy';
 
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import { Helmet } from 'react-helmet';
@@ -17,7 +18,7 @@ import CommercalShotsService from './Pages/Services/CommercalShotsService';
 import EditingService from './Pages/Services/EditingService';
 import EventShotsService from './Pages/Services/EventShotsService';
 import PortraitShotsService from './Pages/Services/PortraitShotsService';
-
+import TermsOfService from './Pages/Legal/TermsOfService';
 
 
 const App = () => {
@@ -54,6 +55,8 @@ const App = () => {
           <Route path='/PortraitShotsService' element={<PortraitShotsService />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/portfolio' element={<Portfolio />}/>
+          <Route path='/privacyPolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/termsOfService' element={<TermsOfService/>}/>
         </Routes>
         <Footer />
       </>
