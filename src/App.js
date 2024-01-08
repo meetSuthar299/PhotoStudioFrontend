@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from "./Components/Header"
-import About from './Pages/About';
+import About from './Pages/About/About';
 import Gallery from './Pages/Gallery/Gallery';
 import Portfolio from './Pages/Portfolio/Portfolio'
 import Home from './Pages/Home';

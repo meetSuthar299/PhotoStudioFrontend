@@ -48,7 +48,7 @@ const MobileNav = () => {
               <a href='/#contact' key='/#contact'>Contact</a>
             </li>
             <li>
-              <a href='/portfolio' key='/portfolio'>Our Work</a>
+              <a href='/portfolio' key='/portfolio'>Portfolio</a>
             </li>
             <li>
               <a href='/gallery' key='/gallery'>Gallery</a>
