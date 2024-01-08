@@ -13,8 +13,8 @@ const Header = () => {
         <a href='/#about' key='/#about' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>About</a>
         <a href='/#services' key='/#services' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Services</a>
         <a href='/#contact' key='/#contact' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Contact</a>
-        <a href='/gallery' key='/gallery' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Gallery</a>
         <a href='/portfolio' key='/portfolio' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Portfolio</a>
+        <a href='/gallery' key='/gallery' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>Gallery</a>
       </nav>
     </div>
     <div className="hidden xl:flex text-primary">
