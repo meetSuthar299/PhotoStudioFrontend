@@ -12,7 +12,7 @@ function Services() {
   return (
     <section id='services' className='section px-20 pt-28 bg-zinc-400'>
       <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center'>
-        Arktik Services
+        Arktic Services
       </h1>
       <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <ItemCard

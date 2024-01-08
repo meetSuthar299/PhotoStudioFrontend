@@ -1,15 +1,14 @@
 import React from 'react'
-import Logo from "../img/header/Logo.png"
+import Logo from './Logo'
 import SocialMediaLinks from './SocialMediaLinks'
 
 function Footer() {
   return (
     <footer className="text-center mx-auto sm:max-w-2xl md:max-w-full lg:max-w-screen md:px-8 lg:px-8 relative z-10 border-slate-800 border-x border-b bg-gray-900 text-white py-8">
-
-      <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-8">
-        <img className='h-20' src={Logo} alt='logo' />
-      </div>
-      <div className="flex justify-center">
+      <a href='/' className='cursor-pointer text-5xl'>
+        <Logo/>
+      </a>
+      <div className="flex justify-center pt-5">
         <SocialMediaLinks />
       </div>
       <div className="text-sm mt-6">

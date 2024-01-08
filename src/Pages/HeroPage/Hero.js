@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-import Logo from "../../img/header/Logo.png"
+import Logo from "../../Components/Logo"
 
 function Hero() {
     return (
-        <div id="home" className=" h-screen justify-center bg-[rgb(6,4,12)] text-white">
+        <div id="home" className=" h-screen justify-center bg-[rgb(6,4,12)] ">
             <ReactPlayer
                 url='https://youtu.be/ouQomNjeRmM'
                 volume={0}
@@ -27,9 +27,13 @@ function Hero() {
                     },
                 }}
             />
-            <div className="overlay absolute top-0 left-0 w-full h-full flex justify-center items-center">
-                <img className="w-96" src={Logo}/>
+            <div className="text-white overlay absolute top-0 left-0 w-full h-full justify-center items-center flex flex-col">
+                <div className='text-9xl '>
+                    <Logo />
+                </div>
+                {/* <p className='text-5xl'>Studios</p> */}
             </div>
+
         </div>
     )
 }

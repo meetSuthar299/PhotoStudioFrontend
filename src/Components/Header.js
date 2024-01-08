@@ -1,13 +1,13 @@
 import React from 'react';
 import Socials from "./SocialMediaLinks"
-import Logo from "../img/header/Logo.png"
+import Logo from './Logo';
 import MobileNav from "./MobileNav"
 
 const Header = () => {
   return <header className='fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] flex items-center bg-white shadow-lg'>
     <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
-      <a href='/' className='max-w-[200px] transition-all cursor-pointer hover:scale-105'>
-        <img className='h-20' src={Logo} alt='logo' />
+      <a href='/' className='max-w-[200px] transition-all cursor-pointer hover:scale-105 text-5xl'>
+        <Logo/>
       </a>
       <nav className='hidden lg:flex gap-x-12 font-semibold px-10 text-xl'>
         <a href='/#about' key='/#about' className='text-[#696c6d] hover:text-primary transition cursor-pointer hover:scale-110'>About</a>
