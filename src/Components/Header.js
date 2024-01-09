@@ -28,19 +28,19 @@ const Header = () => {
     };
   }, []);
 
-  return <header className={`fixed w-full px-10 z-30 h-20 flex items-center shadow-lg ${isScrolled ? 'bg-white text-black' : 'bg-[rgba(207,207,207,0.12)] text-white'} transition-all duration-500`}>
+  return <header className={`fixed w-full px-10 z-30 h-20 flex items-center shadow-lg ${isScrolled ? 'bg-white text-black' : 'bg-[rgba(207,207,207,0.12)] text-white'} transition-all duration-700`}>
       <div className='font-primary flex flex-col lg:flex-row lg:items-center w-full justify-between'>
       <nav className='hidden lg:flex gap-x-12 px-10 text-2xl'>
-        <a href='/#about' key='/#about' className='hover:text-primary transition cursor-pointer hover:scale-110'>About</a>
-        <a href='/#services' key='/#services' className='hover:text-primary transition cursor-pointer hover:scale-110'>Services</a>
-        <a href='/#contact' key='/#contact' className='hover:text-primary transition cursor-pointer hover:scale-110'>Contact</a>
+        <a href='/#about' key='/#about' className='hover:text-primary cursor-pointer hover:scale-110'>About</a>
+        <a href='/#services' key='/#services' className='hover:text-primary cursor-pointer hover:scale-110'>Services</a>
+        <a href='/#contact' key='/#contact' className='hover:text-primary cursor-pointer hover:scale-110'>Contact</a>
       </nav>
-      <a href='/' className='max-w-[200px] transition-all cursor-pointer hover:scale-105 text-5xl hover:text-primary'>
+      <a href='/' className='max-w-[200px] cursor-pointer hover:scale-105 text-5xl hover:text-primary'>
         <Logo />
       </a>
       <nav className='hidden lg:flex gap-x-12 font-semibold px-10 text-2xl'>
-        <a href='/portfolio' key='/portfolio' className='hover:text-primary transition cursor-pointer hover:scale-110'>Portfolio</a>
-        <a href='/gallery' key='/gallery' className=' hover:text-primary transition cursor-pointer hover:scale-110'>Gallery</a>
+        <a href='/portfolio' key='/portfolio' className='hover:text-primary cursor-pointer hover:scale-110'>Portfolio</a>
+        <a href='/gallery' key='/gallery' className=' hover:text-primary cursor-pointer hover:scale-110'>Gallery</a>
         <a className=''><Socials/></a>
       </nav>
     </div>

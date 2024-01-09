@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
@@ -18,6 +18,28 @@ const menuVariants = {
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Adjust the threshold value as needed
+      const threshold = 200;
+
+      if (scrollPosition > threshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <nav className='text-primary xl:hidden lg:hidden'>

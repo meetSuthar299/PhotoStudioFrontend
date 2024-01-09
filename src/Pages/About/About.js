@@ -38,7 +38,7 @@ const About = () => {
         </div>
       </div>
       {/* TEAM SECTION! */}
-      <div className="container mx-auto text-center pb-20 pt-40">
+      {/* <div className="container mx-auto text-center pb-20 pt-40">
         <h1 className='text-3xl lg:text-6xl leading-tight pb-5 lg:mb-8 text-center'>
           Meet the Arktic Team
         </h1>
@@ -54,7 +54,7 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
     </section>
   );

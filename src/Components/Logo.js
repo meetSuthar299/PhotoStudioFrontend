@@ -6,9 +6,9 @@ const Logo = () => {
   );
 };
 
-export const LogoIcon = () => {
+export const LogoStudio = () => {
   return (
-    <h1 className='font-extrabold'>a</h1>
+    <h1 className='font-extrabold text-center'>arktic<hr/>studios</h1>
   );
 }
 

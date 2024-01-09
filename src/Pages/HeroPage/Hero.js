@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-import Logo, { LogoIcon } from "../../Components/Logo"
+import Logo, { LogoStudio } from "../../Components/Logo"
 
 function Hero() {
     return (
@@ -29,7 +29,7 @@ function Hero() {
             />
             <div className="text-white overlay absolute top-0 left-0 w-full h-full justify-center items-center flex flex-col">
                 <div className='text-6xl'>
-                    <Logo />
+                    <LogoStudio />
                 </div>
                 {/* <p className='text-5xl'>Studios</p> */}
             </div>
