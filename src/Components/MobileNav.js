@@ -43,7 +43,7 @@ const MobileNav = () => {
 
   return (
     <nav className='text-primary xl:hidden lg:hidden'>
-      <div className='text-3xl cursor-pointer' onClick={() => setOpenMenu(true)}>
+      <div className={`text-3xl cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all duration-700`} onClick={() => setOpenMenu(true)}>
         <CgMenuRight />
       </div>
       <motion.div
