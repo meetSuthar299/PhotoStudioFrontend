@@ -29,8 +29,8 @@ const Contact = () => {
 
 
 
-  return <section id="contact" className="text-primary mx-auto">
-    <div className="relative px-20 py-20 grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto">
+  return <section id="contact" className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
+      {/* Message and links */}
       <div className='flex flex-col justify-center'>
         <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
           Let's Connect!
@@ -43,10 +43,9 @@ const Contact = () => {
         <div className="flex items-center mb-4 text-left text-xl">
           <SocialMediaLinks />
         </div>
-
       </div>
-      <div className=" p-4 text-xl">
-        <form onSubmit={sendEmail}>
+      {/* Form */}
+        <form onSubmit={sendEmail} className='text-xl'>
           <label className="block mb-6">
             <span className="">Your name</span>
             <input
@@ -81,8 +80,8 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+      
+
   </section>
 };
 

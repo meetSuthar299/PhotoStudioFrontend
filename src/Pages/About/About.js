@@ -38,11 +38,11 @@ const About = () => {
         </div>
       </div>
       {/* TEAM SECTION! */}
-      {/* <div className="container mx-auto text-center py-14">
-        <h1 className='text-3xl lg:text-6xl leading-tight pb-5 lg:mb-8 text-left'>
-          The Team
+      <div className="container mx-auto text-center pb-20 pt-40">
+        <h1 className='text-3xl lg:text-6xl leading-tight pb-5 lg:mb-8 text-center'>
+          Meet the Arktic Team
         </h1>
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-12">
+        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-12 mt-28">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="bg-gray-300 w-24 h-24 rounded-full overflow-hidden mb-4">
@@ -54,7 +54,7 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
     </section>
   );

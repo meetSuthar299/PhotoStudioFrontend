@@ -42,7 +42,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id='gallery' className='section px-20 pt-28 bg-zinc-300'>
+    <section id='gallery' className='section px-5 lg:px-14 pt-28 bg-zinc-300'>
       <Helmet>
           <title>Arktic Studios Gallery</title>
           <meta

@@ -10,8 +10,8 @@ import nightDiaryImg from "../../img/gallery/nightDiaries.jpg";
 
 function Services() {
   return (
-    <section id='services' className='section px-20 py-11 bg-zinc-400'>
-      <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center'>
+    <section id='services' className='section lg:px-10 px-10 py-11 bg-zinc-400'>
+      <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 text-center'>
         Arktic Services
       </h1>
       <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

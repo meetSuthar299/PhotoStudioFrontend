@@ -28,7 +28,7 @@ function Hero() {
                 }}
             />
             <div className="text-white overlay absolute top-0 left-0 w-full h-full justify-center items-center flex flex-col">
-                <div className='text-9xl '>
+                <div className='text-6xl'>
                     <Logo />
                 </div>
                 {/* <p className='text-5xl'>Studios</p> */}
