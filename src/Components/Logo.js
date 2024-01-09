@@ -6,4 +6,10 @@ const Logo = () => {
   );
 };
 
+export const LogoIcon = () => {
+  return (
+    <h1 className='font-extrabold'>a</h1>
+  );
+}
+
 export default Logo;

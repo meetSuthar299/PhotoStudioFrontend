@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-import Logo from "../../Components/Logo"
+import Logo, { LogoIcon } from "../../Components/Logo"
 
 function Hero() {
     return (
