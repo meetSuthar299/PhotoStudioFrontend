@@ -59,16 +59,16 @@ const Gallery = () => {
         ) : (
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
             {products?.map((product, index) => (
-              <div onClick={() => openLightbox(index)} key={product._id} className="break-inside my-6 bg-gray-200 rounded-lg relative overflow-hidden group cursor-pointer">
+              <div onClick={() => openLightbox(index)} key={product._id} className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105">
                 <img
-                  className="object-cover w-full rounded-lg transition-transform transform hover:scale-105 hover:brightness-90 cursor-pointer"
+                  className="object-cover w-full transition-transform transform hover:brightness-90 cursor-pointer"
                   src={product.image[0]}
                   alt={product.name}
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-black bg-opacity-75 rounded-lg">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-black bg-opacity-75">
                   <div className="text-center text-white p-6">
-                    <h1 className="text-xl font-bold mb-4">{product.name}</h1>
-                    <p className="text-lg">{product.description}</p>
+                    <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
+                    <p className="text-sm font-thin">{product.description}</p>
                   </div>
                 </div>
               </div>

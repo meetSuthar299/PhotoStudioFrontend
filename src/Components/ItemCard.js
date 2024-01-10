@@ -3,7 +3,7 @@ import React from 'react';
 function ItemCard({ imgSrc, firstP, secondP }) {
 
     return (
-        <div className="m-2 text-center relative overflow-hidden transition duration-200 transform rounded-3xl shadow-xl hover:-translate-y-2 hover:shadow-2xl cursor-default border-slate-700 border">
+        <div className="m-2 text-center relative overflow-hidden transition duration-200 transform  shadow-xl hover:-translate-y-2 hover:shadow-2xl cursor-default border-slate-700 border">
             <img
                 loading="lazy"
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
