@@ -29,18 +29,18 @@ function Services() {
   return (
     <section id='services' className='section'>
       <div
-        className='relative bg-cover bg-center flex flex-col items-center justify-center py-32'
+        className='relative bg-cover bg-center flex flex-col items-center justify-center py-56'
         style={{
           backgroundImage: `url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)`,
-          backgroundPosition: `50% ${scrollY * 0.4}px`, // Adjust the multiplier for desired parallax effect
+          backgroundPosition: `50% ${scrollY * 0.5}px`, // Adjust the multiplier for desired parallax effect,
         }}
       >
-        <div className='absolute inset-0 bg-black opacity-70'></div>
+        <div className='absolute inset-0 bg-black opacity-50'></div>
         <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
           Navigating Your Journey
         </h1>
         <p className='text-lg lg:text-xl font-light text-white text-center z-10 relative mx-auto'>
-          Experience Simplicity and Collaboration at Every Step!<br />From Initial Planning to Final Product Delivery
+          Experience Simplicity and Collaboration at Every Step
         </p>
       </div>
 
