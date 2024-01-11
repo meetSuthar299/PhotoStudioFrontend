@@ -27,25 +27,26 @@ function Services() {
     };
   }, []);
   return (
-    <section id='services' className='section'>
+    <section id='services' className='section bg-gray-400'>
       <div
-        className='relative bg-cover bg-center flex flex-col items-center justify-center py-56'
+        className='relative bg-cover bg-center flex flex-col items-center justify-center py-40'
         style={{
           backgroundImage: `url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)`,
-          backgroundPosition: `50% ${scrollY * 0.5}px`, // Adjust the multiplier for desired parallax effect,
+          backgroundPosition: `30% ${scrollY * 0.41}px`, // Adjust the multiplier for desired parallax effect,
+          backgroundRepeat: `true`,
         }}
       >
         <div className='absolute inset-0 bg-black opacity-50'></div>
         <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
-          Navigating Your Journey
+          Arktic Studios Services
         </h1>
         <p className='text-lg lg:text-xl font-light text-white text-center z-10 relative mx-auto'>
-          Experience Simplicity and Collaboration at Every Step
+          Elevating Your Vision, Exceeding Your Expectations.
         </p>
       </div>
 
-      <div className='lg:px-10 px-10 py-11'>
-        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className='px-5 lg:px-16 pb-28 pt-16 section'>
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <ItemCard
             imgSrc={eventImg}
             firstP="Events"

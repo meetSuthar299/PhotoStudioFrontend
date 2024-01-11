@@ -6,7 +6,7 @@ function ItemCard({ imgSrc, firstP, secondP }) {
         <div className="m-2 text-center relative overflow-hidden transition duration-200 transform  shadow-xl hover:-translate-y-2 hover:shadow-2xl cursor-default border-slate-700 border">
             <img
                 loading="lazy"
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
+                className="object-cover w-full h-64 md:h-64 xl:h-80"
                 src={imgSrc}
                 alt=""
                 decoding="async"
