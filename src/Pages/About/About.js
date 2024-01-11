@@ -1,7 +1,7 @@
-import React from 'react';
-import homeImg from '../../img/home/ArktikLogo.png';
+import React, { useEffect, useState } from 'react';
+import homeImg from '../../img/header/ArktikLogo.png';
 // import StarsBackground from '../../Components/StarsBackground';
-
+import collage from "../../img/gallery/shapeCollage.jpg"
 const About = () => {
   const teamMembers = [
     {
@@ -17,13 +17,18 @@ const About = () => {
       imageUrl: 'jane-smith-image.jpg', // Replace with actual image URL
     },
   ];
+
+  
+
   return (
-    <section id='about' className='pb-20 mx-auto lg:px-40 pt-32 sm::px-20 p-10'>
-      <div className='h-32 flex items-center'>
-        <h1 className='text-3xl lg:text-5xl text-center mx-auto'>
+    <section id='about' className='pb-20 mx-auto '>
+      <div className='relative bg-cover bg-center flex flex-col items-center justify-center py-60' style={{ backgroundImage: `url(${collage})` }}>
+        <div className='absolute inset-0 bg-slate-900 opacity-70'></div>
+        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
           Where your Vision Meets Victory
         </h1>
       </div>
+      <div className=' sm::px-20 lg:px-40'>
         <div className='flex flex-col lg:flex-row justify-center lg:justify-between items-center'>
           {/* Text */}
           <div className='lg:w-1/2 lg:pt-0 lg:pb-0 z-10 lg:relative flex flex-col items-center lg:items-start'>
@@ -59,7 +64,7 @@ const About = () => {
           ))}
         </div>
       </div> */}
-
+      </div>
     </section>
   );
 };

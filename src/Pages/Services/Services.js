@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemCard from '../../Components/ItemCard'
 import portraitImg from "../../img/gallery/portrait-img.jpg"
 import printImg from "../../img/gallery/print-img.jpg"
@@ -8,14 +8,40 @@ import eventImg from "../../img/gallery/event-img.jpg"
 import commercialImg from "../../img/gallery/Commercia-Img.jpg"
 import nightDiaryImg from "../../img/gallery/nightDiaries.jpg";
 
+
+
 function Services() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <section id='services' className='section bg-zinc-400'>
-      <div className='h-[50vh] relative bg-cover bg-center flex items-center' style={{ backgroundImage: `url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)` }}>
-        <div className='absolute inset-0 bg-black opacity-50'></div>
-        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
-          Arktic Services
+    <section id='services' className='section'>
+      <div
+        className='relative bg-cover bg-center flex flex-col items-center justify-center py-32'
+        style={{
+          backgroundImage: `url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)`,
+          backgroundPosition: `50% ${scrollY * 0.4}px`, // Adjust the multiplier for desired parallax effect
+        }}
+      >
+        <div className='absolute inset-0 bg-black opacity-70'></div>
+        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
+          Navigating Your Journey
         </h1>
+        <p className='text-lg lg:text-xl font-light text-white text-center z-10 relative mx-auto'>
+          Experience Simplicity and Collaboration at Every Step!<br />From Initial Planning to Final Product Delivery
+        </p>
       </div>
 
       <div className='lg:px-10 px-10 py-11'>
