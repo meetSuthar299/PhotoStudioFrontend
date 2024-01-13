@@ -4,20 +4,29 @@ import video from "../../img/gallery/forWebsite.mp4"
 
 function Hero() {
     return (
-    <div id="home" className="h-screen relative bg-slate-500 overflow-hidden">
-        <video
+        <div id="home" className="h-screen relative bg-slate-500 overflow-hidden">
+
+            <div dangerouslySetInnerHTML={{
+                __html: `<video 
+                            loop muted autoplay playsinline
+                            src="${video}"
+                            class="w-full h-full object-cover absolute top-0 left-0 z-0"
+                        />,
+            ` }}></div>
+ 
+            {/* <video
             src={video}
             muted
             loop
             autoPlay 
             className="w-full h-full object-cover absolute top-0 left-0 z-0"
-        />
-        <div className="text-white overlay absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-1">
-            <div className='text-6xl'>
-                <LogoStudio />
+        /> */}
+            <div className="text-white overlay absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-1">
+                <div className='text-6xl'>
+                    <LogoStudio />
+                </div>
             </div>
         </div>
-    </div>
 
     )
 }
