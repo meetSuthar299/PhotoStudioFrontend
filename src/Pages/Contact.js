@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router';
+import React from 'react';
 import { FaMailBulk } from 'react-icons/fa';
 import SocialMediaLinks from '../Components/SocialMediaLinks';
 //import emailjs from 'emailjs-com';
@@ -25,18 +24,6 @@ const Contact = () => {
     // // Reset the form fields after submission (optional).
     // e.target.reset();
   };
-
-  const location = useLocation()
-
-  {/* <section id="contact" >
-    <div className='relative bg-cover bg-center flex flex-col items-center justify-center py-52' style={{ backgroundImage: `url(${collage})` }}>
-      <div className='absolute inset-0 bg-slate-900 opacity-70'></div>
-      <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
-        Lets Bring your Visions to Reality! 
-      </h1>
-    </div>
-    <div className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14"> */}
-
 
   return (
     <section id="contact" className="">
