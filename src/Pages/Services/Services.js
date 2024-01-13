@@ -38,7 +38,7 @@ function Services() {
       >
         <div className='absolute inset-0 bg-black opacity-50'></div>
         <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
-          Arktic Studios Services
+          arktic services
         </h1>
         <p className='text-lg lg:text-xl font-light text-white text-center z-10 relative mx-auto'>
           Elevating Your Vision, Exceeding Your Expectations.
