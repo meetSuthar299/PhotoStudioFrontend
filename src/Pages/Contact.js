@@ -5,6 +5,8 @@ import SocialMediaLinks from '../Components/SocialMediaLinks';
 import collage from "../img/gallery/shapeCollage.jpg"
 
 const Contact = () => {
+  const [budget, setBudget] = React.useState(1250); // Initial value set to $1,250
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -39,7 +41,8 @@ const Contact = () => {
           <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
             Let's Connect!
           </h1>
-          <p className="mb-4 text-xl pb-5 pr-5">If you have any questions, collaboration opportunities, or just want to say hi, feel free to shoot us an email!</p>
+          <p className="mb-4 text-xl pb-5 pr-5">Fill our this questionnaire for your custom quote! </p>
+          <p className="mb-4 text-xl pb-5 pr-5">Our team is dedicated to providing you with services that are specifically catered to your budget and needs. Our goal is to meet and exceed your vision. </p>
           <div className="flex items-center mb-4 text-left text-xl">
             <FaMailBulk className="mr-3" />
             <p>contact@arkticstudios.com</p>
@@ -67,6 +70,66 @@ const Contact = () => {
               required
             />
           </label>
+          <label className="block mb-6">
+            <span className="text-xl">Services you are interested in:</span>
+            <div className="mt-2">
+              <div>
+                <input type="checkbox" name="services" value="Service1" id="service1" className="mr-2" />
+                <label htmlFor="service1">Corporate</label>
+              </div>
+              <div>
+                <input type="checkbox" name="services" value="Service2" id="service2" className="mr-2" />
+                <label htmlFor="service2">Automotive</label>
+              </div>
+              <div>
+                <input type="checkbox" name="services" value="Service3" id="service3" className="mr-2" />
+                <label htmlFor="service3">Personal</label>
+              </div>
+              <div>
+                <input type="checkbox" name="services" value="Service4" id="service4" className="mr-2" />
+                <label htmlFor="service4">Prints</label>
+              </div>
+            </div>
+          </label>
+          <label className="block mb-6">
+            <span className="text-xl">Your budget</span>
+            <input
+              type="range"
+              name="budget"
+              min="0"
+              max="2500"
+              step="100" // The step attribute allows the user to select budget in increments of $100.
+              defaultValue="1250" // Starting value in the middle of the range
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+              onChange={e => setBudget(e.target.value)}
+            />
+            <div className="flex justify-between text-xs px-2">
+              <span>$0</span>
+              <span>$2,500</span>
+            </div>
+            <div className="text-center">
+              <span className="text-lg font-semibold">$</span>
+              <span className="text-lg font-semibold">{budget}</span>
+            </div>
+          </label>
+          <label>
+            <span>Desired Timeline:</span>
+            <select name="timeline">
+              <option value="2_weeks">2 Weeks</option>
+              <option value="1_month">1 Month</option>
+              <option value="3_months">3 Months</option>
+              <option value="6_months">6 Months</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </label>
+          {/* <label>
+            <span>Priority Level:</span>
+            <select name="priority">
+              <option value="urgent">Urgent</option>
+              <option value="regular" selected>Regular</option>
+              <option value="no_rush">No Rush</option>
+            </select>
+          </label> */}
           <label className="block mb-6">
             <span className="">Message</span>
             <textarea
