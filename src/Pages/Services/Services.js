@@ -49,23 +49,23 @@ function Services() {
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <ItemCard
             imgSrc={eventImg}
-            firstP="Events"
-            secondP="Preserve your special moments from weddings, parties, conferences, and other occasions with professional event photography services. From candid shots to capturing the ambiance, I ensure every important detail is beautifully documented."
+            firstP="Occasions"
+            secondP="Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."
           />
           <ItemCard
             imgSrc={portraitImg}
             firstP="Portraits"
-            secondP="Capture the essence and personality of individuals, families, and couples through stunning portrait sessions that create cherished memories."
+            secondP="Capture the unique essence and personalities of individuals, families, and couples in stunning portrait sessions, crafting cherished memories that last a lifetime."
           />
           <ItemCard
             imgSrc={commercialImg}
             firstP="Products"
-            secondP="Elevate your product's visual appeal with our professional photo and video services"
+            secondP="Illuminate your product's excellence with our expert photo and video services. Tailored for perfection, we highlight its unique features for visual brilliance"
           />
           <ItemCard
             imgSrc={autoImg}
             firstP="Arktik Garage"
-            secondP="Specialize in capturing the elegance, power, and detail of performance cars. From sleek sports cars to vintage classics, I create dynamic images that showcase the unique personality of each vehicle."
+            secondP="We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."
           />
           {/* <ItemCard
           imgSrc={editingImg}
@@ -80,7 +80,7 @@ function Services() {
           <ItemCard
             imgSrc={printImg}
             firstP="Prints"
-            secondP="I offer high-quality prints of photographs along with custom framing options. Providing clients with a complete service, allowing them to display their favorite images as stunning pieces of art."
+            secondP="Visit our Gallery for captivating prints. Our high-quality prints and custom framing service transform your favorite images into stunning art, elevating your space with exquisite style."
           />
         </div>
       </div>
