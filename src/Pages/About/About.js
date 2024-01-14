@@ -22,15 +22,8 @@ const About = () => {
 
   return (
     <section id='about' className='mx-auto sm::px-20 lg:px-40 py-52'>
-      {/* <div className='relative bg-cover bg-center flex flex-col items-center justify-center py-60' style={{ backgroundImage: `url(${collage})` }}>
-        <div className='absolute inset-0 bg-slate-900 opacity-70'></div>
-        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
-          Where your Vision Meets Victory
-        </h1>
-      </div> */}
       <div className=' '>
         <div className='flex flex-col lg:flex-row justify-center lg:justify-between items-center'>
-          {/* Text */}
           <div className='lg:w-1/2 lg:pt-0 lg:pb-0 z-10 lg:relative flex flex-col items-center lg:items-start p-5'>
             <div className='relative bg-cover bg-center flex flex-col items-center justify-center'>
               <h1 className='text-4xl lg:text-5xl text-center lg:text-left z-10 relative mx-auto pb-5'>
@@ -45,7 +38,6 @@ const About = () => {
             <a href='#contact' key='#contact' className='btn mb-8 lg:mb-0 cursor-pointer transition-all hover:scale-105'>Get in Touch</a>
           </div>
 
-          {/* Image */}
           <div className='flex justify-center lg:justify-end'>
             <img src={homeImg} alt='Me' className='object-cover lg:h-[55vh] md:h-[65vh] sm:h-[50vh]' />
           </div>

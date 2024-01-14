@@ -35,13 +35,15 @@ const Header = () => {
         <a href='/#services' key='/#services' className='hover:text-primary cursor-pointer hover:scale-110'>Services</a>
         <a href='/#contact' key='/#contact' className='hover:text-primary cursor-pointer hover:scale-110'>Contact</a>
       </nav>
+      <nav>
       <a href='/' className='max-w-[200px] cursor-pointer hover:scale-105 text-5xl hover:text-primary'>
         <Logo />
       </a>
+      </nav>
       <nav className='hidden lg:flex gap-x-12 font-semibold px-10 text-2xl'>
         <a href='/portfolio' key='/portfolio' className='hover:text-primary cursor-pointer hover:scale-110'>Portfolio</a>
         <a href='/gallery' key='/gallery' className=' hover:text-primary cursor-pointer hover:scale-110'>Gallery</a>
-        <a className=''><Socials/></a>
+        <Socials/>
       </nav>
     </div>
     <MobileNav />
