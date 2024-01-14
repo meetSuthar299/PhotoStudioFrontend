@@ -99,7 +99,7 @@ const Contact = () => {
               min="0"
               max="5000"
               step="100" // The step attribute allows the user to select budget in increments of $100.
-              defaultValue="1250" // Starting value in the middle of the range
+              defaultValue="2500" // Starting value in the middle of the range
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
               onChange={e => setBudget(e.target.value)}
             />
