@@ -112,7 +112,7 @@ const Contact = () => {
               <span className="text-lg font-semibold">{budget}</span>
             </div>
           </label>
-          <label>
+          {/* <label>
             <span>Desired Timeline:</span>
             <select name="timeline">
               <option value="2_weeks">2 Weeks</option>
@@ -121,7 +121,7 @@ const Contact = () => {
               <option value="6_months">6 Months</option>
               <option value="flexible">Flexible</option>
             </select>
-          </label>
+          </label> */}
           {/* <label>
             <span>Priority Level:</span>
             <select name="priority">
