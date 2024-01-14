@@ -4,8 +4,11 @@ import image2 from '../../img/gallery/nightDiaries.jpg'
 import image3 from '../../img/gallery/print-img.jpg'
 
 function AutomotiveShotsService() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [
+    image1,image2,image3
+  ];
 
   useEffect(() => {
     const next = (currentSlide + 1) % images.length;
@@ -19,9 +22,7 @@ function AutomotiveShotsService() {
     else if (newSlide >= images.length) newSlide = 0;
     setCurrentSlide(newSlide);
   };
-  const images = [
-    image1,image2,image3
-  ];
+  
   return (
     <div className='section'>
       <div className="carousel relative overflow-hidden">
@@ -32,8 +33,8 @@ function AutomotiveShotsService() {
             </div>
           ))}
         </div>
-        <button className="carousel-control-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white text-3xl p-2" onClick={() => moveSlide(-1)}>&#10094;</button>
-        <button className="carousel-control-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white text-3xl p-2" onClick={() => moveSlide(1)}>&#10095;</button>
+        <button className="carousel-control-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white text-3xl p-2" onClick={() => moveSlide(-1)}>back</button>
+        <button className="carousel-control-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white text-3xl p-2" onClick={() => moveSlide(1)}>next</button>
       </div>
     </div>
   )
