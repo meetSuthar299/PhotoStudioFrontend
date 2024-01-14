@@ -5,7 +5,7 @@ import SocialMediaLinks from '../Components/SocialMediaLinks';
 import collage from "../img/gallery/shapeCollage.jpg"
 
 const Contact = () => {
-  const [budget, setBudget] = React.useState(1250); // Initial value set to $1,250
+  const [budget, setBudget] = React.useState(2500); // Initial value set to $2,500
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -97,7 +97,7 @@ const Contact = () => {
               type="range"
               name="budget"
               min="0"
-              max="2500"
+              max="5000"
               step="100" // The step attribute allows the user to select budget in increments of $100.
               defaultValue="1250" // Starting value in the middle of the range
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
@@ -105,7 +105,7 @@ const Contact = () => {
             />
             <div className="flex justify-between text-xs px-2">
               <span>$0</span>
-              <span>$2,500</span>
+              <span>$5,000</span>
             </div>
             <div className="text-center">
               <span className="text-lg font-semibold">$</span>
