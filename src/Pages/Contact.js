@@ -37,15 +37,15 @@ const Contact = () => {
       </div>
       <div className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
         {/* Message and links */}
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col '>
           <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
             Let's Connect!
           </h1>
-          <p className="mb-4 text-xl pb-5 pr-5">Fill our this questionnaire for your custom quote! </p>
-          <p className="mb-4 text-xl pb-5 pr-5">Our team is dedicated to providing you with services that are specifically catered to your budget and needs. Our goal is to meet and exceed your vision. </p>
+          <p className="mb-4 text-xl pb-5 pr-5 font-light">Fill our this questionnaire for your custom quote! </p>
+          <p className="mb-4 text-xl pb-5 pr-5 font-thin">Our team is dedicated to providing you with services that are specifically catered to your budget and needs. Our goal is to meet and exceed your vision. </p>
           <div className="flex items-center mb-4 text-left text-xl">
-            <FaMailBulk className="mr-3" />
-            <p>contact@arkticstudios.com</p>
+            <FaMailBulk className="mr-3 " />
+            <p className='font-thin'>contact@arkticstudios.com</p>
           </div>
           <div className="flex items-center mb-4 text-left text-xl">
             <SocialMediaLinks />
