@@ -6,6 +6,7 @@ import collage from "../img/gallery/shapeCollage.jpg"
 
 const Contact = () => {
   const [budget, setBudget] = React.useState(2500); // Initial value set to $2,500
+  const [timeline, setTimeline] = React.useState(2); // Initial timeline value, e.g., '2 Weeks'
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,6 +26,14 @@ const Contact = () => {
 
     // // Reset the form fields after submission (optional).
     // e.target.reset();
+  };
+  const timelineOptions = {
+    1: "1 Week",
+    2: "2 Weeks",
+    3: "1 Month",
+    4: "3 Months",
+    5: "6 Months",
+    6: "Flexible"
   };
 
   return (
@@ -89,6 +98,21 @@ const Contact = () => {
                 <input type="checkbox" name="services" value="Service4" id="service4" className="mr-2" />
                 <label htmlFor="service4">Prints</label>
               </div>
+            </div>
+          </label>
+          <label className="block mb-6">
+            <span className="text-xl">Desired Timeline:</span>
+            <input
+              type="range"
+              name="timeline"
+              min="1"
+              max="6"
+              value={timeline}
+              onChange={(e) => setTimeline(e.target.value)}
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer my-2"
+            />
+            <div className="text-center text-lg font-semibold">
+              {timelineOptions[timeline]}
             </div>
           </label>
           <label className="block mb-6">
