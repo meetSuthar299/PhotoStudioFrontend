@@ -32,7 +32,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/contactUs/', {
+      const response = await fetch('https://api-arktik.onrender.com/contactUs/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
