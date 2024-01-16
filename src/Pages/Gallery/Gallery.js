@@ -9,7 +9,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Loader from "../../Components/Loader";
 import { Helmet } from "react-helmet";
-
+import { motion } from "framer-motion";
 
 const Gallery = () => {
   const dispatch = useDispatch();
@@ -42,13 +42,19 @@ const Gallery = () => {
   };
 
   return (
-    <section id='gallery' className='section px-5 lg:px-14 pt-20 bg-zinc-300'>
+    <motion.section id='gallery'
+      key={'gallery'}
+      className='section px-5 lg:px-14 pt-20 bg-zinc-300'
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+    >
       <Helmet>
-          <title>Arktic Studios Gallery</title>
-          <meta
-            name="description"
-            content="Arktic Studios Gallery - Buy high quality prints of Arktic Studios photography, shipped directly to you."
-          />
+        <title>Arktic Studios Gallery</title>
+        <meta
+          name="description"
+          content="Arktic Studios Gallery - Buy high quality prints of Arktic Studios photography, shipped directly to you."
+        />
       </Helmet>
       <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-10'>
         Photo Gallery
@@ -92,7 +98,7 @@ const Gallery = () => {
           </div>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

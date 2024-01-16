@@ -4,6 +4,7 @@ import Services from "../Pages/Services/Services"
 import Contact from './Contact';
 import { useLocation } from 'react-router';
 import Hero from './HeroPage/Hero';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   // scroll animation
@@ -21,12 +22,17 @@ const Home = () => {
 
 
   return (
-    <>
-      <Hero/>
+    <motion.div
+      key={'home'}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+    >
+      <Hero />
       <About />
       <Services />
       <Contact />
-    </>
+    </motion.div>
   );
 };
 
