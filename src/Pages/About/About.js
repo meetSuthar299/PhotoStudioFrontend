@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import homeImg from '../../img/header/ArktikLogo.png';
 // import StarsBackground from '../../Components/StarsBackground';
 

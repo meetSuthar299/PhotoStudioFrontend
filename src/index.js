@@ -8,7 +8,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation,
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
