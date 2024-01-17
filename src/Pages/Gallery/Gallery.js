@@ -67,9 +67,9 @@ const Gallery = () => {
         Photo Gallery
       </h1>
       <div>
-        {isLoading ? (
+        {/* {isLoading ? (
           <Loader />
-        ) : (
+        ) : ( */}
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
             {products?.map((product, index) => (
               <AnimatedComponent>
@@ -110,7 +110,7 @@ const Gallery = () => {
               />
             )}
           </div>
-        )}
+        {/* )} */}
       </div>
     </motion.section>
   );
