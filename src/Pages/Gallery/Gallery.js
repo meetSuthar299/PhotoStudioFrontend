@@ -51,17 +51,17 @@ const Gallery = () => {
       exit={{ opacity: 0, y: -50 }}
     >
       <Helmet>
-        <title>Arktic Studios Gallery</title>
+        <title>Arktic Gallery</title>
         <meta
           name="description"
-          content="Arktic Studios Gallery - Buy high quality prints of Arktic Studios photography, shipped directly to you."
+          content="Buy high quality prints of Arktic Studios photography, shipped directly to you."
         />
       </Helmet>
       <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-10'>
         Photo Gallery
       </h1>
       <div>
-        {products.length === 0 ? (
+        {isLoading ? (
           <Loader />
         ) : (
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
@@ -69,6 +69,7 @@ const Gallery = () => {
               <AnimatedComponent>
               <div onClick={() => openLightbox(index)} key={product._id} className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105">
                 <img
+                  loading="lazy"
                   className="object-cover w-full transition-transform transform hover:brightness-90 cursor-pointer"
                   src={product.image[0]}
                   alt={product.name}
