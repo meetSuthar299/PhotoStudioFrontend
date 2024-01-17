@@ -20,7 +20,7 @@ const Gallery = () => {
     dispatch(getProducts());
   }, [dispatch]);
 
-  const isLoading = useSelector(selectIsLoading)
+  const isLoading = useSelector(selectIsLoading);
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -42,13 +42,19 @@ const Gallery = () => {
     setPhotoIndex((photoIndex + products.length - 1) % products.length);
   };
 
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent the context menu from appearing
+  };
+
   return (
-    <motion.section id='gallery'
+    <motion.section
+      id='gallery'
       key={'gallery'}
       className='section px-5 lg:px-14 pt-20 bg-zinc-300'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
+      onContextMenu={handleContextMenu} // Disable right-click
     >
       <Helmet>
         <title>Arktic Gallery</title>
@@ -67,20 +73,24 @@ const Gallery = () => {
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
             {products?.map((product, index) => (
               <AnimatedComponent>
-              <div onClick={() => openLightbox(index)} key={product._id} className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105">
-                <img
-                  
-                  className="object-cover w-full transition-transform transform hover:brightness-90 cursor-pointer"
-                  src={product.image[0]}
-                  alt={product.name}
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-black bg-opacity-75">
-                  <div className="text-center text-white p-6">
-                    <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
-                    <p className="text-sm font-thin">{product.description}</p>
+                <div
+                  onClick={() => openLightbox(index)}
+                  onContextMenu={handleContextMenu} // Disable right-click
+                  key={product._id}
+                  className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105"
+                >
+                  <img
+                    className="object-cover w-full transition-transform transform hover:brightness-90 cursor-pointer"
+                    src={product.image[0]}
+                    alt={product.name}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-black bg-opacity-75">
+                    <div className="text-center text-white p-6">
+                      <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
+                      <p className="text-sm font-thin">{product.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </AnimatedComponent>
             ))}
             {lightboxOpen && (
