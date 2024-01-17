@@ -1,6 +1,7 @@
 import React from 'react';
 import homeImg from '../../img/header/ArktikLogo.png';
 // import StarsBackground from '../../Components/StarsBackground';
+import AnimatedComponent from '../../Components/AnimatedComponent';
 
 const About = () => {
   const teamMembers = [
@@ -25,22 +26,26 @@ const About = () => {
       <div className=' '>
         <div className='flex flex-col lg:flex-row justify-center lg:justify-between items-center'>
           <div className='lg:w-1/2 lg:pt-0 lg:pb-0 z-10 lg:relative flex flex-col items-center lg:items-start p-5'>
+
             <div className='relative bg-cover bg-center flex flex-col items-center justify-center'>
               <h1 className='text-4xl lg:text-5xl text-center lg:text-left z-10 relative mx-auto pb-5'>
                 Where your Vision Meets Victory
               </h1>
             </div>
-            <p className='text-lg lg:text-2xl font-light mb-8 lg:mb-12'>
-              Discover a world of cinematic excellence with Arktic Studios, your premier video production team nestled in the heart of Calgary.
-              We are committed to inspiring entrepreneurs and small businesses by providing innovative creative solutions.
-              Elevate your brand presence through our expert videography and photography services, designed to distinguish you in a competitive landscape.
-            </p>
-            <a href='#contact' key='#contact' className='btn mb-8 lg:mb-0 cursor-pointer transition-all hover:scale-105'>Get in Touch</a>
+            <AnimatedComponent>
+              <p className='text-lg lg:text-2xl font-light mb-8 lg:mb-12'>
+                Discover a world of cinematic excellence with Arktic Studios, your premier video production team nestled in the heart of Calgary.
+                We are committed to inspiring entrepreneurs and small businesses by providing innovative creative solutions.
+                Elevate your brand presence through our expert videography and photography services, designed to distinguish you in a competitive landscape.
+              </p>
+              <a href='#contact' key='#contact' className='btn mb-8 lg:mb-0 cursor-pointer transition-all hover:scale-105'>Get in Touch</a>
+            </AnimatedComponent>
           </div>
-
-          <div className='flex justify-center lg:justify-end'>
-            <img src={homeImg} alt='Me' className='object-cover lg:h-[55vh] md:h-[65vh] sm:h-[50vh]' />
-          </div>
+          <AnimatedComponent>
+            <div className='flex justify-center lg:justify-end'>
+              <img src={homeImg} alt='Me' className='object-cover lg:h-[55vh] md:h-[65vh] sm:h-[50vh]' />
+            </div>
+          </AnimatedComponent>
         </div>
 
         {/* TEAM SECTION! */}

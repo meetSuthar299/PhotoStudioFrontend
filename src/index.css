@@ -53,6 +53,18 @@
     @apply absolute top-4 left-4 right-4 bottom-4 bg-gray-100 border-solid border-4 border-white rounded-full;
   }
 }
+.lazy-loaded-section {
+  /* Set initial styles before animation */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.lazy-loaded-section.in-viewport {
+  /* Set final styles for when the element is in the viewport */
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @layer utilities {
   @variants responsive {

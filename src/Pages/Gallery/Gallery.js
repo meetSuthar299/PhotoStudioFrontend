@@ -10,6 +10,7 @@ import 'react-image-lightbox/style.css';
 import Loader from "../../Components/Loader";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+import AnimatedComponent from "../../Components/AnimatedComponent";
 
 const Gallery = () => {
   const dispatch = useDispatch();
@@ -65,6 +66,7 @@ const Gallery = () => {
         ) : (
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
             {products?.map((product, index) => (
+              <AnimatedComponent>
               <div onClick={() => openLightbox(index)} key={product._id} className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105">
                 <img
                   className="object-cover w-full transition-transform transform hover:brightness-90 cursor-pointer"
@@ -78,6 +80,7 @@ const Gallery = () => {
                   </div>
                 </div>
               </div>
+              </AnimatedComponent>
             ))}
             {lightboxOpen && (
               <Lightbox

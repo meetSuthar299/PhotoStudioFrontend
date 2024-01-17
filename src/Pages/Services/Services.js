@@ -7,6 +7,7 @@ import editingImg from "../../img/gallery/editing-img.jpg"
 import eventImg from "../../img/gallery/event-img.jpg"
 import commercialImg from "../../img/gallery/Commercia-Img.jpg"
 import nightDiaryImg from "../../img/gallery/nightDiaries.jpg";
+import AnimatedComponent from '../../Components/AnimatedComponent'
 
 
 
@@ -47,41 +48,53 @@ function Services() {
 
       <div className='px-5 lg:px-16 pb-28 pt-16 section'>
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <ItemCard
-            imgSrc={eventImg}
-            firstP="Occasions"
-            secondP="Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."
-          />
-          <ItemCard
-            imgSrc={portraitImg}
-            firstP="Portraits"
-            secondP="Capture the unique essence and personalities of individuals, families, and couples in stunning portrait sessions, crafting cherished memories that last a lifetime."
-          />
-          <ItemCard
-            imgSrc={commercialImg}
-            firstP="Products"
-            secondP="Illuminate your product's excellence with our expert photo and video services. Tailored for perfection, we highlight its unique features for visual brilliance"
-          />
-          <ItemCard
-            imgSrc={autoImg}
-            firstP="Arktik Garage"
-            secondP="We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."
-          />
+          <AnimatedComponent>
+            <ItemCard
+              imgSrc={eventImg}
+              firstP="Occasions"
+              secondP="Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."
+            />
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <ItemCard
+              imgSrc={portraitImg}
+              firstP="Portraits"
+              secondP="Capture the unique essence and personalities of individuals, families, and couples in stunning portrait sessions, crafting cherished memories that last a lifetime."
+            />
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <ItemCard
+              imgSrc={commercialImg}
+              firstP="Products"
+              secondP="Illuminate your product's excellence with our expert photo and video services. Tailored for perfection, we highlight its unique features for visual brilliance"
+            />
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <ItemCard
+              imgSrc={autoImg}
+              firstP="Arktik Garage"
+              secondP="We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."
+            />
+          </AnimatedComponent>
           {/* <ItemCard
           imgSrc={editingImg}
           firstP="Photo Editing and Retouching"
           secondP="Provide professional photo editing and retouching services to enhance the visual appeal and quality of images. From color correction to removing imperfections, I ensure the final images meet the highest standards."
         /> */}
-          <ItemCard
-            imgSrc={nightDiaryImg}
-            firstP="Night Diaries"
-            secondP="Capture the vibrant essence of your night club and restaurant with our professional video and photography services. Elevate your memories by transforming favorite moments into stunning, high-quality videos and photos, turning them into captivating pieces of art."
-          />
-          <ItemCard
-            imgSrc={printImg}
-            firstP="Prints"
-            secondP="Visit our Gallery for captivating prints. Our high-quality prints and custom framing service transform your favorite images into stunning art, elevating your space with exquisite style."
-          />
+          <AnimatedComponent>
+            <ItemCard
+              imgSrc={nightDiaryImg}
+              firstP="Night Diaries"
+              secondP="Capture the vibrant essence of your night club and restaurant with our professional video and photography services. Elevate your memories by transforming favorite moments into stunning, high-quality videos and photos, turning them into captivating pieces of art."
+            />
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <ItemCard
+              imgSrc={printImg}
+              firstP="Prints"
+              secondP="Visit our Gallery for captivating prints. Our high-quality prints and custom framing service transform your favorite images into stunning art, elevating your space with exquisite style."
+            />
+          </AnimatedComponent>
         </div>
       </div>
     </section>
