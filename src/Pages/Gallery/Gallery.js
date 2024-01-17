@@ -69,7 +69,7 @@ const Gallery = () => {
               <AnimatedComponent>
               <div onClick={() => openLightbox(index)} key={product._id} className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105">
                 <img
-                  loading="lazy"
+                  
                   className="object-cover w-full transition-transform transform hover:brightness-90 cursor-pointer"
                   src={product.image[0]}
                   alt={product.name}

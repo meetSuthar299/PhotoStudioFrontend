@@ -53,10 +53,30 @@ const Contact = () => {
     }
   };
 
+{/* <section id="contact" className="">
+      <div className='relative bg-cover bg-center flex flex-col items-center justify-center py-52' style={{ backgroundImage: `url(${collage})` }}>
+        <div className='absolute inset-0 bg-slate-900 opacity-70'></div>
+        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
+          Bring your Visions to Reality
+        </h1>
+      </div>
+      <div className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
+        {/* Message and links */}
+        // <div className='flex flex-col justify-center'>
+        //   <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
+        //     Let's Connect!
+        //   </h1> */}
+
   return (
-    <section id="contact" className="min-h-[60vh] flex items-center justify-center">
+    <section id="contact" className="">
+      <div className='relative bg-cover bg-center flex flex-col items-center justify-center py-52' style={{ backgroundImage: `url(${collage})` }}>
+        <div className='absolute inset-0 bg-slate-900 opacity-70'></div>
+        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
+          Bring your Visions to Reality
+        </h1>
+      </div>
       {isFormSubmitted ? (
-        <div className="grid max-w-screen-xl sm:mx-auto text-center items-center justify-center">
+        <div className="grid max-w-screen-xl sm:mx-auto text-center items-center justify-center h-[40vh]">
           <div>
             <AnimatedComponent>
               <h1 className="mb-10 font-sans text-3xl font-primary sm:text-4xl">
@@ -69,7 +89,7 @@ const Contact = () => {
           </div>
         </div>
       ) : (
-        <div className="grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
+        <div className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
           <div className='flex flex-col'>
             <AnimatedComponent>
               <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
