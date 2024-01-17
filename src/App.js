@@ -17,39 +17,23 @@ import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
   const location = useLocation();
-
-  //Loader before window loads
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    window.addEventListener('load', setIsLoading(false))
-    return () => {
-      window.removeEventListener('load', setIsLoading(false));
-    };
-  }, []);
-
   return <>
-    {isLoading ? (
-      <Loader />
-    ) : (
-      <>
-        <Header />
-        <AnimatePresence>
-          <Routes location={location} key={location.pathname}>
-            <Route path={"/"} element={<Home />} />
-            <Route path='/automotiveService' element={<AutomotiveShotsService />} />
-            <Route path='/commercalShotsService' element={<CommercalShotsService />} />
-            <Route path='/editingService' element={<EditingService />} />
-            <Route path='/eventShotsService' element={<EventShotsService />} />
-            <Route path='/PortraitShotsService' element={<PortraitShotsService />} />
-            <Route path='/gallery' element={<Gallery />} />
-            <Route path='/portfolio' element={<Portfolio />} />
-            <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
-            <Route path='/termsOfService' element={<TermsOfService />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </>
-    )}
+    <Header />
+    <AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path={"/"} element={<Home />} />
+        <Route path='/automotiveService' element={<AutomotiveShotsService />} />
+        <Route path='/commercalShotsService' element={<CommercalShotsService />} />
+        <Route path='/editingService' element={<EditingService />} />
+        <Route path='/eventShotsService' element={<EventShotsService />} />
+        <Route path='/PortraitShotsService' element={<PortraitShotsService />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
+        <Route path='/termsOfService' element={<TermsOfService />} />
+      </Routes>
+    </AnimatePresence>
+    <Footer />
   </>;
 };
 

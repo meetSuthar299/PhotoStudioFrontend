@@ -55,11 +55,69 @@
 
   <!-- Title -->
   <title>Arktic Studios - Capturing Moments, Enhancing Presence</title>
+
+  <style>
+    .container {
+        align-items: center;
+        background-color: #f8f8f8; /* Light gray background */
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .loading {
+        position: relative;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border: 4px solid #333333; /* Dark border color */
+        animation: pulse 2s infinite; /* Added pulse animation */
+    }
+
+    .loading:after {
+        content: 'arktic.';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px; /* Increased font size for better visibility */
+        color: #333333; /* Darker text color */
+        text-align: center;
+        width: 100%;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: bold;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1.05);
+        }
+
+        50% {
+            transform: scale(1.5); /* Slight increase in scale for a subtle pulse effect */
+        }
+    }
+</style>
+
+
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div id="root">
+    <div id="spinner" class="container ">
+      <div class="loading">
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
+
+
+animation: sk-scaleout 1s infinite ease-in-out;
+background-color: #124c62;
+border-radius: 100%;
+height: 6em;
+width: 6em;
