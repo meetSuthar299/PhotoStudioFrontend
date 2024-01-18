@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <link rel="icon" href="%PUBLIC_URL%/ArktikLogo.png" />
-
+  <!-- Title -->
+  <title>Arktic Studios - Capturing Moments, Enhancing Presence</title>
   <!-- SEO Meta Tags -->
   <meta name="description"
     content="Arktic Studios - A creative studio specializing in Photography, Videography, Social Media Management, SEO, and web design. Providing high-quality services to capture your special moments and enhance your online presence." />
@@ -53,57 +54,78 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
 
-  <!-- Title -->
-  <title>Arktic Studios - Capturing Moments, Enhancing Presence</title>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WZSTZFJJ');</script>
+  <!-- End Google Tag Manager -->
+
 
   <style>
     .container {
-        align-items: center;
-        background-color: #f8f8f8; /* Light gray background */
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-        width: 100vw;
+      align-items: center;
+      background-color: #f8f8f8;
+      /* Light gray background */
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      width: 100vw;
     }
 
     .loading {
-        position: relative;
-        width: 6rem;
-        height: 6rem;
-        border-radius: 50%;
-        border: 4px solid #333333; /* Dark border color */
-        animation: pulse 2s infinite; /* Added pulse animation */
+      position: relative;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      border: 4px solid #333333;
+      /* Dark border color */
+      animation: pulse 2s infinite;
+      /* Added pulse animation */
     }
 
     .loading:after {
-        content: 'arktic.';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 30px; /* Increased font size for better visibility */
-        color: #333333; /* Darker text color */
-        text-align: center;
-        width: 100%;
-        font-family: 'League Spartan', sans-serif;
-        font-weight: bold;
+      content: 'arktic.';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      /* Increased font size for better visibility */
+      color: #333333;
+      /* Darker text color */
+      text-align: center;
+      width: 100%;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: bold;
     }
 
     @keyframes pulse {
-        0%, 100% {
-            transform: scale(1.05);
-        }
 
-        50% {
-            transform: scale(1.5); /* Slight increase in scale for a subtle pulse effect */
-        }
+      0%,
+      100% {
+        transform: scale(1.05);
+      }
+
+      50% {
+        transform: scale(1.5);
+        /* Slight increase in scale for a subtle pulse effect */
+      }
     }
-</style>
+  </style>
 
 
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZSTZFJJ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root">
     <div id="spinner" class="container">
