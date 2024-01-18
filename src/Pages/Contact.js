@@ -3,6 +3,7 @@ import { FaMailBulk } from 'react-icons/fa';
 import SocialMediaLinks from '../Components/SocialMediaLinks';
 import collage from "../img/gallery/shapeCollage.jpg";
 import AnimatedComponent from '../Components/AnimatedComponent';
+import PageBanner from '../Components/PageBanner';
 
 const Contact = () => {
   const initialFormData = {
@@ -54,12 +55,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="">
-      <div className='relative bg-cover bg-center flex flex-col items-center justify-center py-52' style={{ backgroundImage: `url(${collage})` }}>
-        <div className='absolute inset-0 bg-slate-900 opacity-70'></div>
-        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto'>
-          Bring your Visions to Reality
-        </h1>
-      </div>
+      <PageBanner text="Bring your Visions to Reality" backgroundImage={collage}/>
       {isFormSubmitted ? (
         <div className="grid max-w-screen-xl sm:mx-auto text-center items-center justify-center h-[40vh]">
           <div>

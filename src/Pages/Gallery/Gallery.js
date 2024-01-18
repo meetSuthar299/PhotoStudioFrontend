@@ -7,10 +7,11 @@ import {
 } from "../../redux/Product/productSlice";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import Loader from "../../Components/Loader";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import AnimatedComponent from "../../Components/AnimatedComponent";
+import PageBanner from "../../Components/PageBanner";
+import cityImg from "../../img/gallery/city.jpeg"
 
 const Gallery = () => {
   const dispatch = useDispatch();
@@ -50,7 +51,7 @@ const Gallery = () => {
     <motion.section
       id='gallery'
       key={'gallery'}
-      className='section px-5 lg:px-14 pt-20 bg-zinc-300'
+      className='section '
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
@@ -63,13 +64,11 @@ const Gallery = () => {
           content="Buy high quality prints of Arktic Studios photography, shipped directly to you."
         />
       </Helmet>
-      <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-10'>
+      {/* <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-10'>
         Photo Gallery
-      </h1>
-      <div>
-        {/* {isLoading ? (
-          <Loader />
-        ) : ( */}
+      </h1> */}
+      <PageBanner text={'Photo Gallery'} backgroundImage={cityImg}/>
+      <div className="px-5 lg:px-14 pt-20 bg-zinc-300">
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
             {products?.map((product, index) => (
               <AnimatedComponent>
@@ -110,7 +109,6 @@ const Gallery = () => {
               />
             )}
           </div>
-        {/* )} */}
       </div>
     </motion.section>
   );

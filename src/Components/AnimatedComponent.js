@@ -23,9 +23,6 @@ const AnimatedComponent = ({ children }) => {
         if (inView && scrollDirection === 'down' || scrollDirection === "up") {
             controls.start('visible');
         }
-        // else if () {
-        //     controls.start("visible")
-        // }
         else {
             controls.start('hidden');
         }
