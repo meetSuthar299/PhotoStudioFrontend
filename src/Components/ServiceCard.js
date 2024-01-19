@@ -26,7 +26,7 @@ function ServiceCard({ img, title, offerings, link, disc }) {
       <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 transition-opacity duration-200 bg-zinc-900 bg-opacity-100 opacity-0 hover:opacity-100 text-center z-10 hidden lg:flex lg:h-[85vh] md:h-[40vh]">
         <ul className="text-gray-200 w-full align-middle">
           {offerings.map((offering, index) => (
-            <li key={index} className="py-6 border-b border-gray-300">
+            <li key={index} className="py-4 border-b border-gray-300">
               <h2 className="text-xl font-extralight">{offering}</h2>
             </li>
           ))}
