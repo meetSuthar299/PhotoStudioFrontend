@@ -38,7 +38,7 @@ const About = () => {
                 We are committed to inspiring entrepreneurs and small businesses by providing innovative creative solutions.
                 Elevate your brand presence through our expert videography and photography services, designed to distinguish you in a competitive landscape.
               </p>
-              <a href='#contact' key='#contact' className='btn mb-8 lg:mb-0 cursor-pointer transition-all hover:scale-105'>Get in Touch</a>
+              <a href='#contact' key='#contact' className='btn mb-8 lg:mb-0 cursor-pointer transition-all hover:scale-105 text-xl'>Get in Touch</a>
             </AnimatedComponent>
           </div>
           <AnimatedComponent>
