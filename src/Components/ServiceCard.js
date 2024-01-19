@@ -23,7 +23,7 @@ function ServiceCard({ img, title, offerings, link, disc }) {
         decoding="async"
       />
       {/* on hover */}
-      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-10 transition-opacity duration-200 bg-zinc-900 bg-opacity-100 opacity-0 hover:opacity-100 text-center z-10 hidden lg:flex lg:h-[85vh] md:h-[40vh]">
+      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 transition-opacity duration-200 bg-zinc-900 bg-opacity-100 opacity-0 hover:opacity-100 text-center z-10 hidden lg:flex lg:h-[85vh] md:h-[40vh]">
         <ul className="text-gray-200 w-full align-middle">
           {offerings.map((offering, index) => (
             <li key={index} className="py-6 border-b border-gray-300">
@@ -31,8 +31,8 @@ function ServiceCard({ img, title, offerings, link, disc }) {
             </li>
           ))}
         </ul>
-        <a href={link} className="gradient-link text-black py-3 w-[80%] rounded-md transition-all duration-200 absolute bottom-0">
-          <span className='text-xl font-thin'>Learn More</span>
+        <a href={link} className="gradient-link text-black py-5 w-[80%] rounded-md transition-all duration-200 absolute bottom-0">
+          <span className='text-2xl font-light'>Learn More</span>
         </a>
       </div>
     </div>
