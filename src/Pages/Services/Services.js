@@ -51,7 +51,7 @@ function Services() {
 
       </div> */}
 
-      <div className='px-5 lg:px-16 py-24'>
+      <div className='px-5 lg:px-16 py-14'>
         <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
           <AnimatedComponent>
             <ServiceCard img={printImg} title={"Corporate"} disc={"Visit our Gallery for captivating prints. Our high-quality prints and custom framing service transform your favorite images into stunning art, elevating your space with exquisite style."} />

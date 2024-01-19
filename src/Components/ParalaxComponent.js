@@ -19,9 +19,9 @@ function ParalaxComponent({ children, backgroundImage }) {
 
   return (
     <div
-      className='relative bg-cover bg-center flex flex-col items-center justify-center h-[45vh] object-fill'
+      className='relative bg-cover bg-center flex flex-col items-center justify-center h-[40vh] object-fill'
       style={{
-        backgroundImage: { backgroundImage},
+        backgroundImage: backgroundImage,
         backgroundPosition: `0% ${scrollY * 0.30}px`, // Adjust the multiplier for desired parallax effect,
         backgroundSize: '100% 100vh',
       }}
