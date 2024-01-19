@@ -30,7 +30,7 @@ function Services() {
     };
   }, []);
   return (
-    <section id='services' className='section bg-gray-900'>
+    <section id='services' className='section '>
       <ParalaxComponent backgroundImage='url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)'>
         <h1 className='text-4xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
           Our Services
@@ -39,13 +39,13 @@ function Services() {
           Elevating Your Vision, Exceeding Your Expectations.
         </p>
       </ParalaxComponent>
-      <div className='px-5 lg:px-16 py-28'>
+      <div className='px-5 lg:px-16 pt-5 pb-24'>
         <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
           <AnimatedComponent>
             <ServiceCard
               img={printImg}
               title={"Corporate"}
-              disc={"Explore our corporate services designed to enhance your professional presence. Immerse your brand in visual excellence with our premium photography and web development solutions. Elevate your corporate image with Arktic Studios."}
+              disc={""}
               offerings={[
                 "Professional Corporate Headshots",
                 "Engaging Corporate Documentaries",

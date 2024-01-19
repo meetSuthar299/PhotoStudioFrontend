@@ -8,11 +8,11 @@ function ServiceCard({ img, title, offerings, link, disc }) {
   return (
     <div
       id={title}
-      className="m-2 text-center relative overflow-hidden transition duration-200 transform hover:-translate-y-2 cursor-pointer lg:h-[70vh] md:h-[40vh] rounded-md shadow-md border border-gray-600"
+      className="m-2 text-center relative overflow-hidden transition duration-200 transform hover:-translate-y-2 cursor-pointer lg:h-[85vh] md:h-[40vh] rounded-md shadow-md border border-gray-600"
       onClick={navigateToLink}
     >
       {/* before hover */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-70 opacity-100">
+      <div className="absolute inset-0 flex flex-col justify-center items-center px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-70 opacity-100 lg:h-[85vh] md:h-[40vh]">
         <h1 className="mb-4 text-2xl lg:text-3xl text-white font-semibold z-10">{title}</h1>
       </div>
       <img
@@ -23,11 +23,11 @@ function ServiceCard({ img, title, offerings, link, disc }) {
         decoding="async"
       />
       {/* on hover */}
-      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-10 transition-opacity duration-200 bg-black bg-opacity-100 opacity-0 hover:opacity-100 text-center z-10 hidden lg:flex lg:h-[70vh] md:h-[40vh]">
-        <ul className="text-gray-400 w-full align-middle">
+      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-10 transition-opacity duration-200 bg-zinc-900 bg-opacity-100 opacity-0 hover:opacity-100 text-center z-10 hidden lg:flex lg:h-[85vh] md:h-[40vh]">
+        <ul className="text-gray-200 w-full align-middle">
           {offerings.map((offering, index) => (
             <li key={index} className="py-6 border-b border-gray-300">
-              <h1 className="text-lg font-extralight">{offering}</h1>
+              <h2 className="text-xl font-extralight">{offering}</h2>
             </li>
           ))}
         </ul>
