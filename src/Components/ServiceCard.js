@@ -31,7 +31,7 @@ function ServiceCard({ img, title, offerings, link, disc }) {
             </li>
           ))}
         </ul>
-        <a href={link} className="gradient-link text-black py-5 w-[80%] rounded-md transition-all duration-200 absolute bottom-0">
+        <a href={link} className="gradient-link text-black py-5 w-[80%] rounded-md transition-all duration-700 absolute bottom-0">
           <span className='text-2xl font-light'>Learn More</span>
         </a>
       </div>
