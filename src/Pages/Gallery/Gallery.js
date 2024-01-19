@@ -64,9 +64,6 @@ const Gallery = () => {
           content="Buy high quality prints of Arktic Studios photography, shipped directly to you."
         />
       </Helmet>
-      {/* <h1 className='text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8 items-center pt-10'>
-        Photo Gallery
-      </h1> */}
       <PageBanner text={'Photo Gallery'} backgroundImage={cityImg}/>
       <div className="px-5 lg:px-14 pt-20 bg-zinc-300">
           <div className="md:masonry-2-col lg:masonry-4-col box-border mx-auto before:box-inherit after:box-inherit pb-10">
@@ -74,7 +71,6 @@ const Gallery = () => {
               <AnimatedComponent>
                 <div
                   onClick={() => openLightbox(index)}
-                  onContextMenu={handleContextMenu} // Disable right-click
                   key={product._id}
                   className="transition-all break-inside my-6 bg-gray-200 relative overflow-hidden group cursor-pointer hover:scale-105"
                 >

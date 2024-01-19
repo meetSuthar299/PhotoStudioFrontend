@@ -55,7 +55,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="">
-      <PageBanner text="Bring your Visions to Reality" backgroundImage={collage}/>
+      <PageBanner text="Bring your Visions to Reality" backgroundImage={collage} />
       {isFormSubmitted ? (
         <div className="grid max-w-screen-xl sm:mx-auto text-center items-center justify-center h-[40vh]">
           <div>
@@ -70,9 +70,10 @@ const Contact = () => {
           </div>
         </div>
       ) : (
-        <div className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
-          <div className='flex flex-col'>
-            <AnimatedComponent>
+        <AnimatedComponent>
+          <div className="relative grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto p-14">
+            <div className='flex flex-col'>
+
               <h1 className="mb-10 font-sans text-3xl font-bold sm:text-4xl">
                 Let's Connect!
               </h1>
@@ -85,9 +86,9 @@ const Contact = () => {
               <div className="flex items-center mb-4 text-left text-xl">
                 <SocialMediaLinks />
               </div>
-            </AnimatedComponent>
-          </div>
-          <AnimatedComponent>
+
+            </div>
+
             <form onSubmit={sendEmail} className='text-xl'>
               <label className="block mb-6">
                 <span className="">Your name</span>
@@ -199,8 +200,9 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-          </AnimatedComponent>
-        </div>
+
+          </div>
+        </AnimatedComponent>
       )}
     </section>
   );
