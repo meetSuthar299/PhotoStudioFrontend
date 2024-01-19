@@ -32,35 +32,60 @@ function Services() {
   return (
     <section id='services' className='section bg-gray-900'>
       <ParalaxComponent backgroundImage='url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)'>
-        <h1 className='text-3xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
-          arktic services
+        <h1 className='text-4xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
+          Our Services
         </h1>
         <p className='text-lg lg:text-xl font-light text-white text-center z-10 relative mx-auto'>
           Elevating Your Vision, Exceeding Your Expectations.
         </p>
       </ParalaxComponent>
-      {/* <div
-        className='relative bg-cover bg-center flex flex-col items-center justify-center py-40'
-        style={{
-          backgroundImage: `url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)`,
-          backgroundPosition: `30% ${scrollY * 0.41}px`, // Adjust the multiplier for desired parallax effect,
-          backgroundRepeat: `true`,
-        }}
-      >
-        <div className='absolute inset-0 bg-black opacity-50'></div>
-
-      </div> */}
-
-      <div className='px-5 lg:px-16 py-14'>
-        <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+      <div className='px-5 lg:px-16 py-28'>
+        <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
           <AnimatedComponent>
-            <ServiceCard img={printImg} title={"Corporate"} disc={"Visit our Gallery for captivating prints. Our high-quality prints and custom framing service transform your favorite images into stunning art, elevating your space with exquisite style."} />
+            <ServiceCard
+              img={printImg}
+              title={"Corporate"}
+              disc={"Explore our corporate services designed to enhance your professional presence. Immerse your brand in visual excellence with our premium photography and web development solutions. Elevate your corporate image with Arktic Studios."}
+              offerings={[
+                "Professional Corporate Headshots",
+                "Engaging Corporate Documentaries",
+                "Striking Product Photography",
+                "Custom Website Development",
+                "Effective Search Engine Optimization (SEO)",
+              ]}
+              link={"/corporateService"}
+            />
           </AnimatedComponent>
           <AnimatedComponent>
-            <ServiceCard img={autoImg} title={"Automotive"} disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."} />
+            <ServiceCard
+              img={autoImg}
+              title={"Automotive"}
+              disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."}
+              offerings={[
+                "Professional Automotive Photography",
+                "4K Showcase Videos",
+                "Dynamic Aerial Drone Automotive Photography",
+                "360-Degree Interior and Exterior Automotive Photography",
+                "Tailored Social Media Campaigns for Automotive Brands",
+              ]}
+              link={"/automotiveService"}
+            />
           </AnimatedComponent>
           <AnimatedComponent>
-            <ServiceCard img={eventImg} title={"Personal"} disc={"Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."} />
+            <ServiceCard
+              img={eventImg} 
+              title={"Personal"}
+              disc={"Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."}
+              offerings={[
+                "Family Portrait Sessions",
+                "Professional Head Shots",
+                "Professional Event Photography",
+                "Documentary-style Event Coverage",
+                "Exclusive Destination Event Photography",
+                "Private Photography Workshops and Classes",
+              ]}
+              link={"/personalService"}
+            />
           </AnimatedComponent>
           {/* <AnimatedComponent>
             <ItemCard
@@ -76,7 +101,6 @@ function Services() {
               secondP="Illuminate your product's excellence with our expert photo and video services. Tailored for perfection, we highlight its unique features for visual brilliance"
             />
           </AnimatedComponent> */}
-
           {/* <AnimatedComponent>
             <ItemCard
               imgSrc={nightDiaryImg}
@@ -84,7 +108,6 @@ function Services() {
               secondP="Capture the vibrant essence of your night club and restaurant with our professional video and photography services. Elevate your memories by transforming favorite moments into stunning, high-quality videos and photos, turning them into captivating pieces of art."
             />
           </AnimatedComponent> */}
-
         </div>
       </div>
     </section>
