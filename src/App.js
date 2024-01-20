@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Header from "./Components/Header"
+import Header from "./Components/Header/Header"
 import Gallery from './Pages/Gallery/Gallery';
 import Portfolio from './Pages/Portfolio/Portfolio'
 import Home from './Pages/Home';
