@@ -18,56 +18,45 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
     };
 
     return (
-        <div
-            
-            
-            className="relative inline-block text-left hover:scale-110"
-        >
+        <div className="relative inline-block text-left hover:scale-110">
             <div className='flex'>
-                {/* Title of the dropdown */}
                 <a href={dropdownLink} className="font-semibold focus:outline-none">
                     {dropdownTitle}
                 </a>
-                {/* Down arrow with rotation animation */}
-                <motion.span
-                    // Click event listener to toggle dropdown state
-                    onClick={handleToggleDropdown}
-                    // Initial CSS classes
-                    className={`transition-all duration-75 pt-1`}
-                    // Initial state of the animation
-                    initial={{rotate: 0}}
-                    // Target state of the animation based on isDropdownOpen
-                    animate={{ rotate: isDropdownOpen ? 180 : 0} }
-                    onMouseEnter={handleMouseEnter}
-                >
-                    {/* Icon (down arrow) inside the motion span */}
-                    <IoIosArrowDown />
-                </motion.span>
-            </div>
-            {/* AnimatePresence to handle enter and exit animations */}
-            <AnimatePresence>
-                {isDropdownOpen && (
-                    <motion.div
-                        key="dropdown"
-                        className="absolute -left-16 w-60 rounded-md shadow-lg bg-[rgba(255,255,255,0.8)] backdrop-blur-sm border"
-                        initial={{ opacity: 0, y: -65, scale:0}}
-                        animate={{ opacity: 1, y: 0, scale:1}}
-                        exit={{ opacity: 0, y: -65,  scale:0}}
-                        onMouseLeave={handleMouseLeave}
+                <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <motion.span
+                        onClick={handleToggleDropdown}
+                        className={`transition-all duration-75 pt-1 inline-block`}
+                        initial={{ rotate: 0 }}
+                        animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+                        style={{ zIndex: 1}}
                     >
-                        {/* Dropdown content */}
-                        {links.map(({ name, link }) => (
-                            <a
-                                key={link}
-                                href={link}
-                                className="block px-4 py-2 text-gray-700 hover:bg-[rgba(255,255,255,0.6)] hover:text-gray-900 text-center text-xl hover:rounded-md"
+                        <IoIosArrowDown />
+                    </motion.span>
+                    <AnimatePresence>
+                        {isDropdownOpen && (
+                            <motion.div
+                                key="dropdown"
+                                className="absolute -left-16 w-60 rounded-lg p-1 shadow-xl bg-[rgba(251,252,255,0.8)] backdrop-blur-sm z-50 duration-150"
+                                initial={{ opacity: 0, y: -75, scale: 0 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                exit={{ opacity: 0, y: -75, scale: 0 }}
+
                             >
-                                {name}
-                            </a>
-                        ))}
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                                {links.map(({ name, link }) => (
+                                    <a
+                                        key={link}
+                                        href={link}
+                                        className="block px-4 py-2 text-gray-700 hover:bg-slate-900 hover:text-gray-100 text-center text-xl rounded-md transition-colors duration-200"
+                                    >
+                                        {name}
+                                    </a>
+                                ))}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </div>
         </div>
     );
 };
