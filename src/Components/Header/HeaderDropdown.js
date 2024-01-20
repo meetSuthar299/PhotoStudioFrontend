@@ -33,7 +33,7 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                     // Click event listener to toggle dropdown state
                     onClick={handleToggleDropdown}
                     // Initial CSS classes
-                    className={`transition-all duration-75 pt-1 pl-1`}
+                    className={`transition-all duration-75 pt-1`}
                     // Initial state of the animation
                     initial={{rotate: 0}}
                     // Target state of the animation based on isDropdownOpen
