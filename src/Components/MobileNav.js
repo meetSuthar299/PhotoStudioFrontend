@@ -3,6 +3,7 @@ import { IoMdClose } from 'react-icons/io';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
 import Socials from "./SocialMediaLinks"
+import HeaderDropdown from './Header/HeaderDropdown';
 
 const menuVariants = {
   hidden: {
@@ -42,7 +43,7 @@ const MobileNav = () => {
   }, []);
 
   return (
-    <nav className='text-primary xl:hidden lg:hidden'>
+    <nav className='xl:hidden lg:hidden'>
       <div className={`text-3xl cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all duration-700`} onClick={() => setOpenMenu(true)}>
         <CgMenuRight />
       </div>
@@ -50,21 +51,30 @@ const MobileNav = () => {
         variants={menuVariants}
         initial={'hidden'}
         animate={openMenu ? 'show' : 'hidden'}
-        className='bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20'
+        className='bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20 text-primary'
       >
-        <div className='text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer'
+        <div className='text-4xl absolute z-30 left-4 top-14 cursor-pointer '
           onClick={() => {
             setOpenMenu(false)
           }}>
           <IoMdClose />
         </div>
-        <div className='h-full flex flex-col'>
-          <ul className='h-full flex flex-col justify-center items-center gap-y-8 text-primary  font-bold text-3xl'>
+        
+          <ul className='h-full flex flex-col justify-center items-center gap-y-8 font-primary text-3xl'>
             <li>
               <a href='/#about' key='/#about'>About</a>
             </li>
-            <li>
-              <a href='/#services' key='/#services'>Services</a>
+            <li className='pl-5'>
+              <HeaderDropdown
+                dropdownTitle="Services"
+                dropdownLink="/#services"
+                links={[
+                  { name: 'Corporate', link: '/corporateService' },
+                  { name: 'Automotive', link: '/automotiveService' },
+                  { name: 'Personal', link: '/personalService' },
+                  // Add more services as needed
+                ]}
+              />
             </li>
             <li>
               <a href='/#contact' key='/#contact'>Contact</a>
@@ -75,10 +85,10 @@ const MobileNav = () => {
             <li>
               <a href='/gallery' key='/gallery'>Gallery</a>
             </li>
-            <Socials/>
+            <Socials />
           </ul>
-          
-        </div>
+
+        
       </motion.div>
     </nav>
   );
