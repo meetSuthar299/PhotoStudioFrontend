@@ -19,8 +19,8 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
 
     return (
         <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            
+            
             className="relative inline-block text-left hover:scale-110"
         >
             <div className='flex'>
@@ -33,11 +33,12 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                     // Click event listener to toggle dropdown state
                     onClick={handleToggleDropdown}
                     // Initial CSS classes
-                    className={`transition-all duration-75`}
+                    className={`transition-all duration-75 pt-1 pl-1`}
                     // Initial state of the animation
-                    initial={{ rotate: 0, marginBottom: 0 }}
+                    initial={{rotate: 0}}
                     // Target state of the animation based on isDropdownOpen
-                    animate={{ rotate: isDropdownOpen ? 180 : 0, marginBottom: isDropdownOpen ? 2 : 0 }}
+                    animate={{ rotate: isDropdownOpen ? 180 : 0} }
+                    onMouseEnter={handleMouseEnter}
                 >
                     {/* Icon (down arrow) inside the motion span */}
                     <IoIosArrowDown />
@@ -52,13 +53,14 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                         initial={{ opacity: 0, y: -65, scale:0}}
                         animate={{ opacity: 1, y: 0, scale:1}}
                         exit={{ opacity: 0, y: -65,  scale:0}}
+                        onMouseLeave={handleMouseLeave}
                     >
                         {/* Dropdown content */}
                         {links.map(({ name, link }) => (
                             <a
                                 key={link}
                                 href={link}
-                                className="block px-4 py-2 text-gray-700 hover:bg-[rgba(255,255,255,0.82)] hover:text-gray-900 text-center text-2xl hover:rounded-md"
+                                className="block px-4 py-2 text-gray-700 hover:bg-[rgba(255,255,255,0.6)] hover:text-gray-900 text-center text-xl hover:rounded-md"
                             >
                                 {name}
                             </a>
