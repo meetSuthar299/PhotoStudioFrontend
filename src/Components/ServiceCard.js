@@ -8,7 +8,7 @@ function ServiceCard({ img, title, offerings, link }) {
   return (
     <div
       onClick={navigateToLink}
-      className="group relative overflow-hidden transition-all duration-200 transform hover:-translate-y-2 cursor-pointer rounded shadow-md h-[70vh]"
+      className="group relative overflow-hidden transition-all duration-200 transform hover:-translate-y-2 cursor-pointer rounded shadow-md  md:h-[50vh] lg:h-[75vh]"
     >
       {/* Image */}
       <img
@@ -20,8 +20,14 @@ function ServiceCard({ img, title, offerings, link }) {
       />
 
       {/* Overlay for Title on Image */}
-      <div className="group-hover:opacity-0 sm:opacity-100 absolute inset-0 flex flex-col justify-center items-center backdrop-brightness-50">
-        <h1 className="mb-4 text-3xl lg:text-4xl text-white font-semibold z-10">{title}</h1>
+      <div className="sm:opacity-100 absolute inset-0 flex flex-col justify-center items-center backdrop-brightness-50">
+        <h1 className="group-hover:opacity-0 mb-4 text-3xl lg:text-4xl text-white font-semibold z-10 hidden lg:flex">{title}</h1>
+        <div className="mb-4 text-3xl lg:text-4xl text-white font-semibold z-10 lg:hidden text-center">
+          <h1>{title}</h1>
+          <a href={link} className="hover:scale-110 w-full shadow-md bg-[rgba(255,255,255,0.13)] hover:bg-[rgba(255,255,255,0.23)] rounded text-xl font-light absolute bottom-0 left-0 py-4">
+            <h2>Learn More</h2>
+          </a>
+        </div>
       </div>
 
       {/* Details Overlay */}
