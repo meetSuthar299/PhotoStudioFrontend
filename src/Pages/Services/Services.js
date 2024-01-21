@@ -29,9 +29,10 @@ function Services() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <section id='services' className='section '>
-      <ParalaxComponent backgroundImage='url(https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868127/IMG_7527_wmhqsf.jpg)'>
+      <ParalaxComponent backgroundImage='url(https://res.cloudinary.com/ddp8ln1ts/image/upload/q_60/v1704868127/IMG_7527_wmhqsf.jpg)'>
         <h1 className='text-4xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
           Our Services
         </h1>
@@ -43,30 +44,30 @@ function Services() {
         <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
           <AnimatedComponent>
             <ServiceCard
-              img={printImg}
-              title={"Corporate"}
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_60/v1704924907/B8B98E71-DCFC-4EFE-8F58-2A3E12B0F607_jrefnu.jpg"}
+              title={"Business"}
               disc={""}
               offerings={[
                 "Professional Corporate Headshots",
-                "Engaging Corporate Documentaries",
-                "Striking Product Photography",
+                "Video Production",
+                "Product and Brand Photography",
                 "Custom Website Development",
-                "Effective Search Engine Optimization (SEO)",
+                "Social Media Marketing",
+                "Search Engine Optimization(SEO)",
               ]}
               link={"/corporateService"}
             />
           </AnimatedComponent>
           <AnimatedComponent>
             <ServiceCard
-              img={autoImg}
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_40/v1705296476/edit-5_etttao.jpg"}
               title={"Automotive"}
               disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."}
               offerings={[
-                "Professional Automotive Photography",
-                "4K Showcase Videos",
-                "Dynamic Aerial Drone Automotive Photography",
-                "360-Degree Interior and Exterior Automotive Photography",
-                "Tailored Social Media Campaigns for Automotive Brands",
+                "Private Vehicle Photoshoot",
+                "Dealership Media",
+                "Aerial Drone Photography & Videography",
+                "360-Degree Interior and Exterior Shots",
               ]}
               link={"/automotiveService"}
             />
@@ -77,37 +78,15 @@ function Services() {
               title={"Personal"}
               disc={"Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."}
               offerings={[
-                "Family Portrait Sessions",
+                "Individual Portrait Photoshoots",
                 "Professional Head Shots",
-                "Professional Event Photography",
-                "Documentary-style Event Coverage",
-                "Exclusive Destination Event Photography",
-                "Private Photography Workshops and Classes",
+                "Family Portrait Sessions",
+                "Engagement & Couple Portrait Sessions",
+                "Event Photography & Videography",
               ]}
               link={"/personalService"}
             />
           </AnimatedComponent>
-          {/* <AnimatedComponent>
-            <ItemCard
-              imgSrc={portraitImg}
-              firstP="Portraits"
-              secondP="Capture the unique essence and personalities of individuals, families, and couples in stunning portrait sessions, crafting cherished memories that last a lifetime."
-            />
-          </AnimatedComponent> */}
-          {/* <AnimatedComponent>
-            <ItemCard
-              imgSrc={commercialImg}
-              firstP="Products"
-              secondP="Illuminate your product's excellence with our expert photo and video services. Tailored for perfection, we highlight its unique features for visual brilliance"
-            />
-          </AnimatedComponent> */}
-          {/* <AnimatedComponent>
-            <ItemCard
-              imgSrc={nightDiaryImg}
-              firstP="Night Diaries"
-              secondP="Capture the vibrant essence of your night club and restaurant with our professional video and photography services. Elevate your memories by transforming favorite moments into stunning, high-quality videos and photos, turning them into captivating pieces of art."
-            />
-          </AnimatedComponent> */}
         </div>
       </div>
     </section>

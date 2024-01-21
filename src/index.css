@@ -3,7 +3,7 @@
 
 @layer base {
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-800 bg-white;
   }
 
   h1 {
@@ -19,13 +19,14 @@
   }
 
   .btn {
-    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-primary font-semibold bg-primary text-white;
+    @apply py-3 px-6 flex items-center justify-center text-base uppercase font-primary font-semibold text-center duration-200 shadow-md bg-black text-white;
   }
+  
   .gradient-link {
     @apply bg-gradient-to-r from-gray-800 to-gray-700;
     @apply hover:from-gray-700 to-gray-800;
   }
-  
+
 }
 
 .lazy-loaded-section {
@@ -57,6 +58,7 @@
       break-inside: avoid;
     }
   }
+
   .gradient-link {
     @apply inline-block relative overflow-hidden text-white font-medium border-2 border-gray-700;
     @apply transition-all duration-300 ease-in-out;

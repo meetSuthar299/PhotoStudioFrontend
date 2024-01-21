@@ -33,15 +33,13 @@ const Header = () => {
     <div className='font-primary flex flex-col lg:flex-row lg:items-center w-full justify-between'>
       <nav className='hidden lg:flex gap-x-10 px-10 text-2xl'>
         <a href='/#about' key='/#about' className='cursor-pointer hover:scale-110'>About</a>
-        {/* <a href='/#services' key='/#services' className='hover:text-primary cursor-pointer hover:scale-110'>Services</a> */}
         <HeaderDropdown
           dropdownTitle="Services"
           dropdownLink="/#services"
           links={[
-            { name: 'Corporate', link: '/corporateService' },
-            { name: 'Automotive', link: '/automotiveService' },
-            { name: 'Personal', link: '/personalService' },
-            // Add more services as needed
+            {name: 'Business', link: '/corporateService'},
+            {name: 'Automotive', link: '/automotiveService'},
+            {name: 'Personal', link: '/personalService'},
           ]}
         />
         <a href='/#contact' key='/#contact' className=' cursor-pointer hover:scale-110'>Contact</a>

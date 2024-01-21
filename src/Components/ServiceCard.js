@@ -1,42 +1,51 @@
 import React from 'react';
 
-function ServiceCard({ img, title, offerings, link, disc }) {
+function ServiceCard({ img, title, offerings, link }) {
   const navigateToLink = () => {
     window.location.href = link;
   };
 
   return (
     <div
-      id={title}
-      className="m-2 text-center relative overflow-hidden transition duration-200 transform hover:-translate-y-2 cursor-pointer lg:h-[85vh] md:h-[40vh] rounded-md shadow-md border border-gray-600"
       onClick={navigateToLink}
+      className="group relative overflow-hidden transition-all duration-200 transform hover:-translate-y-2 cursor-pointer rounded shadow-md h-[70vh]"
     >
-      {/* before hover */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-70 opacity-100 lg:h-[85vh] md:h-[40vh]">
-        <h1 className="mb-4 text-2xl lg:text-3xl text-white font-semibold z-10">{title}</h1>
-      </div>
+      {/* Image */}
       <img
         loading="lazy"
-        className="object-cover w-full h-full rounded-md"
+        className="object-cover w-full h-full rounded"
         src={img}
         alt={title}
         decoding="async"
       />
-      {/* on hover */}
-      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 transition-opacity duration-200 bg-opacity-100 opacity-0 hover:opacity-100 text-center z-10 hidden lg:flex lg:h-[85vh] md:h-[40vh] bg-gradient-to-b from-black to-slate-600">
-        <h1 className='mb-4 text-2xl lg:text-3xl text-white font-semibold z-10'>{title}</h1>
-        <ul className="text-gray-200 w-full align-middle">
+
+      {/* Overlay for Title on Image */}
+      <div className="group-hover:opacity-0 sm:opacity-100 absolute inset-0 flex flex-col justify-center items-center backdrop-brightness-50">
+        <h1 className="mb-4 text-3xl lg:text-4xl text-white font-semibold z-10">{title}</h1>
+      </div>
+
+      {/* Details Overlay */}
+      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 opacity-0 hover:bg-opacity-100 hover:opacity-100 text-center z-10 hidden lg:flex backdrop-blur backdrop-brightness-[0.3]">
+        <h1 className='mb-4 text-3xl lg:text-4xl text-white font-semibold z-10'>{title}</h1>
+        <ul className="text-gray-100 w-full align-middle">
           {offerings.map((offering, index) => (
-            <li key={index} className="py-3 border-b border-gray-300">
-              <h2 className="text-xl font-extralight">{offering}</h2>
-            </li>
+            <React.Fragment key={index}>
+              <li className="">
+                <h2 className=" text-lg font-light py-3">{offering}</h2>
+              </li>
+              {index !== offerings.length - 1 && (
+                <div className="w-[90%] mx-auto h-[1px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(255,255,255)] to-[rgba(255,255,255,0)] rounded-full"></div>
+              )}
+            </React.Fragment>
           ))}
+
         </ul>
-        <a href={link} className="gradient-link btn text-black py-5 w-[80%] absolute bottom-0">
-          <span className='text-2xl font-light'>Learn More</span>
+        <a href={link} className="btn hover:scale-110 w-[75%] shadow-md bg-[rgba(129,129,129,0.22)] hover:bg-[rgba(255,255,255,0.23)] rounded text-xl ">
+          <h1>Learn More</h1>
         </a>
       </div>
     </div>
+
   );
 }
 
