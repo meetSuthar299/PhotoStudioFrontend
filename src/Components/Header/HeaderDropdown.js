@@ -18,12 +18,12 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
     };
 
     return (
-        <div className="relative inline-block text-left hover:scale-110">
+        <div className="relative inline-block text-left hover:scale-110" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='flex'>
                 <a href={dropdownLink} className="font-semibold focus:outline-none">
                     {dropdownTitle}
                 </a>
-                <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <div >
                     <motion.span
                         onClick={handleToggleDropdown}
                         className={`transition-all duration-75 pt-1 inline-block text-2xl`}
@@ -47,13 +47,13 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                                     <React.Fragment key={link}>
                                         <a
                                             href={link}
-                                            className="block px-4 py-2 hover:scale-[1.2] text-center text-xl rounded-md transition-all duration-200  text-gray-600 hover:text-black"
+                                            className="block px-4 py-2 hover:scale-[1.05] text-center text-xl rounded-md transition-all duration-200  text-gray-600 hover:text-black"
                                         >
                                             {name}
                                         </a>
-                                        {index !== links.length - 1 && (
+                                        {/* {index !== links.length - 1 && (
                                             <div className="w-[90%] mx-auto h-[1px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(0,0,0)] to-[rgb(255,255,255,0)] rounded-full"></div>
-                                        )}
+                                        )} */}
                                     </React.Fragment>
                                 ))}
 

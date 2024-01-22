@@ -11,8 +11,6 @@ import AnimatedComponent from '../../Components/AnimatedComponent'
 import ServiceCard from '../../Components/ServiceCard'
 import ParalaxComponent from '../../Components/ParalaxComponent'
 
-
-
 function Services() {
   const [scrollY, setScrollY] = useState(0);
 

@@ -4,7 +4,6 @@ import Logo from '../Logo';
 import MobileNav from "../MobileNav"
 import HeaderDropdown from './HeaderDropdown';
 
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 

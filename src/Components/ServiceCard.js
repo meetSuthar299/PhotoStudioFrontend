@@ -40,7 +40,7 @@ function ServiceCard({ img, title, offerings, link }) {
                 <h2 className=" text-lg font-light py-3">{offering}</h2>
               </li>
               {index !== offerings.length - 1 && (
-                <div className="w-[90%] mx-auto h-[1px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(255,255,255)] to-[rgba(255,255,255,0)] rounded-full"></div>
+                <div className="w-[70%] mx-auto h-[1px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(255,255,255)] to-[rgba(255,255,255,0)] rounded-full"></div>
               )}
             </React.Fragment>
           ))}
