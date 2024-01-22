@@ -8,7 +8,7 @@ function ServiceCard({ img, title, offerings, link }) {
   return (
     <div
       onClick={navigateToLink}
-      className="group relative overflow-hidden transition-all duration-200 transform hover:-translate-y-2 cursor-pointer rounded shadow-md  md:h-[50vh] lg:h-[75vh]"
+      className="group relative overflow-hidden transition-all duration-400 transform hover:-translate-y-2 cursor-pointer rounded shadow-md  md:h-[50vh] lg:h-[75vh]"
     >
       {/* Image */}
       <img
@@ -31,9 +31,9 @@ function ServiceCard({ img, title, offerings, link }) {
       </div>
 
       {/* Details Overlay */}
-      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 opacity-0 hover:bg-opacity-100 hover:opacity-100 text-center z-10 hidden lg:flex backdrop-blur backdrop-brightness-[0.3]">
-        <h1 className='mb-4 text-3xl lg:text-4xl text-white font-semibold z-10'>{title}</h1>
-        <ul className="text-gray-100 w-full align-middle">
+      <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 opacity-0 hover:bg-opacity-100 hover:opacity-100 text-center z-10 hidden lg:flex backdrop-blur backdrop-brightness-[0.3] duration-1000">
+        {/* <h1 className='mb-4 text-3xl lg:text-4xl text-white font-semibold z-10'>{title}</h1> */}
+        <ul className="text-gray-100 w-full align-middle items-center">
           {offerings.map((offering, index) => (
             <React.Fragment key={index}>
               <li className="">
@@ -44,7 +44,6 @@ function ServiceCard({ img, title, offerings, link }) {
               )}
             </React.Fragment>
           ))}
-
         </ul>
         <a href={link} className="btn hover:scale-110 w-[75%] shadow-md bg-[rgba(129,129,129,0.22)] hover:bg-[rgba(255,255,255,0.23)] rounded text-xl ">
           <h1>Learn More</h1>

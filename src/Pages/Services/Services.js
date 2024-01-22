@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ItemCard from '../../Components/ItemCard'
-import portraitImg from "../../img/gallery/portrait-img.jpg"
-import printImg from "../../img/gallery/print-img.jpg"
-import autoImg from "../../img/gallery/auto-img.jpg"
-import editingImg from "../../img/gallery/editing-img.jpg"
 import eventImg from "../../img/gallery/event-img.jpg"
-import commercialImg from "../../img/gallery/Commercia-Img.jpg"
-import nightDiaryImg from "../../img/gallery/nightDiaries.jpg";
 import AnimatedComponent from '../../Components/AnimatedComponent'
 import ServiceCard from '../../Components/ServiceCard'
 import ParalaxComponent from '../../Components/ParalaxComponent'
@@ -30,7 +23,7 @@ function Services() {
 
   return (
     <section id='services' className='section '>
-      <ParalaxComponent backgroundImage='url(https://res.cloudinary.com/ddp8ln1ts/image/upload/q_60/v1704868127/IMG_7527_wmhqsf.jpg)'>
+      <ParalaxComponent backgroundImage='url(https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1704868127/IMG_7527_wmhqsf.jpg)'>
         <h1 className='text-4xl lg:text-5xl text-white text-center z-10 relative mx-auto pb-10'>
           Our Services
         </h1>
@@ -42,7 +35,7 @@ function Services() {
         <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
           <AnimatedComponent>
             <ServiceCard
-              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_60/v1704924907/B8B98E71-DCFC-4EFE-8F58-2A3E12B0F607_jrefnu.jpg"}
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1704924907/B8B98E71-DCFC-4EFE-8F58-2A3E12B0F607_jrefnu.jpg"}
               title={"Business"}
               disc={""}
               offerings={[
@@ -58,7 +51,7 @@ function Services() {
           </AnimatedComponent>
           <AnimatedComponent>
             <ServiceCard
-              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_40/v1705296476/edit-5_etttao.jpg"}
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1705296476/edit-5_etttao.jpg"}
               title={"Automotive"}
               disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."}
               offerings={[
@@ -66,6 +59,8 @@ function Services() {
                 "Dealership Media",
                 "Aerial Drone Photography & Videography",
                 "360-Degree Interior and Exterior Shots",
+                "Vehicle Detailing Videos",
+                "Custom Prints and Wall Papers"
               ]}
               link={"/automotiveService"}
             />
