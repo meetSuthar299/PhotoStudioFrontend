@@ -36,9 +36,9 @@ const Header = () => {
           dropdownTitle="Services"
           dropdownLink="/#services"
           links={[
-            {name: 'Business', link: '/corporateService'},
-            {name: 'Automotive', link: '/automotiveService'},
-            {name: 'Personal', link: '/personalService'},
+            {name: 'Business', link: '/businessService/'},
+            {name: 'Automotive', link: '/automotiveService/'},
+            {name: 'Personal', link: '/personalService/'},
           ]}
         />
         <a href='/#contact' key='/#contact' className=' cursor-pointer hover:scale-110'>Contact</a>

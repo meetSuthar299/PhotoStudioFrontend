@@ -3,6 +3,7 @@ import eventImg from "../../img/gallery/event-img.jpg"
 import AnimatedComponent from '../../Components/AnimatedComponent'
 import ServiceCard from '../../Components/ServiceCard'
 import ParalaxComponent from '../../Components/ParalaxComponent'
+import WhatToExpect from '../../Components/WhatToExpect'
 
 function Services() {
   const [scrollY, setScrollY] = useState(0);
@@ -46,12 +47,12 @@ function Services() {
                 "Social Media Marketing",
                 "Search Engine Optimization(SEO)",
               ]}
-              link={"/corporateService"}
+              link={"/businessService/"}
             />
           </AnimatedComponent>
           <AnimatedComponent>
             <ServiceCard
-              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1705296476/edit-5_etttao.jpg"}
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704922335/IMG_7975_ataipw.jpg"}
               title={"Automotive"}
               disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."}
               offerings={[
@@ -62,12 +63,12 @@ function Services() {
                 "Vehicle Detailing Videos",
                 "Custom Prints and Wall Papers"
               ]}
-              link={"/automotiveService"}
+              link={"/automotiveService/"}
             />
           </AnimatedComponent>
           <AnimatedComponent>
             <ServiceCard
-              img={eventImg} 
+              img={eventImg}
               title={"Personal"}
               disc={"Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."}
               offerings={[
@@ -77,7 +78,7 @@ function Services() {
                 "Engagement & Couple Portrait Sessions",
                 "Event Photography & Videography",
               ]}
-              link={"/personalService"}
+              link={"/personalService/"}
             />
           </AnimatedComponent>
         </div>

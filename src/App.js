@@ -8,7 +8,7 @@ import Loader from './Components/Loader';
 import PrivacyPolicy from './Pages/Legal/PrivacyPolicy';
 import { Route, Routes, useLocation, } from "react-router-dom";
 import AutomotiveService from './Pages/Services/AutomotiveService';
-import CorporateService from './Pages/Services/CorporateService';
+import BusinessService from './Pages/Services/BusinessService';
 import PersonalService from './Pages/Services/PersonalService';
 import TermsOfService from './Pages/Legal/TermsOfService';
 import { AnimatePresence } from 'framer-motion';
@@ -21,7 +21,7 @@ const App = () => {
       <Routes location={location} key={location.pathname}>
         <Route path={"/"} element={<Home />} />
         <Route path='/automotiveService' element={<AutomotiveService />} />
-        <Route path='/corporateService' element={<CorporateService />} />
+        <Route path='/businessService' element={<BusinessService />} />
         <Route path='/personalService' element={<PersonalService />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/portfolio' element={<Portfolio />} />
