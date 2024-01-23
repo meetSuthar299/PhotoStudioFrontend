@@ -71,9 +71,9 @@ const MobileNav = () => {
               dropdownTitle="Services"
               dropdownLink="/#services"
               links={[
-                { name: 'Corporate', link: '/businessService' },
-                { name: 'Automotive', link: '/automotiveService' },
-                { name: 'Personal', link: '/personalService' },
+                { name: 'Business', link: '/businessService/' },
+                { name: 'Automotive', link: '/automotiveService/' },
+                { name: 'Personal', link: '/personalService/' },
               ]}
             />
           </li>
@@ -81,10 +81,10 @@ const MobileNav = () => {
             <a href='/#contact' key='/#contact'>Contact</a>
           </li>
           <li>
-            <a href='/portfolio' key='/portfolio'>Portfolio</a>
+            <a href='/portfolio' key='/portfolio/'>Portfolio</a>
           </li>
           <li>
-            <a href='/gallery' key='/gallery'>Gallery</a>
+            <a href='/gallery' key='/gallery/'>Gallery</a>
           </li>
           <Socials />
         </ul>
