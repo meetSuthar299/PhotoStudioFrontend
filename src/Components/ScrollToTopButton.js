@@ -12,7 +12,7 @@ const ScrollToTopButton = () => {
 
       if (shouldShow !== isVisible) {
         setIsVisible(shouldShow);
-        controls.start({ opacity: shouldShow ? 1 : 0 , y: shouldShow ? -1 : 100});
+        controls.start({opacity: shouldShow ? 1 : 0,  y: shouldShow ? 0 : 200});
       }
     };
 
@@ -26,12 +26,12 @@ const ScrollToTopButton = () => {
   return (
     <motion.button
       className="text-black text-4xl fixed bottom-10 right-10 z-50 transition-all duration-300 p-3 bg-white rounded-full shadow-xl border"
+      initial={{ opacity: 0, y: 100}}
       animate={controls}
+      exit={{ opacity: 0, y: 100 }}
       onClick={scrollToTop}
-      initial={{ opacity: 0, y:-100 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      title='Scroll to top'
     >
       <TbArrowAutofitUp />
     </motion.button>
