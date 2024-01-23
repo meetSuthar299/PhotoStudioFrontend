@@ -29,14 +29,15 @@ function PersonalService() {
       <div className="lg:px-20 px-10 pb-10">
         <AnimatedComponent>
           <WhatToExpect
-            text="Elevating a vehicle through photography transcends mere aesthetics—it's a celebration of diverse designs. 
-            Our mission is to unravel these distinctive features, recognizing that each vehicle appeals to a unique demographic. 
-            Here's the tailored approach to deliver content that aligns seamlessly with your distinct vision."
+            text="Elevating your personal story through our personalized services goes beyond mere aesthetics—it's a 
+            unique celebration of your individuality. Our mission is to uncover the distinctive aspects that make you, 
+            recognizing your unique qualities. Here's our tailored approach to deliver services that align seamlessly 
+            with your distinct vision."
             setDescription={[
-              "Let's discuss your project and your unique vision.",
-              "Together, we'll craft shot lists, choose locations, and set dates.",
-              "We capture your vehicle in action, ensuring every detail shines.",
-              'Your chosen images arrive in high resolution, ready for seamless uploading.',
+              "Let's dive into a conversation about your project and your personal vision.",
+              "Together, we'll outline personalized plans, curate shot ideas, finalize locations, and set dates.",
+              "We'll capture moments that reflect your personality, ensuring every detail shines.",
+              'Your selected images will be presented in high resolution, ready for seamless sharing and cherishing.',
             ]}
           />
         </AnimatedComponent>
