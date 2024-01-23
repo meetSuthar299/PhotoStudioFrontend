@@ -25,12 +25,13 @@ const ScrollToTopButton = () => {
 
   return (
     <motion.button
-      className="text-black text-2xl md:text-4xl fixed bottom-10 right-10 z-50 transition-all p-3 bg-white rounded-full shadow-xl border border-black"
+      className="text-black text-2xl md:text-4xl fixed bottom-10 right-5 z-50 transition-all p-3 bg-white rounded-full shadow-xl border border-black"
       initial={{ opacity: 0, y: 100}}
       animate={controls}
       exit={{ opacity: 0, y: 100 }}
       onClick={scrollToTop}
       whileHover={{ scale: 1.1 }}
+      title='Scroll to top'
     >
       <TbArrowAutofitUp />
     </motion.button>
