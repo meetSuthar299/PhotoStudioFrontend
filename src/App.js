@@ -12,6 +12,7 @@ import BusinessService from './Pages/Services/BusinessService';
 import PersonalService from './Pages/Services/PersonalService';
 import TermsOfService from './Pages/Legal/TermsOfService';
 import { AnimatePresence } from 'framer-motion';
+import ScrollToTopButton from './Components/ScrollToTopButton';
 
 const App = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const App = () => {
       </Routes>
     </AnimatePresence>
     <Footer />
+    <ScrollToTopButton/>
   </>;
 };
 

@@ -4,7 +4,7 @@ import SocialMediaLinks from './SocialMediaLinks'
 
 function Footer() {
   return (
-    <footer className="text-center mx-auto sm:max-w-2xl md:max-w-full lg:max-w-screen md:px-8 lg:px-8 relative z-10 border-slate-800 border-x border-b bg-gray-900 text-white py-8">
+    <footer className="text-center mx-auto sm:max-w-2xl md:max-w-full lg:max-w-screen md:px-8 lg:px-8 relative border-slate-800 border-x border-b bg-gray-900 text-white py-8">
       <a href='/' className='cursor-pointer text-5xl '>
         <Logo/>
       </a>

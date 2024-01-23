@@ -37,7 +37,7 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                         {isDropdownOpen && (
                             <motion.div
                                 key="dropdown"
-                                className="absolute -left-9 w-40 rounded-lg p-1 shadow-xl bg-[rgba(251,252,255,0.84)] backdrop-blur-sm backdrop-grayscale z-50 duration-75 border"
+                                className="absolute -left-9 w-40 rounded-lg p-1 shadow-xl bg-[rgba(255,255,255,0.92)] backdrop-blur-sm z-50 duration-75 border"
                                 initial={{ opacity: 0, y: -75, scale: 0 }}
                                 animate={{ opacity: 1, y: 0, scale: 1, }}
                                 exit={{ opacity: 0, y: -75, scale: 0, }}

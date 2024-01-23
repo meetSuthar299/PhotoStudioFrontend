@@ -71,7 +71,7 @@ const MobileNav = () => {
               dropdownTitle="Services"
               dropdownLink="/#services"
               links={[
-                { name: 'Corporate', link: '/corporateService' },
+                { name: 'Corporate', link: '/businessService' },
                 { name: 'Automotive', link: '/automotiveService' },
                 { name: 'Personal', link: '/personalService' },
               ]}
