@@ -31,13 +31,12 @@ function CorporateService() {
       <div className="lg:px-20 px-10 pb-10">
         <AnimatedComponent>
           <WhatToExpect
-            text="Elevating your corporate image through our photography services transcends
-             mere visuals—it's a strategic celebration of professional prowess. Our mission 
-             is to uncover the distinctive aspects that set your business apart, recognizing 
-             the unique appeal to your target audience. Here's our tailored approach to 
-             deliver content that seamlessly aligns with your corporate vision."
-            setDescription={[
-              "Let's initiate a discussion about your project and your corporate vision.",
+            text="
+            We aim to reveal the unique aspects that set your business apart, acknowledging its 
+            special appeal to your target audience. Here's our customized approach to delivering content that effortlessly aligns with your 
+            strategic vision."
+            steps={[
+              "Let's initiate a discussion about your project and your vision.",
               "Together, we'll formulate comprehensive plans, curate shot lists, finalize locations, and set dates.",
               "We meticulously capture your corporate essence in action, ensuring every detail shines.",
               'Your selected images are delivered in high resolution, primed for seamless integration into your corporate identity.',

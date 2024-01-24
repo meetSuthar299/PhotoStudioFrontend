@@ -33,7 +33,7 @@ function AutomotiveService() {
             text="Elevating a vehicle through photography transcends mere aesthetics—it's a celebration of diverse designs. 
             Our mission is to unravel these distinctive features, recognizing that each vehicle appeals to a unique demographic. 
             Here's the tailored approach to deliver content that aligns seamlessly with your distinct vision."
-            setDescription={[
+            steps={[
               "Let's discuss your project and your unique vision.",
               "Together, we'll craft shot lists, choose locations, and set dates.",
               "We capture your vehicle in action, ensuring every detail shines.",

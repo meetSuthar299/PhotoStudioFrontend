@@ -29,11 +29,8 @@ function PersonalService() {
       <div className="lg:px-20 px-10 pb-10">
         <AnimatedComponent>
           <WhatToExpect
-            text="Elevating your personal story through our personalized services goes beyond mere aesthetics—it's a 
-            unique celebration of your individuality. Our mission is to uncover the distinctive aspects that make you, 
-            recognizing your unique qualities. Here's our tailored approach to deliver services that align seamlessly 
-            with your distinct vision."
-            setDescription={[
+            text="Our mission is to elevate your personal story and highlight your unique qualities, uncovering the distinctive aspects that define you. Here's our tailored approach to delivering services that seamlessly align with your distinct vision."
+            steps={[
               "Let's dive into a conversation about your project and your personal vision.",
               "Together, we'll outline personalized plans, curate shot ideas, finalize locations, and set dates.",
               "We'll capture moments that reflect your personality, ensuring every detail shines.",
