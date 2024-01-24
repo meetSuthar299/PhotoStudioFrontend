@@ -4,6 +4,8 @@ import SocialMediaLinks from '../Components/SocialMediaLinks';
 import collage from "../img/gallery/shapeCollage.jpg";
 import AnimatedComponent from '../Components/AnimatedComponent';
 import PageBanner from '../Components/PageBanner';
+import { motion } from 'framer-motion';
+
 
 const Contact = () => {
   const initialFormData = {
@@ -53,6 +55,26 @@ const Contact = () => {
       console.error('Error sending email:', error);
     }
   };
+
+  const ServiceCheckbox = ({ label, isChecked, onChange }) => {
+    return (
+      <motion.div
+        whileTap={{ scale: 1 }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+        animate={{ scale: 1, opacity: 1, transition: { duration: 0.3, ease: 'easeInOut' } }}
+        exit={{ scale: 0.9, opacity: 0, transition: { duration: 0.2 } }}
+        className={`p-3 rounded-md cursor-pointer text-center ${isChecked
+            ? 'bg-gray-900 text-white'
+            : 'bg-[rgba(94,94,94,0.14)] shadow-inner text-gray-800'
+          }`}
+        onClick={onChange}
+      >
+        {label}
+      </motion.div>
+    );
+  };
+
+
   return (
     <section id="contact" className="">
       <PageBanner text="Bring your Visions to Reality" backgroundImage={collage} />
@@ -112,55 +134,31 @@ const Contact = () => {
               {/* Services  */}
               <label className="block mb-6">
                 <span className="text-xl">Services you are interested in:</span>
-                <div className="mt-2">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="services"
-                      value="Corporate"
-                      id="Corporate"
-                      className="mr-2"
-                      onChange={() => handleCheckboxChange('Corporate')}
-                    />
-                    <label htmlFor="Corporate">Corporate</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="services"
-                      value="Automotive"
-                      id="Automotive"
-                      className="mr-2"
-                      onChange={() => handleCheckboxChange('Automotive')}
-                    />
-                    <label htmlFor="Automotive">Automotive</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="services"
-                      value="Personal"
-                      id="Personal"
-                      className="mr-2"
-                      onChange={() => handleCheckboxChange('Personal')}
-                    />
-                    <label htmlFor="Personal">Personal</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="services"
-                      value="Prints"
-                      id="Prints"
-                      className="mr-2"
-                      onChange={() => handleCheckboxChange('Prints')}
-                    />
-                    <label htmlFor="Prints">Prints</label>
-                  </div>
+                <div className="mt-2 grid grid-cols-2 gap-2">
+                  <ServiceCheckbox
+                    label="Corporate"
+                    isChecked={formData.services.includes('Corporate')}
+                    onChange={() => handleCheckboxChange('Corporate')}
+                  />
+                  <ServiceCheckbox
+                    label="Automotive"
+                    isChecked={formData.services.includes('Automotive')}
+                    onChange={() => handleCheckboxChange('Automotive')}
+                  />
+                  <ServiceCheckbox
+                    label="Personal"
+                    isChecked={formData.services.includes('Personal')}
+                    onChange={() => handleCheckboxChange('Personal')}
+                  />
+                  <ServiceCheckbox
+                    label="Prints"
+                    isChecked={formData.services.includes('Prints')}
+                    onChange={() => handleCheckboxChange('Prints')}
+                  />
                 </div>
               </label>
               {/* budget */}
-              <label className="block mb-6">
+              <label className="block mb-6 relative">
                 <span className="text-xl">Your budget</span>
                 <input
                   type="range"
@@ -168,9 +166,12 @@ const Contact = () => {
                   min="0"
                   max="5000"
                   step="100"
-                  defaultValue="0"
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-teal-200"
+                  value={formData.budget}
+                  className="w-full h-[10px] bg-gray-300 rounded-full appearance-none cursor-pointer bg-[rgba(117,117,117,0.14)] shadow-inner mt-2"
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                  style={{
+                    background: `linear-gradient(90deg, black ${formData.budget / 5000 * 100}%, rgba(117,117,117,0.14) ${formData.budget / 5000 * 100}%)`,
+                  }}
                 />
                 <div className="flex justify-between text-xs px-2">
                   <span>$0</span>
