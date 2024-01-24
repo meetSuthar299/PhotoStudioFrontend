@@ -169,7 +169,7 @@ const Contact = () => {
                   max="5000"
                   step="100"
                   defaultValue="0"
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-teal-200"
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                 />
                 <div className="flex justify-between text-xs px-2">
