@@ -136,9 +136,9 @@ const Contact = () => {
                 <span className="text-xl">Services you are interested in:</span>
                 <div className="mt-2 grid grid-cols-2 gap-2">
                   <ServiceCheckbox
-                    label="Corporate"
-                    isChecked={formData.services.includes('Corporate')}
-                    onChange={() => handleCheckboxChange('Corporate')}
+                    label="Business"
+                    isChecked={formData.services.includes('Business')}
+                    onChange={() => handleCheckboxChange('Business')}
                   />
                   <ServiceCheckbox
                     label="Automotive"
