@@ -1,7 +1,7 @@
 import React from 'react';
 import homeImg from '../../img/header/ArktikLogo.png';
 // import StarsBackground from '../../Components/StarsBackground';
-import AnimatedComponent from '../../Components/AnimatedComponent';
+import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent';
 
 const About = () => {
   const teamMembers = [

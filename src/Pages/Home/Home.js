@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import About from './About/About';
-import Services from "../Pages/Services/Services"
-import Contact from './Contact';
+import About from './About';
+import Services from "../Services/Services"
+import Contact from '../Contact';
 import { useLocation } from 'react-router';
-import Hero from './HeroPage/Hero';
+import Hero from './Hero';
 import { motion } from 'framer-motion';
 
 const Home = () => {

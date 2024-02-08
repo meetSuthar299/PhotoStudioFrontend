@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import eventImg from "../../img/gallery/event-img.jpg"
-import AnimatedComponent from '../../Components/AnimatedComponent'
+import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
 import ServiceCard from '../../Components/ServiceCard'
-import ParalaxComponent from '../../Components/ParalaxComponent'
-import WhatToExpect from '../../Components/WhatToExpect'
+import ParalaxComponent from '../../Components/WrapperComponents/ParalaxComponent'
 
 function Services() {
   const [scrollY, setScrollY] = useState(0);
@@ -43,7 +42,7 @@ function Services() {
                 "Professional Corporate Headshots",
                 "Video Production",
                 "Product and Brand Photography",
-                "Custom Website Development",
+                "Website Design & Development",
                 "Social Media Marketing",
                 "Search Engine Optimization(SEO)",
               ]}
@@ -57,10 +56,9 @@ function Services() {
               disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."}
               offerings={[
                 "Private Vehicle Photoshoot",
+                "Detailed Vehicle Videos",
                 "Dealership Media",
                 "Aerial Drone Photography & Videography",
-                "360-Degree Interior and Exterior Shots",
-                "Vehicle Detailing Videos",
                 "Custom Prints and Wall Papers"
               ]}
               link={"/automotiveService/"}

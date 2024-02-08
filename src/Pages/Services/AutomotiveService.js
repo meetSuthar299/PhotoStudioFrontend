@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PageBanner from '../../Components/PageBanner'
 import Contact from '../Contact'
-import AnimatedComponent from '../../Components/AnimatedComponent'
+import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import WhatToExpect from '../../Components/WhatToExpect';

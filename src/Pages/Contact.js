@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaMailBulk } from 'react-icons/fa';
 import SocialMediaLinks from '../Components/SocialMediaLinks';
 import collage from "../img/gallery/shapeCollage.jpg";
-import AnimatedComponent from '../Components/AnimatedComponent';
+import AnimatedComponent from '../Components/WrapperComponents/AnimatedComponent';
 import PageBanner from '../Components/PageBanner';
 import { motion } from 'framer-motion';
 

@@ -41,7 +41,7 @@ const AnimatedComponent = ({ children }) => {
             variants={variants}
             initial="hidden"
             animate={controls}
-            className="overflow-hidden"
+            className=""
         >
             {children}
         </motion.div>

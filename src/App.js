@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from "./Components/Header/Header"
 import Gallery from './Pages/Gallery/Gallery';
 import Portfolio from './Pages/Portfolio/Portfolio'
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import Footer from './Components/Footer';
 import Loader from './Components/Loader';
 import PrivacyPolicy from './Pages/Legal/PrivacyPolicy';

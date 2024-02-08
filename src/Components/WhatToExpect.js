@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import AnimatedComponent from './AnimatedComponent';
+import AnimatedComponent from './WrapperComponents/AnimatedComponent';
 
 const WhatToExpect = ({ title, text, steps }) => {
     const sectionVariants = {

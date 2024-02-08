@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Socials from "../SocialMediaLinks"
 import Logo from '../Logo';
-import MobileNav from "../MobileNav"
+import MobileNav from "./MobileNav"
 import HeaderDropdown from './HeaderDropdown';
 
 const Header = () => {

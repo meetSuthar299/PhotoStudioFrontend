@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
-import Socials from "./SocialMediaLinks"
-import HeaderDropdown from './Header/HeaderDropdown';
+import Socials from "../SocialMediaLinks"
+import HeaderDropdown from './HeaderDropdown';
 
 const menuVariants = {
   hidden: {

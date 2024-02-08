@@ -1,4 +1,5 @@
 import React from 'react';
+import { withHoverEffect } from './withHoverEffect';
 
 function ServiceCard({ img, title, offerings, link }) {
   const navigateToLink = () => {
@@ -54,4 +55,4 @@ function ServiceCard({ img, title, offerings, link }) {
   );
 }
 
-export default ServiceCard;
+export default withHoverEffect(ServiceCard);

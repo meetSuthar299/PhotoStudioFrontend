@@ -9,9 +9,10 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import AnimatedComponent from "../../Components/AnimatedComponent";
+import AnimatedComponent from "../../Components/WrapperComponents/AnimatedComponent";
 import PageBanner from "../../Components/PageBanner";
 import cityImg from "../../img/gallery/city.jpeg"
+import { withClick } from "../../Components/withHoverEffect";
 
 const Gallery = () => {
   const dispatch = useDispatch();

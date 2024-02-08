@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PageBanner from '../../Components/PageBanner'
 import Contact from '../Contact'
-import AnimatedComponent from '../../Components/AnimatedComponent'
+import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
 import WhatToExpect from '../../Components/WhatToExpect';
 import { useLocation } from 'react-router-dom';
 
