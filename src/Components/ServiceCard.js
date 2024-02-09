@@ -9,7 +9,7 @@ function ServiceCard({ img, title, offerings, link }) {
   return (
     <div
       onClick={navigateToLink}
-      className="group relative overflow-hidden transition-all duration-400 transform cursor-pointer rounded shadow-md  md:h-[50vh] lg:h-[75vh]"
+      className="group relative overflow-hidden transition-all duration-400 transform cursor-pointer rounded shadow-md md:h-[50vh] lg:h-[75vh]"
     >
       {/* Image */}
       <img
@@ -25,7 +25,7 @@ function ServiceCard({ img, title, offerings, link }) {
         <h1 className="group-hover:opacity-0 mb-4 text-3xl lg:text-4xl text-white font-semibold z-10 hidden lg:flex">{title}</h1>
         <div className="mb-4 text-3xl lg:text-4xl text-white font-semibold z-10 lg:hidden text-center">
           <h1>{title}</h1>
-          <a href={link} className="w-full shadow-md bg-[rgba(41,41,41,0.64)] backdrop-blur-lg text-xl font-light absolute bottom-0 left-0 py-6">
+          <a href={link} className="w-full shadow-md bg-[rgba(41,41,41,0.64)] backdrop-blur-lg text-xl font-light absolute bottom-0 left-0 py-2">
             <h2>Learn More</h2>
           </a>
         </div>
