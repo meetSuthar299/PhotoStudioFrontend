@@ -55,4 +55,4 @@ function ServiceCard({ img, title, offerings, link }) {
   );
 }
 
-export default withHoverEffect(ServiceCard);
+export default ServiceCard;
