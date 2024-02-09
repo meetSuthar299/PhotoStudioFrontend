@@ -7,20 +7,10 @@ import { useLocation } from 'react-router-dom';
 
 import FlipCard from '../../Components/FlipCard';
 
-import { RiTeamLine } from "react-icons/ri";
-import { MdVideoCameraFront } from "react-icons/md";
-import { RiVipCrownFill } from "react-icons/ri";
-import { FaSellsy, FaConnectdevelop } from "react-icons/fa";
-import { MdOutlineWeb } from "react-icons/md";
-
 import { MdFamilyRestroom, MdOutlineCelebration } from "react-icons/md";
 import { MdOutlinePhotoCameraFront } from "react-icons/md";
 import { MdFaceRetouchingNatural } from "react-icons/md";
 import { GiLovers } from "react-icons/gi";
-
-
-
-
 
 function PersonalService() {
   // scroll animation
