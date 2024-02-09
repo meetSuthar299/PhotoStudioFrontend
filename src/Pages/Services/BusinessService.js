@@ -97,7 +97,7 @@ function CorporateService() {
             <FlipCard
               title="Website Design & Development"
               frontData={{
-                img: <MdOutlineWeb  />,
+                img: <MdOutlineWeb />,
                 paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'}}
               backData={{ paragraph: '' }}
               size="vertical"
