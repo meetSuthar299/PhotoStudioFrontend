@@ -13,7 +13,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
 
 
     const expandButton = <button className='hover:scale-110 transition-all text-4xl absolute bottom-5' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
-    const cardTitle = <h1 className="font-bold mb-2 text-2xl flex">{title}</h1>
+    const cardTitle = <h1 className="font-bold mb-2 text-2xl flex top-14 text-center">{title}</h1>
     const Icon = (
         <div className='text-3xl absolute top-5' alt="">
             {frontData.img}
@@ -21,10 +21,11 @@ const FlipCard = ({ title, frontData, backData, size }) => {
     return (
         <AnimatedComponent>
             <div
+            onClick={() => setIsFlipped(!isFlipped)}
                 className={`${cardSize} h-[450px] my-3 transition-all break-inside relative`}
             >
                 <motion.div
-                    className="p-5 absolute top-0 h-full w-full bg-zinc-100 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center justify-center border"
+                    className="bg-sky-100 p-5 absolute top-0 h-full w-full rounded-lg shadow-md hover:shadow-lg flex flex-col items-center justify-center border"
                     style={{ backfaceVisibility: 'hidden', transform: isFlipped ? `rotateY(${rotateXaxis}deg) rotateX(${rotateYaxis}deg)` : 'rotateX(0deg)' }}
                     animate={{ rotateY: isFlipped ? 180 : 0 }}
                     transition={{ duration: 0.5 }}
@@ -37,7 +38,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                 </motion.div>
 
                 <motion.div
-                    className="p-2 absolute top-0 h-[100%] w-[100%] bg-zinc-800 text-white rounded-lg shadow-md hover:shadow-lg flex flex-col items-center justify-center border"
+                    className="p-2 absolute top-0 h-[100%] w-[100%] bg-gray-900 text-white rounded-lg shadow-md hover:shadow-lg flex flex-col items-center justify-center border"
                     style={{ backfaceVisibility: 'hidden', transform: isFlipped ? 'rotateX(0deg)' : `rotateY(${-180}deg)` }}
                     animate={{ rotateY: isFlipped ? 0 : -180 }}
                     transition={{ duration: 0.5 }}
