@@ -15,7 +15,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
     const expandButton = <button className='hover:scale-110 transition-all text-4xl absolute bottom-5' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
     const cardTitle = <h1 className="font-bold mb-2 text-2xl flex top-14 text-center">{title}</h1>
     const Icon = (
-        <div className='text-4xl absolute top-5' alt="">
+        <div className='text-4xl ' alt="">
             {frontData.img}
         </div>)
     return (
@@ -43,7 +43,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                 >
                     {Icon}
                     {/* {cardTitle} */}
-                    <p className="font-light p-2 text-center lg:text-base">{frontData.paragraph}</p>
+                    <p className="p-2 text-center text-sm">{frontData.paragraph}</p>
                     {expandButton}
                 </motion.div>
             </div>
