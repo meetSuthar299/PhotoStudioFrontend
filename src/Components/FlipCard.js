@@ -12,10 +12,10 @@ const FlipCard = ({ title, frontData, backData, size }) => {
     const cardSize = size === 'vertical' ? 'md:h-[525px]' : 'md:h-[250px] ';
 
 
-    const expandButton = <button className='hover:scale-125 transition-all text-3xl absolute bottom-5 right-5' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
-    const cardTitle = <h1 className="font-bold mb-2 text-xl lg:text-2xl flex text-center top-5 left-5">{title}</h1>
+    const expandButton = <button className='hover:scale-110 transition-all text-4xl absolute bottom-5' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
+    const cardTitle = <h1 className="font-bold mb-2 text-2xl flex">{title}</h1>
     const Icon = (
-        <div className='text-4xl' alt="">
+        <div className='text-3xl absolute top-5' alt="">
             {frontData.img}
         </div>)
     return (
@@ -30,7 +30,9 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                     transition={{ duration: 0.5 }}
                 >
                     {Icon}
-                    <h1 className="text-xl font-bold mt-3">{cardTitle}</h1>
+                    {cardTitle}
+                    {/* <div className="w-[70%] mx-auto h-[2px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(0,0,0)] to-[rgba(255,255,255,0)] rounded-full"></div> */}
+                    
                     {expandButton}
                 </motion.div>
 
@@ -41,8 +43,8 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                     transition={{ duration: 0.5 }}
                 >
                     {Icon}
-                    
-                    <p className="font-light text-sm py-2 text-center lg:text-base">{frontData.paragraph}</p>
+                    {/* {cardTitle} */}
+                    <p className="font-light p-2 text-center lg:text-base">{frontData.paragraph}</p>
                     {expandButton}
                 </motion.div>
             </div>

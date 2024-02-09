@@ -11,6 +11,7 @@ import { RiTeamLine } from "react-icons/ri";
 import { MdVideoCameraFront } from "react-icons/md";
 import { RiVipCrownFill } from "react-icons/ri";
 import { FaSellsy, FaConnectdevelop  } from "react-icons/fa";
+import { MdOutlineWeb } from "react-icons/md";
 
 
 function CorporateService() {
@@ -45,7 +46,7 @@ function CorporateService() {
               title="Professional Corporate Headshots"
               frontData={{
                 img: <RiTeamLine />,
-                paragraph:"We specialize in capturing the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, our skilled photographers will create high-quality headshots that leave a lasting impression."
+                paragraph:"Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression."
               }}
               backData={{ }}
               size="vertical"
@@ -56,15 +57,18 @@ function CorporateService() {
               title="Video Production"
               frontData={{
                 img: <MdVideoCameraFront />,
-                paragraph: 'A well-crafted video can be a powerful tool for your business. We can help you create a video that will engage your audience and help you stand out from the competition.'}}
-              backData={{}}
+                paragraph: "Create a video that will engage your audience and help you stand out from the competition" 
+              }}
+              backData={{                
+                paragraph: 'Create a video that engages your audience and helps you stand out from the competition.'
+            }}
               size="horizontal"
             />
             <FlipCard
               title="Product and Brand Photography"
               frontData={{
                 img:<RiVipCrownFill  />,
-                paragraph: "We specialize in showcasing your product's unique features and essence through professional brand photography services. Working closely with your team, we capture high-quality images that resonate with your brand identity and effectively communicate your message to your audience."}}
+                paragraph: "Showcase your product's unique features and essence through  high-quality images and videos that resonate with your brand identity and audience."}}
               backData={{}}
               size="horizontal"
             />
@@ -76,7 +80,7 @@ function CorporateService() {
               title="Social Media Marketing"
               frontData={{
                 img: <FaConnectdevelop />,
-                paragraph: 'We offer social media marketing services that are designed to help your business grow. Our team of experts will work with you to create a strategy that will help you reach your target audience and achieve your business goals.'}}
+                paragraph: 'Enhance your online presence with a creative strategy to reach your target audience and achieve your business goals.'}}
               backData={{ }}
               size="horizontal"
             />
@@ -84,7 +88,7 @@ function CorporateService() {
               title="Search Engine Optimization"
               frontData={{ 
                 img: <FaSellsy />,
-                paragraph: 'Our SEO services are designed to help your business rank higher in search engine results. We will work with you to create a strategy that will help you improve your online visibility and attract more customers to your website.'}}
+                paragraph: "Improve your business's search engine ranking with our collaborative strategy, boosting online visibility and attracting more website visitors."}}
               backData={{ paragraph: '' }}
               size="horizontal"
             />
@@ -93,8 +97,8 @@ function CorporateService() {
             <FlipCard
               title="Website Design & Development"
               frontData={{
-                img: <RiTeamLine />,
-                paragraph: 'We offer website design and development services that are designed to help your business succeed online. Our team of experts will work with you to create a website that is tailored to your business needs and goals.'}}
+                img: <MdOutlineWeb  />,
+                paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'}}
               backData={{ paragraph: '' }}
               size="vertical"
             />

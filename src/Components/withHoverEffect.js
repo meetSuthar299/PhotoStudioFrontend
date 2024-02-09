@@ -29,8 +29,8 @@ export function withHoverEffect(Component) {
             const elementCenterY = elementHeight / 2;
             const mouseX = event.clientY - elementRect.y - elementCenterY;
             const mouseY = event.clientX - elementRect.x - elementCenterX;
-            const degreeX = (mouseX / elementWidth) * 5; //The number is the rotation factor
-            const degreeY = (mouseY / elementHeight) * 5; //The number is the rotation factor
+            const degreeX = (mouseX / elementWidth) * 4; //The number is the rotation factor
+            const degreeY = (mouseY / elementHeight) * 3; //The number is the rotation factor
             setRotateXaxis(degreeX);
             setRotateYaxis(degreeY);
         };
