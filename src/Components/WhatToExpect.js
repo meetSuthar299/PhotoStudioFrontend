@@ -22,7 +22,7 @@ const WhatToExpect = ({ title, text, steps }) => {
     const stepTitles = ["Consultation", "Collaborative Planning", "Dynamic Photoshoot", "Polished Delivery"];
 
     return (
-        <motion.section id="whatToExpect" className="pt-24">
+        <motion.section id="whatToExpect" className="py-24">
             <h2 className="text-5xl font-extrabold pb-20 text-center">What to Expect</h2>
             <p className="text-xl mb-12 text-center font-light px-2 lg:px-36">
                 {text}

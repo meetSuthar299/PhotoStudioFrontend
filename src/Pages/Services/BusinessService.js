@@ -7,6 +7,12 @@ import { useLocation } from 'react-router-dom';
 import FlipCard from '../../Components/FlipCard';
 import cityImg from '../../img/gallery/city.jpeg';
 
+import { RiTeamLine } from "react-icons/ri";
+import { MdVideoCameraFront } from "react-icons/md";
+import { RiVipCrownFill } from "react-icons/ri";
+import { FaSellsy, FaConnectdevelop  } from "react-icons/fa";
+
+
 function CorporateService() {
   const location = useLocation();
   useEffect(() => {
@@ -31,70 +37,85 @@ function CorporateService() {
           { name: 'Get a Quote', link: '/businessService/#contact' }
         ]}
       />
-      <div className="lg:px-40 px-10">
-        {/* <h1 id='whatWeDo' className='text-4xl text-black text-center py-10'>What We Do</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="lg:px-20 md:px-10 px-10">
+        <h1 id='whatWeDo' className='text-4xl text-black text-center py-10'>What We Do</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col ">
             <FlipCard
-              title="Photography"
-              frontData={{}}
-              backData={{ paragraph: 'We capture the essence of your business in action, ensuring every detail shines.' }}
+              title="Professional Corporate Headshots"
+              frontData={{
+                img: <RiTeamLine />,
+                paragraph:"We specialize in capturing the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, our skilled photographers will create high-quality headshots that leave a lasting impression."
+              }}
+              backData={{ }}
               size="vertical"
             />
           </div>
           <div className="flex flex-col ">
             <FlipCard
-              title="Photography"
-              frontData={{}}
-              backData={{ paragraph: 'We capture the essence of your business in action, ensuring every detail shines.' }}
+              title="Video Production"
+              frontData={{
+                img: <MdVideoCameraFront />,
+                paragraph: 'A well-crafted video can be a powerful tool for your business. We can help you create a video that will engage your audience and help you stand out from the competition.'}}
+              backData={{}}
               size="horizontal"
             />
             <FlipCard
-              title="Photography"
-              frontData={{}}
-              backData={{ paragraph: 'We capture the essence of your business in action, ensuring every detail shines.' }}
+              title="Product and Brand Photography"
+              frontData={{
+                img:<RiVipCrownFill  />,
+                paragraph: "We specialize in showcasing your product's unique features and essence through professional brand photography services. Working closely with your team, we capture high-quality images that resonate with your brand identity and effectively communicate your message to your audience."}}
+              backData={{}}
               size="horizontal"
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col ">
             <FlipCard
-              title="Photography"
-              frontData={{}}
-              backData={{ paragraph: 'We capture the essence of your business in action, ensuring every detail shines.' }}
+              title="Social Media Marketing"
+              frontData={{
+                img: <FaConnectdevelop />,
+                paragraph: 'We offer social media marketing services that are designed to help your business grow. Our team of experts will work with you to create a strategy that will help you reach your target audience and achieve your business goals.'}}
+              backData={{ }}
               size="horizontal"
             />
             <FlipCard
-              title="Photography"
-              frontData={{}}
-              backData={{ paragraph: 'We capture the essence of your business in action, ensuring every detail shines.' }}
+              title="Search Engine Optimization"
+              frontData={{ 
+                img: <FaSellsy />,
+                paragraph: 'Our SEO services are designed to help your business rank higher in search engine results. We will work with you to create a strategy that will help you improve your online visibility and attract more customers to your website.'}}
+              backData={{ paragraph: '' }}
               size="horizontal"
             />
           </div>
           <div className="flex flex-col">
             <FlipCard
-              title="Photography"
-              frontData={{}}
-              backData={{ paragraph: 'We capture the essence of your business in action, ensuring every detail shines.' }}
+              title="Website Design & Development"
+              frontData={{
+                img: <RiTeamLine />,
+                paragraph: 'We offer website design and development services that are designed to help your business succeed online. Our team of experts will work with you to create a website that is tailored to your business needs and goals.'}}
+              backData={{ paragraph: '' }}
               size="vertical"
             />
           </div>
-        </div> */}
-        <AnimatedComponent>
-          <WhatToExpect
-            text="
+        </div>
+        <div>
+          <AnimatedComponent>
+            <WhatToExpect
+              text="
           We aim to reveal the unique aspects that set your business apart, acknowledging its 
           special appeal to your target audience. Here's our customized approach to delivering content that effortlessly aligns with your 
           strategic vision."
-            steps={[
-              "Let's initiate a discussion about your project and your vision.",
-              "Together, we'll formulate comprehensive plans, curate shot lists, finalize locations, and set dates.",
-              "We meticulously capture your corporate essence in action, ensuring every detail shines.",
-              'Your selected images are delivered in high resolution, primed for seamless integration into your corporate identity.',
-            ]}
-          />
-        </AnimatedComponent>
+              steps={[
+                "Let's initiate a discussion about your project and your vision.",
+                "Together, we'll formulate comprehensive plans, curate shot lists, finalize locations, and set dates.",
+                "We meticulously capture your corporate essence in action, ensuring every detail shines.",
+                'Your selected images are delivered in high resolution, primed for seamless integration into your corporate identity.',
+              ]}
+            />
+          </AnimatedComponent>
+        </div>
       </div>
       <Contact />
     </div>
