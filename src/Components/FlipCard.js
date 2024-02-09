@@ -15,7 +15,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
     const expandButton = <button className='hover:scale-110 transition-all text-4xl absolute bottom-5' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
     const cardTitle = <h1 className="font-bold mb-2 text-2xl flex top-14 text-center">{title}</h1>
     const Icon = (
-        <div className='text-3xl absolute top-5' alt="">
+        <div className='text-4xl absolute top-5' alt="">
             {frontData.img}
         </div>)
     return (
@@ -25,15 +25,13 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                 className={`${cardSize} h-[450px] my-3 transition-all break-inside relative`}
             >
                 <motion.div
-                    className="bg-sky-100 p-5 absolute top-0 h-full w-full rounded-lg shadow-md hover:shadow-lg flex flex-col items-center justify-center border"
+                    className="bg-slate-200 p-5 absolute top-0 h-full w-full rounded-lg shadow-md hover:shadow-lg flex flex-col items-center justify-center border"
                     style={{ backfaceVisibility: 'hidden', transform: isFlipped ? `rotateY(${rotateXaxis}deg) rotateX(${rotateYaxis}deg)` : 'rotateX(0deg)' }}
                     animate={{ rotateY: isFlipped ? 180 : 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     {Icon}
                     {cardTitle}
-                    {/* <div className="w-[70%] mx-auto h-[2px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(0,0,0)] to-[rgba(255,255,255,0)] rounded-full"></div> */}
-                    
                     {expandButton}
                 </motion.div>
 

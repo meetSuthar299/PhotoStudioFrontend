@@ -10,7 +10,7 @@ import cityImg from '../../img/gallery/city.jpeg';
 import { RiTeamLine } from "react-icons/ri";
 import { MdVideoCameraFront } from "react-icons/md";
 import { RiVipCrownFill } from "react-icons/ri";
-import { FaSellsy, FaConnectdevelop  } from "react-icons/fa";
+import { FaSellsy, FaConnectdevelop } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
 
 
@@ -38,17 +38,27 @@ function CorporateService() {
           { name: 'Get a Quote', link: '/businessService/#contact' }
         ]}
       />
+      <div id='whatWeDo' className='pt-10'>
+        <AnimatedComponent>
+          <div className="flex flex-col items-center justify-center lg:px-20 md:px-10 px-10 py-10">
+            <h1 className="text-4xl text-black text-center py-10">The ultimate hub for your business's content creation needs</h1>
+            <p className="text-lg lg:text-xl font-light text-black text-center">
+              We specialize in creating high-quality content that captures the essence of your business, products, and services. Our commitment is to help you stand out from the competition and achieve your business goals effectively.
+            </p>
+          </div>
+        </AnimatedComponent>
+      </div>
       <div className="lg:px-20 md:px-10 px-10">
-        <h1 id='whatWeDo' className='text-4xl text-black text-center py-10'>What We Do</h1>
+        {/* <h1  className='text-4xl text-black text-center py-10'>What We Do</h1> */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col ">
             <FlipCard
               title="Professional Corporate Headshots"
               frontData={{
                 img: <RiTeamLine />,
-                paragraph:"Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression."
+                paragraph: "Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression."
               }}
-              backData={{ }}
+              backData={{}}
               size="vertical"
             />
           </div>
@@ -57,18 +67,19 @@ function CorporateService() {
               title="Video Production"
               frontData={{
                 img: <MdVideoCameraFront />,
-                paragraph: "Create a video that will engage your audience and help you stand out from the competition" 
+                paragraph: "Create a video that will engage your audience and help you stand out from the competition"
               }}
-              backData={{                
+              backData={{
                 paragraph: 'Create a video that engages your audience and helps you stand out from the competition.'
-            }}
+              }}
               size="horizontal"
             />
             <FlipCard
               title="Product and Brand Photography"
               frontData={{
-                img:<RiVipCrownFill  />,
-                paragraph: "Showcase your product's unique features and essence through  high-quality images and videos that resonate with your brand identity and audience."}}
+                img: <RiVipCrownFill />,
+                paragraph: "Showcase your product's unique features and essence through  high-quality images and videos that resonate with your brand identity and audience."
+              }}
               backData={{}}
               size="horizontal"
             />
@@ -80,15 +91,17 @@ function CorporateService() {
               title="Social Media Marketing"
               frontData={{
                 img: <FaConnectdevelop />,
-                paragraph: 'Enhance your online presence with a creative strategy to reach your target audience and achieve your business goals.'}}
-              backData={{ }}
+                paragraph: 'Enhance your online presence with a creative strategy to reach your target audience and achieve your business goals.'
+              }}
+              backData={{}}
               size="horizontal"
             />
             <FlipCard
               title="Search Engine Optimization"
-              frontData={{ 
+              frontData={{
                 img: <FaSellsy />,
-                paragraph: "Improve your business's search engine ranking with our collaborative strategy, boosting online visibility and attracting more website visitors."}}
+                paragraph: "Improve your business's search engine ranking with our collaborative strategy, boosting online visibility and attracting more website visitors."
+              }}
               backData={{ paragraph: '' }}
               size="horizontal"
             />
@@ -98,19 +111,19 @@ function CorporateService() {
               title="Website Design & Development"
               frontData={{
                 img: <MdOutlineWeb />,
-                paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'}}
+                paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'
+              }}
               backData={{ paragraph: '' }}
               size="vertical"
             />
           </div>
         </div>
-        <div>
+        <div className="lg:px-20 px-10 pb-10">
           <AnimatedComponent>
             <WhatToExpect
-              text="
-          We aim to reveal the unique aspects that set your business apart, acknowledging its 
-          special appeal to your target audience. Here's our customized approach to delivering content that effortlessly aligns with your 
-          strategic vision."
+              text="We aim to reveal the unique aspects that set your business apart, acknowledging its 
+                    special appeal to your target audience. Here's our customized approach to delivering content that effortlessly aligns with your 
+                    strategic vision."
               steps={[
                 "Let's initiate a discussion about your project and your vision.",
                 "Together, we'll formulate comprehensive plans, curate shot lists, finalize locations, and set dates.",

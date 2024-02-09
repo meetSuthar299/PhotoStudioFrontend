@@ -58,7 +58,7 @@ export function withHoverEffect(Component) {
             >
                 <motion.div
                     ref={ref}
-                    whileHover={{ scale: 1.01}}
+                    whileHover={{ scale: 1.02}}
                     onMouseMove={handleMouseMove}
                     onMouseLeave={handleMouseLeave}
                     transition={spring}
