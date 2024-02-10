@@ -44,7 +44,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                     transition={{ duration: 0.5 }}
                 >
                     {Icon}
-                    <p className="p-2 text-center text-sm lg:text-lg">{backData.paragraph}</p>
+                    <p className="p-2 text-center text-sm xl:text-lg">{backData.paragraph}</p>
                     <ul className="text-center ml-4 font-thin pt-2">
                         {backData?.bulletPoints?.map((point, index) => (
                             <li key={index}>{point}</li>
