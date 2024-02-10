@@ -110,7 +110,7 @@ function CorporateService() {
                 img: SocialMedia
               }}
               backData={{
-                paragraph: 'Enhance your online presence with a creative strategy to reach your target audience and achieve your business goals.'
+                paragraph: 'We understand the importance of a strong social media presence for businesses. Our service helps manage social media accounts to grow brands effectively. We work closely with clients to develop customized strategies aligned with their objectives. Our experts create engaging content, manage interactions, and track performance metrics for optimal results.'
               }}
               size="horizontal"
             />
