@@ -1,11 +1,10 @@
 import React from 'react'
 import { LogoStudio } from "../../Components/Logo"
 import video from "../../img/gallery/forWebsite.mp4"
-import { RotatingText } from 'react-rotating-text';
-// import TypingHeading from '../../Components/typingHeadding';
+import TypingHeading from '../../Components/typingHeadding';
 
 function Hero() {
-    const services = ["Video Production", "Photography", "Graphic Design", "Web Design"];
+    const services = ["Video Production", "Photography", "Automotive Photography", "Graphic Design", "Web Development", "Search Engine Optimization", "Social Media Marketing", "Corporate Headshots", "Product Photography", "Event Photography", "Real Estate Photography"];
     return (
         <div id="home" className="h-screen relative bg-slate-500 overflow-hidden">
             <div dangerouslySetInnerHTML={{
@@ -15,26 +14,19 @@ function Hero() {
                     class="w-full h-full object-cover absolute top-0 left-0 z-0"
                 />`,
             }}></div>
-            <div className="overlay absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-1 text-white">
-                <div className='text-8xl mb-4'>
+            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-1 text-white">
+                <div className='text-6xl mb-4'>
                     <LogoStudio />
                 </div>
-                {/* <h1 className="text-4xl font-semibold mb-6">Serving Calgary and beyond with</h1> */}
-                {/* <TypingHeading headings={services} className="font-semibold " /> */}
-                {/* <div className="flex flex-col sm:flex-row gap-4">
-                    {services.map((service, index) => (
-                        <div key={index} className="text-2xl font-light text-center">{service}</div>
-                    ))}
-                </div> */}
-                {/* <RotatingText
-                    items={services}
-                    className="text-2xl font-light text-center"
-                    pause={2000} // Pause between rotations in milliseconds
-                /> */}
+                <div className="w-[50%] mx-auto h-[2px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(255,255,255)] to-[rgba(255,255,255,0)] rounded-full"></div>
+                <h2 className="text-2xl font-medium mb-6 text-center pt-5">Serving Calgary and beyond with</h2>
+                <TypingHeading headings={services} />
+                <a href='#services' className="absolute bottom-10 btn mt-8 hover:scale-110 bg-[rgba(124,124,124,0.2)] backdrop-blur-sm rounded border border-zinc-600 py-5 ">Explore Our Services</a> 
             </div>
         </div>
 
     )
 }
 
-export default Hero
+export default Hero;
+

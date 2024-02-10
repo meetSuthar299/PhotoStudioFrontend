@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import usePreviousState from '../hooks/usePreviousState';
+import usePreviousState from './usePreviousState';
 
-const typingSpeed = 0.125;
+const typingSpeed = 0.15;
 const deleteSpeed = 0.1;
-const delayBeforeDelete = 1.1;
+const delayBeforeDelete = 1.5;
 
 const headingVariants = {
     visible: {
@@ -71,7 +71,7 @@ function TypingHeading({ headings }) {
     }, [typingMode, updateTypingModeTimer]);
 
     return (
-        <div className="mb-4 text-4xl font-bold text-neutrals-50 md:text-5xl">
+        <div className="text-2xl font-medium text-neutrals-50 md:text-3xl">
             <h2 className="sr-only">
                 {currentHeading}
             </h2>

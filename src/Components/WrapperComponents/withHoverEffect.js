@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Children } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 const spring = {
