@@ -51,8 +51,8 @@ const Header = () => {
       <nav className='hidden lg:flex gap-x-12 font-semibold px-10 text-2xl'>
         <a href='/portfolio' key='/portfolio' className='cursor-pointer hover:scale-110'>Portfolio</a>
         <a href='/gallery' key='/gallery' className=' cursor-pointer hover:scale-110'>Gallery</a>
-        {/* <a href='/login' key='/login' className=' cursor-pointer hover:scale-110'>Member Login</a> */}
-        <Socials />
+        <a href='/login' key='/login' className=' cursor-pointer hover:scale-110'>Login</a>
+        {/* <Socials /> */}
       </nav>
     </div>
     <MobileNav />

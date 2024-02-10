@@ -13,6 +13,7 @@ import PersonalService from './Pages/Services/PersonalService';
 import TermsOfService from './Pages/Legal/TermsOfService';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTopButton from './Components/ScrollToTopButton';
+import Login from './Pages/Auth/Login';
 
 const App = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/personalService' element={<PersonalService />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/login' element={<Login/>} />
         <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
         <Route path='/termsOfService' element={<TermsOfService />} />
       </Routes>
