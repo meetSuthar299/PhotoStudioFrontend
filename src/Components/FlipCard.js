@@ -11,7 +11,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
     const cardSize = size === 'vertical' ? 'md:h-[525px]' : 'md:h-[250px] ';
 
 
-    const expandButton = <button className='hover:scale-110 transition-all text-4xl absolute bottom-5 z-10' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
+    const expandButton = <button className='hover:scale-110 transition-all text-3xl absolute bottom-5 z-10' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
     const cardTitle = <h1 className="font-bold mb-2 text-3xl flex top-14 text-center z-10">{title}</h1>
     const Icon = (
         <div className='text-4xl z-10' alt="">
