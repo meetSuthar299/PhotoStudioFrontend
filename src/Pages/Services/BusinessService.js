@@ -5,7 +5,14 @@ import AnimatedComponent from '../../Components/WrapperComponents/AnimatedCompon
 import WhatToExpect from '../../Components/WhatToExpect';
 import { useLocation } from 'react-router-dom';
 import FlipCard from '../../Components/FlipCard';
+
 import cityImg from '../../img/gallery/city.jpeg';
+import CorporateHeadshot from '../../img/ServiceImgs/CorporateHeadshots.jpg';
+import CorporateVideo from '../../img/ServiceImgs/CorporateVideo.jpg';
+import CorporateProduct from '../../img/ServiceImgs/corporateProduct.jpg';
+import SocialMedia from '../../img/ServiceImgs/SocialMedia.jpg';
+import SEO from '../../img/ServiceImgs/SEO.jpg';
+import WebDesign from '../../img/ServiceImgs/WebDesign.jpg';
 
 import { RiTeamLine } from "react-icons/ri";
 import { MdVideoCameraFront } from "react-icons/md";
@@ -55,10 +62,13 @@ function CorporateService() {
             <FlipCard
               title="Professional Corporate Headshots"
               frontData={{
-                img: <RiTeamLine />,
-                paragraph: "Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression."
+                icon: <RiTeamLine />,
+                img: CorporateHeadshot
               }}
-              backData={{}}
+              backData={{
+                paragraph: "Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression."
+
+              }}
               size="vertical"
             />
           </div>
@@ -66,21 +76,23 @@ function CorporateService() {
             <FlipCard
               title="Video Production"
               frontData={{
-                img: <MdVideoCameraFront />,
-                paragraph: "Create a video that will engage your audience and help you stand out from the competition"
+                icon: <MdVideoCameraFront />,
+                img: CorporateVideo
               }}
               backData={{
-                paragraph: 'Create a video that engages your audience and helps you stand out from the competition.'
+                paragraph: "Create a video that will engage your audience and help you stand out from the competition"
               }}
               size="horizontal"
             />
             <FlipCard
               title="Product and Brand Photography"
               frontData={{
-                img: <RiVipCrownFill />,
+                icon: <RiVipCrownFill />,
+                img: CorporateProduct
+              }}
+              backData={{
                 paragraph: "Showcase your product's unique features and essence through  high-quality images and videos that resonate with your brand identity and audience."
               }}
-              backData={{}}
               size="horizontal"
             />
           </div>
@@ -90,19 +102,24 @@ function CorporateService() {
             <FlipCard
               title="Social Media Marketing"
               frontData={{
-                img: <FaConnectdevelop />,
+                icon: <FaConnectdevelop />,
+                img: SocialMedia
+              }}
+              backData={{
                 paragraph: 'Enhance your online presence with a creative strategy to reach your target audience and achieve your business goals.'
               }}
-              backData={{}}
               size="horizontal"
             />
             <FlipCard
               title="Search Engine Optimization"
               frontData={{
-                img: <FaSellsy />,
-                paragraph: "Improve your business's search engine ranking with our collaborative strategy, boosting online visibility and attracting more website visitors."
+                icon: <FaSellsy />,
+                img: SEO
               }}
-              backData={{ paragraph: '' }}
+              backData={{
+                paragraph: "Improve your business's search engine ranking with our collaborative strategy, boosting online visibility and attracting more website visitors."
+
+              }}
               size="horizontal"
             />
           </div>
@@ -110,10 +127,13 @@ function CorporateService() {
             <FlipCard
               title="Website Design & Development"
               frontData={{
-                img: <MdOutlineWeb />,
-                paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'
+                icon: <MdOutlineWeb />,
+                img: WebDesign
               }}
-              backData={{ paragraph: '' }}
+              backData={{
+                paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'
+
+              }}
               size="vertical"
             />
           </div>

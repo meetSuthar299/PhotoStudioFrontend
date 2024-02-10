@@ -7,16 +7,18 @@ import { motion } from 'framer-motion';
 import WhatToExpect from '../../Components/WhatToExpect';
 
 import FlipCard from '../../Components/FlipCard';
-import { MdFamilyRestroom, MdOutlineCelebration } from "react-icons/md";
-import { MdOutlinePhotoCameraFront } from "react-icons/md";
-import { MdFaceRetouchingNatural } from "react-icons/md";
-import { GiLovers } from "react-icons/gi";
-
 import { GiRaceCar } from "react-icons/gi";
 import { IoCarSport } from "react-icons/io5";
 import { FaCar } from "react-icons/fa";
 import { TbDrone } from "react-icons/tb";
 import { MdFilterFrames } from "react-icons/md";
+
+import Auto1 from '../../img/ServiceImgs/Auto1.jpg';
+import Auto3 from '../../img/ServiceImgs/Auto3.jpg';
+import Auto4 from '../../img/ServiceImgs/Auto4.jpg';
+import Drone from '../../img/ServiceImgs/Drone.jpg';
+import Print from '../../img/ServiceImgs/Print.jpg';
+
 
 function AutomotiveService() {
   // scroll animation
@@ -60,10 +62,13 @@ function AutomotiveService() {
             <FlipCard
               title="Private Vehicle Photoshoot"
               frontData={{
-                img: <FaCar />,
-                paragraph: "Capture the essence of your vehicle with our personalized photoshoots. Our experienced photographers will ensure it looks stunning, whether for personal enjoyment or professional purposes."
+                icon: <FaCar />,
+                img: Auto1
               }}
-              backData={{}}
+              backData={{
+                paragraph: "Capture the essence of your vehicle with our personalized photoshoots. Our experienced photographers will ensure it looks stunning, whether for personal enjoyment or professional purposes."
+
+              }}
               size="vertical"
             />
           </div>
@@ -71,19 +76,25 @@ function AutomotiveService() {
             <FlipCard
               title="Detailed Vehicle Videos"
               frontData={{
-                img: <IoCarSport  />,
-                paragraph: "Bring your vehicle to life with our detailed vehicle videos. Our team specializes in capturing the essence of your vehicle, ensuring it stands out in any setting. With meticulous attention to detail and a keen eye for aesthetics, we guarantee videos that showcase the professionalism and uniqueness of your vehicle."
+                icon: <IoCarSport  />,
+                img: Auto4
               }}
-              backData={{}}
+              backData={{
+                paragraph: "Bring your vehicle to life with our detailed vehicle videos. Our team specializes in capturing the essence of your vehicle, ensuring it stands out in any setting. With meticulous attention to detail and a keen eye for aesthetics, we guarantee videos that showcase the professionalism and uniqueness of your vehicle."
+
+              }}
               size="horizontal"
             />
             <FlipCard
               title="Dealership Media"
               frontData={{
-                img: <GiRaceCar/>,
-                paragraph: "Enhance your dealership's presence with our comprehensive media services. Our skilled photographers specialize in capturing captivating images that highlight the essence of your dealership and the vehicles you offer. Whether it's showcasing the showroom, conducting vehicle photo shoots, or capturing the dealership's atmosphere, we'll ensure your media portrays professionalism and quality."
+                icon: <GiRaceCar/>,
+                img: Auto3
               }}
-              backData={{}}
+              backData={{
+                paragraph: "Enhance your dealership's presence with our comprehensive media services. Our skilled photographers specialize in capturing captivating images that highlight the essence of your dealership and the vehicles you offer. Whether it's showcasing the showroom, conducting vehicle photo shoots, or capturing the dealership's atmosphere, we'll ensure your media portrays professionalism and quality."
+
+              }}
               size="horizontal"
             />
           </div>
@@ -93,10 +104,13 @@ function AutomotiveService() {
             <FlipCard
               title="Aerial Drone Photography & Videography"
               frontData={{
-                img: <TbDrone />,
-                paragraph: "Elevate your perspective with our aerial drone photography and videography services. Our skilled team specializes in capturing stunning aerial shots and videos that provide a unique and breathtaking view of your surroundings. Whether it's for personal or professional use, we'll work with you to capture the perfect angles and moments, ensuring you have captivating visuals that leave a lasting impression."
+                icon: <TbDrone />,
+                img: Drone
               }}
-              backData={{}}
+              backData={{
+                paragraph: "Elevate your perspective with our aerial drone photography and videography services. Our skilled team specializes in capturing stunning aerial shots and videos that provide a unique and breathtaking view of your surroundings. Whether it's for personal or professional use, we'll work with you to capture the perfect angles and moments, ensuring you have captivating visuals that leave a lasting impression."
+
+              }}
               size="horizontal"
             />
           </div>
@@ -104,10 +118,13 @@ function AutomotiveService() {
             <FlipCard
               title="Custom Prints and Wallpapers"
               frontData={{
-                img: <MdFilterFrames />,
-                paragraph: "Transform your space with our custom prints and wallpapers. Our team specializes in creating personalized designs that reflect your unique style and personality. Whether you're looking to add a pop of color, showcase your favorite memories, or create a statement wall, we'll work with you to bring your vision to life."
+                icon: <MdFilterFrames />,
+                img: Print
               }}
-              backData={{ paragraph: '' }}
+              backData={{ 
+                paragraph: "Transform your space with our custom prints and wallpapers. Our team specializes in creating personalized designs that reflect your unique style and personality. Whether you're looking to add a pop of color, showcase your favorite memories, or create a statement wall, we'll work with you to bring your vision to life."
+
+               }}
               size="horizontal"
             />
           </div>
