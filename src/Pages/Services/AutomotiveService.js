@@ -76,7 +76,7 @@ function AutomotiveService() {
             <FlipCard
               title="Detailed Vehicle Videos"
               frontData={{
-                icon: <IoCarSport  />,
+                icon: <IoCarSport />,
                 img: Auto4
               }}
               backData={{
@@ -88,7 +88,7 @@ function AutomotiveService() {
             <FlipCard
               title="Dealership Media"
               frontData={{
-                icon: <GiRaceCar/>,
+                icon: <GiRaceCar />,
                 img: Auto3
               }}
               backData={{
@@ -99,7 +99,7 @@ function AutomotiveService() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5"> 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col ">
             <FlipCard
               title="Aerial Drone Photography & Videography"
@@ -121,10 +121,9 @@ function AutomotiveService() {
                 icon: <MdFilterFrames />,
                 img: Print
               }}
-              backData={{ 
-                paragraph: "Transform your space with our custom prints and wallpapers. Our team specializes in creating personalized designs that reflect your unique style and personality. Whether you're looking to add a pop of color, showcase your favorite memories, or create a statement wall, we'll work with you to bring your vision to life."
-
-               }}
+              backData={{
+                paragraph: "Transform your space with our custom prints and wallpapers. Our team specializes in creating personalized designs that reflect your unique style and personality. Whether you're looking to add a pop of color, showcase your favorite memories, or create a statement wall, we'll work with you to bring your vision to life.",
+              }}
               size="horizontal"
             />
           </div>

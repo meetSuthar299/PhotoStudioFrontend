@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import AnimatedComponent from "../../Components/WrapperComponents/AnimatedComponent";
 import PageBanner from "../../Components/PageBanner";
 import cityImg from "../../img/gallery/city.jpeg"
-import { withClick } from "../../Components/withHoverEffect";
 
 const Gallery = () => {
   const dispatch = useDispatch();

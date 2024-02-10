@@ -1,5 +1,5 @@
 import React from 'react';
-import { withHoverEffect } from './withHoverEffect';
+import { withHoverEffect } from './WrapperComponents/withHoverEffect';
 
 function ServiceCard({ img, title, offerings, link }) {
   const navigateToLink = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { withHoverEffect } from './withHoverEffect';
+import { withHoverEffect } from './WrapperComponents/withHoverEffect';
 import { FaPlusCircle, FaMinusCircle } from 'react-icons/fa';
 import AnimatedComponent from './WrapperComponents/AnimatedComponent';
 
@@ -11,10 +11,10 @@ const FlipCard = ({ title, frontData, backData, size }) => {
     const cardSize = size === 'vertical' ? 'md:h-[525px]' : 'md:h-[250px] ';
 
 
-    const expandButton = <button className='hover:scale-110 transition-all text-3xl absolute bottom-5 z-10' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
+    const expandButton = <button className='hover:scale-110 transition-all text-3xl absolute bottom-3 z-10' onClick={() => setIsFlipped(!isFlipped)}>{isFlipped ? <FaMinusCircle /> : <FaPlusCircle />}</button>
     const cardTitle = <h1 className="font-bold mb-2 text-3xl flex top-14 text-center z-10">{title}</h1>
     const Icon = (
-        <div className='text-4xl z-10 absolute top-5' alt="">
+        <div className='text-4xl z-10 absolute top-1' alt="">
             {frontData.icon}
         </div>)
     return (
@@ -26,7 +26,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                 {/* Front of the card */}
                 <motion.div
                     className="bg-zinc-50 text-white p-5 absolute top-0 h-full w-full rounded-lg shadow-md group hover:shadow-lg flex flex-col items-center justify-center border bg-cover bg-center"
-                    style={{ backfaceVisibility: 'hidden',  backgroundImage: `url(${frontData.img})` }}
+                    style={{ backfaceVisibility: 'hidden', backgroundImage: `url(${frontData.img})` }}
                     animate={{ rotateY: isFlipped ? 180 : 0 }}
                     transition={{ duration: 0.5 }}
                 >
@@ -44,7 +44,12 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                     transition={{ duration: 0.5 }}
                 >
                     {Icon}
-                    <p className="p-2 text-center text-sm">{backData.paragraph}</p>
+                    <p className="p-2 text-center text-sm lg:text-lg">{backData.paragraph}</p>
+                    <ul className="text-center ml-4 font-thin pt-2">
+                        {backData?.bulletPoints?.map((point, index) => (
+                            <li key={index}>{point}</li>
+                        ))}
+                    </ul>
                     {expandButton}
                 </motion.div>
             </div>

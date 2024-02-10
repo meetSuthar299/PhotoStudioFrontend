@@ -66,8 +66,12 @@ function CorporateService() {
                 img: CorporateHeadshot
               }}
               backData={{
-                paragraph: "Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression."
-
+                paragraph: "Capture the essence of your business professionals in action, ensuring every detail shines. Whether it's for executive profiles, team photos, or marketing materials, we will create high-quality headshots that leave a lasting impression.",
+                bulletPoints: [
+                  'Professional executive portraits',
+                  'Dynamic team photos',
+                  'Impactful marketing imagery'
+                ]
               }}
               size="vertical"
             />
@@ -131,8 +135,11 @@ function CorporateService() {
                 img: WebDesign
               }}
               backData={{
-                paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'
-
+                paragraph: "Your website is your company’s digital face; we make sure it’s flawless. Our website development services help your business stay ahead and ensure success online. Websites developed by us are visually appealing, optimized for search engines, mobile responsive, integrated with social media, and designed perfectly. Moreover, our experts can help amplify growth and boost online sales through additional services, including SEO and content writing.",
+                bulletPoints: [
+                  'WordPress, Squarespace, Wix, and Shopify',
+                  'React Js, View Js, and Angular Js',
+                ]
               }}
               size="vertical"
             />
