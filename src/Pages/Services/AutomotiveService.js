@@ -67,7 +67,7 @@ function AutomotiveService() {
               }}
               backData={{
                 paragraph: "Capture the essence of your vehicle with our personalized photoshoots. Our experienced photographers will ensure it looks stunning, whether for personal enjoyment or professional purposes."
-
+              
               }}
               size="vertical"
             />

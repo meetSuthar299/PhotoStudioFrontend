@@ -30,7 +30,7 @@ const FlipCard = ({ title, frontData, backData, size }) => {
                     animate={{ rotateY: isFlipped ? 180 : 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div className='absolute inset-0 rounded-lg bg-[rgba(10,10,14,0.79)] group group-hover:opacity-90 transition-all'></div>
+                    <div className='absolute inset-0 rounded-lg bg-[rgba(10,10,14,0.79)] group group-hover:opacity-80 transition-all'></div>
 
                     {/* {Icon} */}
                     {cardTitle}

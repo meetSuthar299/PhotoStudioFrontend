@@ -47,7 +47,7 @@ const About = () => {
             </div>
           </AnimatedComponent>
         </div>
-        <div className="mx-auto text-center py-16">
+        {/* <div className="mx-auto text-center py-16">
           <h2 className='text-2xl lg:text-3xl font-bold mb-8'>Meet the Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="flex flex-col items-center">
@@ -66,7 +66,7 @@ const About = () => {
             </div>
 
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

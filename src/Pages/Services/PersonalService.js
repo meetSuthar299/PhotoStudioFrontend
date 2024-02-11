@@ -12,6 +12,12 @@ import { MdOutlinePhotoCameraFront } from "react-icons/md";
 import { MdFaceRetouchingNatural } from "react-icons/md";
 import { GiLovers } from "react-icons/gi";
 
+import portraitImg from '../../img/ServiceImgs/portrait-img.jpg';
+import professionalPic from '../../img/ServiceImgs/professionalPic.jpg';
+import familyPic from '../../img/ServiceImgs/familyPic.jpg';
+import engagementPic from '../../img/ServiceImgs/engagementPic.jpg';
+import eventPic from '../../img/ServiceImgs/eventPic.jpg';
+
 function PersonalService() {
   // scroll animation
   const location = useLocation();
@@ -55,9 +61,11 @@ function PersonalService() {
               title="Individual Portrait Photoshoots"
               frontData={{
                 icon: <MdOutlinePhotoCameraFront />,
+                img: portraitImg
               }}
               backData={{
-                paragraph: "Capture your essence with our individual portrait photoshoots. Whether it's for personal or professional use, our experienced photographers will ensure you look your best. From choosing the perfect backdrop to guiding you through poses, we'll create stunning portraits that reflect your unique personality and style."
+                paragraph: "Capture your essence with our individual portrait photoshoots. Whether it's for personal or professional use, our experienced photographers will ensure you look your best. From choosing the perfect backdrop to guiding you through poses, we'll create stunning portraits that reflect your unique personality and style.",
+                
               }}
               size="vertical"
             />
@@ -67,6 +75,7 @@ function PersonalService() {
               title="Professional Head Shots"
               frontData={{
                 icon: <MdFaceRetouchingNatural />,
+                img: professionalPic
               }}
               backData={{
                 paragraph: "Elevate your professional image with our expert headshot services. Our team specializes in capturing your unique essence, ensuring you make a lasting impression in any professional setting. With meticulous attention to detail and a keen eye for aesthetics, we guarantee headshots that exude professionalism and confidence."
@@ -78,6 +87,7 @@ function PersonalService() {
               title="Family Portrait Sessions"
               frontData={{
                 icon: <MdFamilyRestroom />,
+                img: familyPic
               }}
               backData={{
                 paragraph: "Capture cherished moments with our family portrait sessions. Our skilled photographers specialize in creating beautiful and meaningful images that reflect the love and connection within your family. Whether it's a formal studio shoot or a relaxed outdoor session, we'll ensure you have timeless photos to treasure for generations."
@@ -93,6 +103,7 @@ function PersonalService() {
               title="Engagement & Couple Portrait Sessions"
               frontData={{
                 icon: <GiLovers />,
+                img: engagementPic
               }}
               backData={{
                 paragraph: "Celebrate your love story with our engagement and couple portrait sessions. Our talented photographers specialize in capturing the unique connection and chemistry between you and your partner. Whether you prefer a romantic outdoor setting or a cozy indoor shoot, we'll work with you to create stunning images that reflect your love and personalities."
@@ -115,6 +126,7 @@ function PersonalService() {
               title="Event Photography & Videography"
               frontData={{
                 icon: <MdOutlineCelebration />,
+                img: eventPic
               }}
               backData={{
                 paragraph: 'Get your business online with our customized website design and development services. Our expert team creates websites tailored to your needs and goals.'
