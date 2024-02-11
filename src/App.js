@@ -13,7 +13,7 @@ import PersonalService from './Pages/Services/PersonalService';
 import TermsOfService from './Pages/Legal/TermsOfService';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTopButton from './Components/ScrollToTopButton';
-import Login from './Pages/Auth/Login';
+import Login from './Pages/Auth/login';
 
 const App = () => {
   const location = useLocation();
