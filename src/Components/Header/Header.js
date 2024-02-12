@@ -28,7 +28,7 @@ const Header = () => {
     };
   }, []);
 
-  return <header className={`fixed w-full px-10 z-30 h-20 flex items-center shadow-lg ${isScrolled ? 'bg-white text-black' : 'bg-[rgba(9,12,22,0.34)] text-white'} backdrop-blur-sm transition-all duration-700 border-b border-gray-500`}>
+  return <header className={`fixed w-full px-10 z-30 h-20 flex items-center shadow-lg ${isScrolled ? 'bg-white text-black' : 'bg-[rgba(8,10,19,0.27)] text-white'} backdrop-blur-sm transition-all duration-700 border-b border-gray-500`}>
     <div className='font-primary flex flex-col lg:flex-row lg:items-center w-full justify-between'>
       <nav className='hidden lg:flex gap-x-10 px-10 text-2xl'>
         <a href='/#about' key='/#about' className='cursor-pointer hover:scale-110'>About</a>

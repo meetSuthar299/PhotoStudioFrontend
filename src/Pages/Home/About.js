@@ -1,74 +1,96 @@
 import React from 'react';
+import TypingHeading from '../../Components/typingHeadding';
 import homeImg from '../../img/header/ArktikLogo.png';
-// import StarsBackground from '../../Components/StarsBackground';
+import FlipCard from '../../Components/FlipCard';
+import Testimonials from './Testimonials';
+import AboutTeam from './AboutTeam';
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent';
+import { GiMountaintop } from "react-icons/gi";
 
 const About = () => {
+
+  const services = [
+    "Video Production",
+    "Photography",
+    "Graphic Design",
+    "Web Development",
+    "SEO",
+    "Social Media Marketing",
+    "Corporate Headshots",
+    "Product Photography",
+    "Event Photography",
+    "Real Estate Photography"
+  ];
   const teamMembers = [
     {
       name: 'Fateh Sandhu',
       role: 'Co-Founder',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'With a passion for storytelling and a keen eye for detail, Fateh co-founded Arktic Studios to empower businesses through creative visual content. He brings years of experience in video production and a commitment to delivering exceptional results to every project.',
       imageUrl: 'john-doe-image.jpg', // Replace with actual image URL
     },
     {
       name: 'Meet Suthar',
       role: 'Co-Founder',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      description: 'As a visionary entrepreneur, Meet co-founded Arktic Studios with a mission to redefine the standard of visual storytelling. His expertise in photography and dedication to client satisfaction drive the studio\'s success, ensuring every project exceeds expectations.',
       imageUrl: 'jane-smith-image.jpg', // Replace with actual image URL
     },
   ];
-
-
+  const customerReviews = [
+    {
+      name: 'John Doe',
+      review: 'Arktic Studios helped us launch our new product with an outstanding promotional video. Their team is incredibly talented and professional. They listened to our vision and brought it to life in ways we couldn\'t have imagined. Highly recommend!',
+      company: 'ABC Tech Solutions',
+    },
+    {
+      name: 'Jane Smith',
+      review: 'Working with Arktic Studios was a game-changer for our brand. Their attention to detail and creative flair elevated our marketing efforts to new heights. We saw an immediate impact on engagement and brand awareness. Thank you for your exceptional work!',
+      company: 'XYZ Fashion',
+    },
+    {
+      name: 'Jane Smith',
+      review: 'Working with Arktic Studios was a game-changer for our brand. Their attention to detail and creative flair elevated our marketing efforts to new heights. We saw an immediate impact on engagement and brand awareness. Thank you for your exceptional work!',
+      company: 'XYZ Fashion',
+    },
+    {
+      name: 'Jane Smith',
+      review: 'Working with Arktic Studios was a game-changer for our brand. Their attention to detail and creative flair elevated our marketing efforts to new heights. We saw an immediate impact on engagement and brand awareness. Thank you for your exceptional work!',
+      company: 'XYZ Fashion',
+    },
+  ];
 
   return (
-    <section id='about' className='mx-auto sm::px-20 lg:px-40 py-52'>
-      <div className=' '>
-        <div className='flex flex-col lg:flex-row justify-center lg:justify-between items-center'>
-          <div className='lg:w-1/2 lg:pt-0 lg:pb-0 z-10 lg:relative flex flex-col items-center lg:items-start p-5'>
-
-            <div className='relative bg-cover bg-center flex flex-col items-center justify-center'>
-              <h1 className='text-4xl lg:text-5xl text-center lg:text-left z-10 relative mx-auto pb-5'>
-                Where your Vision Meets Victory
-              </h1>
-            </div>
+    <section id='about' className='bg-gray-100 lg:px-20 md:px-10 px-10 py-28'>
+      <div className='mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+          <div className='text-center lg:text-left'>
             <AnimatedComponent>
-              <p className='text-lg lg:text-2xl font-light mb-8 lg:mb-12'>
-                Discover a world of cinematic excellence with Arktic Studios, your premier video production team nestled in the heart of Calgary.
-                We are committed to inspiring entrepreneurs and small businesses by providing innovative creative solutions.
-                Elevate your brand presence through our expert videography and photography services, designed to distinguish you in a competitive landscape.
+              <h1 className='text-lg font-bold'>We are arktic.</h1>
+              <h1 className='text-4xl lg:text-5xl font-bold mb-2'>your all-in-one destination for</h1>
+              <TypingHeading headings={services} />
+            </AnimatedComponent>
+            <AnimatedComponent>
+              <p className='text-lg text-gray-700 my-8'>
+                Our goal is to help your business thrive through creative visual solutions.
+                Our team is dedicated to delivering exceptional results, whether it's crafting compelling narratives
+                through captivating storytelling or designing innovative digital experiences.
+                We pride ourselves on our ability to understand your unique goals and bring them to life with
+                precision and creativity. From enhancing your online presence to creating memorable brand experiences,
+                we are committed to exceeding your expectations and helping you succeed in today's competitive landscape.
+                Trust Arktic to be your partner in achieving your vision and reaching new heights of success.
               </p>
-              <a href='#contact' key='#contact' className='btn mb-8 lg:mb-0 cursor-pointer transition-all hover:scale-105 text-xl'>Get in Touch</a>
+              <a href='#contact' className='btn text-lg'>Get in Touch</a>
             </AnimatedComponent>
           </div>
-          <AnimatedComponent>
-            <div className='flex justify-center lg:justify-end'>
-              <img src={homeImg} alt='Me' className='object-cover lg:h-[55vh] md:h-[65vh] sm:h-[50vh]' />
-            </div>
-          </AnimatedComponent>
-        </div>
-        {/* <div className="mx-auto text-center py-16">
-          <h2 className='text-2xl lg:text-3xl font-bold mb-8'>Meet the Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div className="flex flex-col items-center">
-              <div className="bg-gray-300 w-24 h-24 rounded-full overflow-hidden mb-4">
-                <img src='john-doe-image.jpg' alt='Fateh Sandhu' className="w-full h-full object-cover" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Fateh Sandhu</h3>
-              <p className="text-gray-600">Co-Founder</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-gray-300 w-24 h-24 rounded-full overflow-hidden mb-4">
-                <img src='jane-smith-image.jpg' alt='Meet Suthar' className="w-full h-full object-cover" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Meet Suthar</h3>
-              <p className="text-gray-600">Co-Founder</p>
-            </div>
-
+          <div className='flex justify-center items-center text-[400px]'>
+            {/* <img src={homeImg} alt='Arktic Studios' className='object-cover h-96 rounded-lg' /> */}
+            <GiMountaintop />
           </div>
-        </div> */}
+        </div>
+        {/* <AboutTeam teamMembers={teamMembers} /> */}
+        {/* <Testimonials reviews={customerReviews} /> */}
       </div>
     </section>
   );
 };
+
 export default About;
