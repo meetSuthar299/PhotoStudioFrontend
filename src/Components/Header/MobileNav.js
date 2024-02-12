@@ -63,8 +63,15 @@ const MobileNav = () => {
         </div>
 
         <ul className='h-full flex flex-col justify-center items-center gap-y-8 font-primary text-3xl'>
-          <li>
-            <a href='/#about' key='/#about'>About</a>
+          <li className='pl-5'>
+            <HeaderDropdown
+              dropdownTitle="About"
+              dropdownLink="/#about"
+              links={[
+                { name: 'Out Team', link: '/aboutTeam/' },
+                // { name: 'Testimonials', link: '/#testimonials' },
+              ]}
+            />
           </li>
           <li className='pl-5'>
             <HeaderDropdown

@@ -19,7 +19,6 @@ import Auto4 from '../../img/ServiceImgs/Auto4.jpg';
 import Drone from '../../img/ServiceImgs/Drone.jpg';
 import Print from '../../img/ServiceImgs/Print.jpg';
 
-
 function AutomotiveService() {
   // scroll animation
   const location = useLocation();
@@ -67,7 +66,7 @@ function AutomotiveService() {
               }}
               backData={{
                 paragraph: "Capture the essence of your vehicle with our personalized photoshoots. Our experienced photographers will ensure it looks stunning, whether for personal enjoyment or professional purposes."
-              
+
               }}
               size="vertical"
             />

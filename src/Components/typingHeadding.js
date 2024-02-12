@@ -71,7 +71,7 @@ function TypingHeading({ headings }) {
     }, [typingMode, updateTypingModeTimer]);
 
     return (
-        <div className="text-2xl font-medium text-neutrals-50 md:text-3xl">
+        <div className="text-3xl font-medium text-neutrals-50 md:text-3xl">
             <h2 className="sr-only">
                 {currentHeading}
             </h2>
@@ -87,7 +87,7 @@ function TypingHeading({ headings }) {
                     {currentHeading.split('').map((char, index) => (
                         <motion.span
                             key={`${char}-${index}`}
-                            className="inline-block whitespace-pre"
+                            className="inline-block whitespace-pre font-primary"
                             variants={letterVariants}
                         >
                             {char}

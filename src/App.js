@@ -14,6 +14,7 @@ import TermsOfService from './Pages/Legal/TermsOfService';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTopButton from './Components/ScrollToTopButton';
 import Login from './Pages/Auth/login';
+import AboutTeam from './Pages/AboutTeam';
 
 const App = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const App = () => {
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path={"/"} element={<Home />} />
+        <Route path='/aboutTeam' element={<AboutTeam />} />
         <Route path='/automotiveService' element={<AutomotiveService />} />
         <Route path='/businessService' element={<BusinessService />} />
         <Route path='/personalService' element={<PersonalService />} />
