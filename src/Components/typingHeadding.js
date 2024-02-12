@@ -71,7 +71,7 @@ function TypingHeading({ headings }) {
     }, [typingMode, updateTypingModeTimer]);
 
     return (
-        <div className="text-3xl font-medium text-neutrals-50 md:text-3xl">
+        <div className="text-neutrals-50 text-2xl lg:text-4xl font-extrabold">
             <h2 className="sr-only">
                 {currentHeading}
             </h2>

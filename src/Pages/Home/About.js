@@ -10,7 +10,7 @@ const About = () => {
     "Photography",
     "Graphic Design",
     "Web Development",
-    "SEO",
+    "Search Engine Optimization",
     "Social Media Marketing",
     "Corporate Headshots",
     "Product Photography",
@@ -24,7 +24,7 @@ const About = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
           <div className='text-center lg:text-left'>
             <h1 className='text-lg font-bold'>We are arktic.</h1>
-            <h1 className='text-4xl lg:text-5xl font-bold mb-2'>Your all-in-one destination for</h1>
+            <h1 className='text-4xl lg:text-5xl font-bold mb-4'>Your all-in-one destination for</h1>
             <TypingHeading headings={services} />
             <AnimatedComponent>
               <p className='text-lg text-gray-700 my-8'>
