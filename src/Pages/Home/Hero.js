@@ -11,7 +11,7 @@ function Hero() {
                 __html: `<video 
                     loop muted autoplay playsinline
                     src="${video}"
-                    class="w-full h-full object-cover absolute top-0 -right-7 z-0 scale-110"
+                    class="w-full h-full object-cover absolute top-0 z-0"
                 />`,
             }}></div>
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-1 text-white backdrop-brightness-75">
