@@ -68,8 +68,9 @@ const MobileNav = () => {
               dropdownTitle="About"
               dropdownLink="/#about"
               links={[
-                { name: 'Out Team', link: '/aboutTeam/' },
-                // { name: 'Testimonials', link: '/#testimonials' },
+                { name: 'Our Story', link: '/aboutTeam/#ourStory' },
+                { name: 'Our Team', link: '/aboutTeam/#ourTeam' },
+                { name: 'Our Values', link: '/aboutTeam/#values' }
               ]}
             />
           </li>
