@@ -48,7 +48,11 @@ function AboutTeam() {
                 ]}
             />
             <div id="ourStory" className='py-40 px-10 md:px-20 bg-gray-100 transition-all'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>
+                    <div className='flex justify-center items-center text-[400px]'>
+                        {/* <img src={homeImg} alt='Arktic Studios' className='object-cover h-96 rounded-lg' /> */}
+                        <GiMountaintop />
+                    </div>
                     <div className='text-center lg:text-left'>
                         <h1 className='text-xl font-bold'>The </h1>
                         <h1 className='text-4xl lg:text-5xl font-bold mb-2'>Arktic Story</h1>
@@ -71,10 +75,6 @@ function AboutTeam() {
                             </p>
                             <a href='#contact' className='btn text-lg hover:scale-105'>Get in Touch</a>
                         </AnimatedComponent>
-                    </div>
-                    <div className='flex justify-center items-center text-[400px]'>
-                        {/* <img src={homeImg} alt='Arktic Studios' className='object-cover h-96 rounded-lg' /> */}
-                        <GiMountaintop />
                     </div>
                 </div>
                 <section id="ourTeam" className="our-team py-40">

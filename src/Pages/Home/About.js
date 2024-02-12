@@ -40,7 +40,6 @@ const About = () => {
                 <a href='#contact' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded hover:'>Contact us</a>
                 <a href='/aboutTeam/' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded'>Our Story</a>
               </div>
-
             </AnimatedComponent>
           </div>
           <div className='flex justify-center items-center text-[400px]'>
