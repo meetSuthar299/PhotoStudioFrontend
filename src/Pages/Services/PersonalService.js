@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import PageBanner from '../../Components/PageBanner'
 import Contact from '../Contact'
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
-import WhatToExpect from '../../Components/WhatToExpect';
+import StepsToSuccess from '../../Components/StepsToSuccess';
 import { useLocation } from 'react-router-dom';
 
 import FlipCard from '../../Components/FlipCard';
@@ -39,7 +39,7 @@ function PersonalService() {
         backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868123/IMG_2820_os1xpx.jpg"}
         links={[
           { name: 'What We Do', link: '/personalService/#whatWeDo' },
-          { name: 'What To Expect', link: '/personalService/#whatToExpect' },
+          { name: 'Steps to Success', link: '/personalService/#stepsToSuccess' },
           { name: 'Get a Quote', link: '/personalService/#contact' },
         ]}
       />
@@ -137,7 +137,7 @@ function PersonalService() {
         </div>
         <div className="lg:px-20 px-10 pb-10">
           <AnimatedComponent>
-            <WhatToExpect
+            <StepsToSuccess
               text="Our mission is to elevate your personal story and highlight your unique qualities, uncovering the distinctive aspects that define you. Here's our tailored approach to delivering services that seamlessly align with your distinct vision."
               steps={[
                 "Let's dive into a conversation about your project and your personal vision.",

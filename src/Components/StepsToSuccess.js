@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import AnimatedComponent from './WrapperComponents/AnimatedComponent';
 
-const WhatToExpect = ({ title, text, steps }) => {
+const StepsToSuccess = ({ title, text, steps }) => {
     const sectionVariants = {
         initial: { opacity: 0, y: 40 },
         animate: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
@@ -22,8 +22,8 @@ const WhatToExpect = ({ title, text, steps }) => {
     const stepTitles = ["Consultation", "Collaborative Planning", "Dynamic Photoshoot", "Polished Delivery"];
 
     return (
-        <motion.section id="whatToExpect" className="py-24">
-            <h2 className="text-5xl font-extrabold pb-20 text-center">What to Expect</h2>
+        <motion.section id="stepsToSuccess" className="py-24">
+            <h2 className="text-5xl font-extrabold pb-20 text-center">Steps to Success</h2>
             <p className="text-xl mb-12 text-center font-light px-2 lg:px-36">
                 {text}
             </p>
@@ -46,4 +46,4 @@ const WhatToExpect = ({ title, text, steps }) => {
     );
 };
 
-export default WhatToExpect;
+export default StepsToSuccess;

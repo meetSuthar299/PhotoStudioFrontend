@@ -2,11 +2,10 @@ import React, { useEffect } from 'react'
 import PageBanner from '../../Components/PageBanner'
 import Contact from '../Contact'
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
-import WhatToExpect from '../../Components/WhatToExpect';
+import StepsToSuccess from '../../Components/StepsToSuccess';
 import { useLocation } from 'react-router-dom';
 import FlipCard from '../../Components/FlipCard';
 
-import cityImg from '../../img/gallery/city.jpeg';
 import CorporateHeadshot from '../../img/ServiceImgs/CorporateHeadshots.jpg';
 import CorporateVideo from '../../img/ServiceImgs/CorporateVideo.jpg';
 import CorporateProduct from '../../img/ServiceImgs/corporateProduct.jpg';
@@ -41,7 +40,7 @@ function CorporateService() {
         backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_50/v1705297846/colorCheck1_j8ucjm.jpg"}
         links={[
           { name: 'What We Do', link: '/businessService/#whatWeDo' },
-          { name: 'What to Expect', link: '/businessService/#whatToExpect' },
+          { name: 'Steps to Success', link: '/businessService/#stepsToSuccess' },
           { name: 'Get a Quote', link: '/businessService/#contact' }
         ]}
       />
@@ -147,7 +146,7 @@ function CorporateService() {
         </div>
         <div className="lg:px-20 px-10 pb-10">
           <AnimatedComponent>
-            <WhatToExpect
+            <StepsToSuccess
               text="We aim to reveal the unique aspects that set your business apart, acknowledging its 
                     special appeal to your target audience. Here's our customized approach to delivering content that effortlessly aligns with your 
                     strategic vision."

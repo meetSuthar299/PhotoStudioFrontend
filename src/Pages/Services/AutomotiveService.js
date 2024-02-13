@@ -3,8 +3,7 @@ import PageBanner from '../../Components/PageBanner'
 import Contact from '../Contact'
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
 import { useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import WhatToExpect from '../../Components/WhatToExpect';
+import StepsToSuccess from '../../Components/StepsToSuccess';
 
 import FlipCard from '../../Components/FlipCard';
 import { GiRaceCar } from "react-icons/gi";
@@ -40,7 +39,7 @@ function AutomotiveService() {
         backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1705296352/film-23_csirlj.jpg"}
         links={[
           { name: 'What We Do', link: '/automotiveService/#whatWeDo' },
-          { name: 'What To Expect', link: '/automotiveService/#whatToExpect' },
+          { name: 'Steps to Success', link: '/automotiveService/#stepsToSuccess' },
           { name: 'Get a Quote', link: '/automotiveService/#contact' }
         ]}
       />
@@ -129,7 +128,7 @@ function AutomotiveService() {
         </div>
         <div className="lg:px-20 px-10 pb-10">
           <AnimatedComponent>
-            <WhatToExpect
+            <StepsToSuccess
               text="Elevating a vehicle through photography transcends mere aesthetics—it's a celebration of diverse designs. 
             Our mission is to unravel these distinctive features, recognizing that each vehicle appeals to a unique demographic. 
             Here's the tailored approach to deliver content that aligns seamlessly with your distinct vision."
