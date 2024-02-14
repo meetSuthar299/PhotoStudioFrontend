@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom'; // Import NavLink
 
 function PageBanner({ text, backgroundImage, links }) {
     return (
@@ -11,25 +11,14 @@ function PageBanner({ text, backgroundImage, links }) {
             <div className='flex flex-row gap-8 text-white z-10 text text-md md:text-lg lg:text-xl'>
                 {links?.map((link, index) => (
                     <React.Fragment key={index}>
-                        <a href={link.link} className='hover:scale-110 font-thin text-center sm:w-auto transition-all'>
+                        {/* Replace anchor tag with NavLink */}
+                        <NavLink to={link.link} className='hover:scale-110 font-thin text-center sm:w-auto transition-all'>
                             <h2>{link.name}</h2>
-                        </a>
+                        </NavLink>
                     </React.Fragment>
                 ))}
             </div>
         </div>
     );
 }
-
-PageBanner.propTypes = {
-    text: PropTypes.string.isRequired,
-    backgroundImage: PropTypes.string.isRequired,
-    sectionLinks: PropTypes.arrayOf(
-        PropTypes.shape({
-            link: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-        })
-    ),
-};
-
 export default PageBanner;

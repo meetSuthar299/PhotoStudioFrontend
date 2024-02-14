@@ -10,7 +10,7 @@ function Login() {
 
     return (
         <section id='login' className='flex flex-col items-center justify-center h-screen bg-gray-100'>
-            <div className='bg-white px-5 py-10 rounded-lg shadow-md w-80'>
+            <div className='bg-white px-5 py-10 rounded-lg shadow-md w-96'>
                 <h1 className='text-3xl font-semibold mb-4 text-center py-2'>Member Login</h1>
                 <form className='flex flex-col gap-4'>
                     <label className='text-gray-600'>Email:</label>
@@ -35,6 +35,9 @@ function Login() {
                         Login
                     </button>
                 </form>
+                <p className='text-gray-600 text-center mt-4'>
+                    Don't have an account? <a href='/requestAccount/' className='text-primary hover:font-bold'>Request one here</a>
+                </p>
             </div>
         </section>
     );

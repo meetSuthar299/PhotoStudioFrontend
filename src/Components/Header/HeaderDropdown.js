@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { motion, AnimatePresence } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -21,9 +22,12 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
         <div className="relative text-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='flex'>
                 <div className='hover:scale-110'>
-                    <a href={dropdownLink} className="font-semibold focus:outline-none ">
+                    {/* <a href={dropdownLink} className="font-semibold focus:outline-none ">
                         {dropdownTitle}
-                    </a>
+                    </a> */}
+                    <NavLink to={dropdownLink} className="font-semibold focus:outline-none ">
+                        {dropdownTitle}
+                    </NavLink>
                     <motion.span
                         onClick={handleToggleDropdown}
                         className={`transition-all duration-75 inline-block my-auto align-middle text-2xl`}
@@ -46,12 +50,18 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                         >
                             {links.map(({ name, link }, index) => (
                                 <React.Fragment key={link}>
-                                    <a
+                                    {/* <a
                                         href={link}
                                         className="z-50 block px-4 py-2 hover:scale-[1.05] text-center text-xl rounded-md transition-all duration-200 bg-zinc-100 text-gray-500 hover:text-black"
                                     >
                                         {name}
-                                    </a>
+                                    </a> */}
+                                    <NavLink
+                                        to={link}
+                                        className="z-50 block px-4 py-2 hover:scale-[1.05] text-center text-xl rounded-md transition-all duration-200 bg-zinc-100 text-gray-500 hover:text-black"
+                                    >
+                                        {name}
+                                    </NavLink>
                                 </React.Fragment>
                             ))}
 

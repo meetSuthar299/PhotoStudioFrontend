@@ -58,7 +58,7 @@ const Gallery = () => {
       onContextMenu={handleContextMenu} // Disable right-click
     >
       <Helmet>
-        <title>Arktic Gallery</title>
+        <title>Arktic Gallery - High quality prints of Arktic Studios catalog</title>
         <meta
           name="description"
           content="Buy high quality prints of Arktic Studios photography, shipped directly to you."

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom'; // Import NavLink
 import { IoMdClose } from 'react-icons/io';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
@@ -86,21 +87,19 @@ const MobileNav = () => {
             />
           </li>
           <li>
-            <a href='/#contact' key='/#contact'>Contact</a>
+            <NavLink to='/#contact'>Contact</NavLink>
           </li>
           <li>
-            <a href='/portfolio' key='/portfolio/'>Portfolio</a>
+            <NavLink to='/portfolio/'>Portfolio</NavLink>
           </li>
           <li>
-            <a href='/gallery' key='/gallery/'>Gallery</a>
+            <NavLink to='/gallery/'>Gallery</NavLink>
           </li>
           <li>
-            <a href='/login' key='/login/'>Login</a>
+            <NavLink to='/login/'>Login</NavLink>
           </li>
           <Socials />
         </ul>
-
-
       </motion.div>
     </nav>
   );

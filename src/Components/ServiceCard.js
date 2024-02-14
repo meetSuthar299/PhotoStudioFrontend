@@ -1,16 +1,9 @@
 import React from 'react';
-import { withHoverEffect } from './WrapperComponents/withHoverEffect';
+import { NavLink } from 'react-router-dom'; // Import NavLink
 
 function ServiceCard({ img, title, offerings, link }) {
-  const navigateToLink = () => {
-    window.location.href = link;
-  };
-
   return (
-    <div
-      onClick={navigateToLink}
-      className="group relative overflow-hidden transition-all duration-400 transform cursor-pointer rounded shadow-md md:h-[50vh] lg:h-[75vh]"
-    >
+    <div className="group relative overflow-hidden transition-all duration-400 transform cursor-pointer rounded shadow-md md:h-[50vh] lg:h-[75vh]">
       {/* Image */}
       <img
         loading="lazy"
@@ -25,15 +18,15 @@ function ServiceCard({ img, title, offerings, link }) {
         <h1 className="group-hover:opacity-0 mb-4 text-3xl lg:text-4xl text-white font-semibold z-10 hidden lg:flex">{title}</h1>
         <div className="mb-4 text-3xl lg:text-4xl text-white font-semibold z-10 lg:hidden text-center">
           <h1>{title}</h1>
-          <a href={link} className="w-full shadow-md bg-[rgba(41,41,41,0.64)] backdrop-blur-lg text-xl font-light absolute bottom-0 left-0 py-2">
+          {/* Replace anchor tag with NavLink */}
+          <NavLink to={link} className="w-full shadow-md bg-[rgba(41,41,41,0.64)] backdrop-blur-lg text-xl font-light absolute bottom-0 left-0 py-2">
             <h2>Learn More</h2>
-          </a>
+          </NavLink>
         </div>
       </div>
 
       {/* Details Overlay */}
       <div className="absolute inset-0 flex-col justify-between items-center px-5 py-20 opacity-0 hover:bg-opacity-100 hover:opacity-100 text-center z-10 hidden lg:flex backdrop-blur backdrop-brightness-[0.3] duration-1000">
-        {/* <h1 className='mb-4 text-3xl lg:text-4xl text-white font-semibold z-10'>{title}</h1> */}
         <ul className="text-gray-100 w-full align-middle items-center">
           {offerings.map((offering, index) => (
             <React.Fragment key={index}>
@@ -46,12 +39,12 @@ function ServiceCard({ img, title, offerings, link }) {
             </React.Fragment>
           ))}
         </ul>
-        <a href={link} className="btn hover:scale-110 w-[75%] shadow-md bg-[rgba(78,78,78,0.22)] hover:bg-[rgba(194,194,194,0.23)] rounded text-xl transition-all">
+        {/* Replace anchor tag with NavLink */}
+        <NavLink to={link} className="btn hover:scale-110 w-[75%] shadow-md bg-[rgba(78,78,78,0.22)] hover:bg-[rgba(194,194,194,0.23)] rounded text-xl transition-all">
           <h1>Learn More</h1>
-        </a>
+        </NavLink>
       </div>
     </div>
-
   );
 }
 

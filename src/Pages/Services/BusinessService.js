@@ -5,6 +5,7 @@ import AnimatedComponent from '../../Components/WrapperComponents/AnimatedCompon
 import StepsToSuccess from '../../Components/StepsToSuccess';
 import { useLocation } from 'react-router-dom';
 import FlipCard from '../../Components/FlipCard';
+import { motion } from "framer-motion";
 
 import CorporateHeadshot from '../../img/ServiceImgs/CorporateHeadshots.jpg';
 import CorporateVideo from '../../img/ServiceImgs/CorporateVideo.jpg';
@@ -34,7 +35,12 @@ function CorporateService() {
   }, [location])
 
   return (
-    <div>
+    <motion.section
+      className='section '
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+    >
       <PageBanner
         text={'Business Services'}
         backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_50/v1705297846/colorCheck1_j8ucjm.jpg"}
@@ -161,7 +167,7 @@ function CorporateService() {
         </div>
       </div>
       <Contact />
-    </div>
+    </motion.section>
 
   )
 }

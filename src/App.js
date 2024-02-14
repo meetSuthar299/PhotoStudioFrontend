@@ -6,37 +6,58 @@ import Home from './Pages/Home/Home';
 import Footer from './Components/Footer';
 import Loader from './Components/Loader';
 import PrivacyPolicy from './Pages/Legal/PrivacyPolicy';
-import { Route, Routes, useLocation, } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AutomotiveService from './Pages/Services/AutomotiveService';
 import BusinessService from './Pages/Services/BusinessService';
 import PersonalService from './Pages/Services/PersonalService';
 import TermsOfService from './Pages/Legal/TermsOfService';
-import { AnimatePresence } from 'framer-motion';
 import ScrollToTopButton from './Components/ScrollToTopButton';
 import Login from './Pages/Auth/login';
 import AboutTeam from './Pages/AboutTeam';
+import RequestAccount from './Pages/Auth/RequestAccount';
 
 const App = () => {
-  const location = useLocation();
-  return <>
-    <Header />
-    <AnimatePresence>
-      <Routes location={location} key={location.pathname}>
-        <Route path={"/"} element={<Home />} />
-        <Route path='/aboutTeam' element={<AboutTeam />} />
-        <Route path='/automotiveService' element={<AutomotiveService />} />
-        <Route path='/businessService' element={<BusinessService />} />
-        <Route path='/personalService' element={<PersonalService />} />
-        <Route path='/gallery' element={<Gallery />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
-        <Route path='/termsOfService' element={<TermsOfService />} />
-      </Routes>
-    </AnimatePresence>
-    <Footer />
-    <ScrollToTopButton/>
-  </>;
-};
+  // const location = useLocation();
+  return (
+    <Router>
+      <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutTeam" element={<AboutTeam />} />
+          <Route path="/automotiveService" element={<AutomotiveService />} />
+          <Route path="/businessService" element={<BusinessService />} />
+          <Route path="/personalService" element={<PersonalService />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/requestAccount" element={<RequestAccount />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/termsOfService" element={<TermsOfService />} />
+        </Routes>
+      <ScrollToTopButton />
+      <Footer />
+    </Router>
+  );
+  // return <>
+  //   <Header />
+  //   <AnimatePresence>
+  //     <Routes location={location} key={location.pathname}>
+  //       <Route path={"/"} element={<Home />} />
+  //       <Route path='/aboutTeam' element={<AboutTeam />} />
+  //       <Route path='/automotiveService' element={<AutomotiveService />} />
+  //       <Route path='/businessService' element={<BusinessService />} />
+  //       <Route path='/personalService' element={<PersonalService />} />
+  //       <Route path='/gallery' element={<Gallery />} />
+  //       <Route path='/portfolio' element={<Portfolio />} />
+  //       <Route path='/login' element={<Login/>} />
+  //       <Route path='/requestAccount' element={<RequestAccount/>} />
+  //       <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
+  //       <Route path='/termsOfService' element={<TermsOfService />} />
+  //     </Routes>
+  //   </AnimatePresence>
+  //   <Footer />
 
+  // </>;
+};
+//  
 export default App;

@@ -4,6 +4,7 @@ import Contact from '../Contact'
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
 import { useLocation } from 'react-router-dom';
 import StepsToSuccess from '../../Components/StepsToSuccess';
+import { motion } from "framer-motion";
 
 import FlipCard from '../../Components/FlipCard';
 import { GiRaceCar } from "react-icons/gi";
@@ -33,7 +34,12 @@ function AutomotiveService() {
   }, [location])
 
   return (
-    <div>
+    <motion.section
+      className='section '
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+    >
       <PageBanner
         text={'Automotive Studio'}
         backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1705296352/film-23_csirlj.jpg"}
@@ -143,7 +149,7 @@ function AutomotiveService() {
         </div>
       </div>
       <Contact />
-    </div>
+    </motion.section>
   )
 }
 

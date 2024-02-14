@@ -4,6 +4,7 @@ import Contact from '../Contact'
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent'
 import StepsToSuccess from '../../Components/StepsToSuccess';
 import { useLocation } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 import FlipCard from '../../Components/FlipCard';
 
@@ -33,7 +34,12 @@ function PersonalService() {
   }, [location])
 
   return (
-    <div>
+    <motion.section
+      className='section '
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+    >
       <PageBanner
         text={'Personal Services'}
         backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704868123/IMG_2820_os1xpx.jpg"}
@@ -65,7 +71,7 @@ function PersonalService() {
               }}
               backData={{
                 paragraph: "Capture your essence with our individual portrait photoshoots. Whether it's for personal or professional use, our experienced photographers will ensure you look your best. From choosing the perfect backdrop to guiding you through poses, we'll create stunning portraits that reflect your unique personality and style.",
-                
+
               }}
               size="vertical"
             />
@@ -150,7 +156,7 @@ function PersonalService() {
         </div>
       </div>
       <Contact />
-    </div>
+    </motion.section>
   )
 }
 

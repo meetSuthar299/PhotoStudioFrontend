@@ -2,35 +2,44 @@ import React from 'react';
 import Logo from './Logo';
 import SocialMediaLinks from './SocialMediaLinks';
 import { FiMapPin, FiMail, FiPhone } from 'react-icons/fi';
+import { NavLink } from 'react-router-dom'; // Import NavLink
 
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white text-center sm:text-left transition-all">
       <div className="mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 px-10">
           <div className="flex flex-col space-y-6">
-            <a href="/" className="cursor-pointer text-5xl">
+            <NavLink to="/" className="cursor-pointer text-5xl">
               <Logo />
-            </a>
-            <div className="flex justify-center sm:justify-start" >
-            <SocialMediaLinks />
+            </NavLink>
+            <div className="flex justify-center sm:justify-start">
+              <SocialMediaLinks />
             </div>
           </div>
           <div className="space-y-4">
             <h1 className="text-xl font-semibold">Quick Links</h1>
             <ul className="text-gray-400">
-              <li><a href="/#about" className="hover:text-white hover:font-bold">About Us</a></li>
-              <li><a href="/#services" className="hover:text-white hover:font-bold">Our Services</a></li>
-              <li><a href="/#contact"className="hover:text-white hover:font-bold">Contact Us</a></li>
-              <li><a href="/gallery"className="hover:text-white hover:font-bold">Gallery</a></li>
-              <li><a href="/portfolio"className="hover:text-white hover:font-bold">Portfolio</a></li>
+              <li><NavLink to="/#services" className="hover:text-white hover:font-bold">Our Services</NavLink></li>
+              <li><NavLink to="/#contact" className="hover:text-white hover:font-bold">Contact Us</NavLink></li>
+              <li><NavLink to="/gallery/" className="hover:text-white hover:font-bold">Gallery</NavLink></li>
+              <li><NavLink to="/portfolio/" className="hover:text-white hover:font-bold">Portfolio</NavLink></li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <h1 className="text-xl font-semibold">About Arktic</h1>
+            <ul className="text-gray-400">
+              <li><NavLink to="/#about" className="hover:text-white hover:font-bold">About Us</NavLink></li>
+              <li><NavLink to="/aboutTeam/" className="hover:text-white hover:font-bold">Our Story</NavLink></li>
+              <li><NavLink to="/aboutTeam/#ourTeam" className="hover:text-white hover:font-bold">Our Team</NavLink></li>
+              <li><NavLink to="/aboutTeam/#values" className="hover:text-white hover:font-bold">Our Values</NavLink></li>
             </ul>
           </div>
           <div className="space-y-4">
             <h1 className="text-xl font-semibold">Legal</h1>
             <ul className="text-gray-400">
-              <li><a href="/termsOfService"className="hover:text-white hover:font-bold">Terms of Service</a></li>
-              <li><a href="/privacyPolicy"className="hover:text-white hover:font-bold">Privacy Policy</a></li>
+              <li><NavLink to="/termsOfService" className="hover:text-white hover:font-bold">Terms of Service</NavLink></li>
+              <li><NavLink to="/privacyPolicy" className="hover:text-white hover:font-bold">Privacy Policy</NavLink></li>
             </ul>
           </div>
           <div className="space-y-4">
