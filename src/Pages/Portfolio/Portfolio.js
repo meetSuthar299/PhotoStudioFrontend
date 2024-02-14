@@ -8,8 +8,22 @@ import {
 import Loader from "../../Components/Loader";
 import { Helmet } from "react-helmet";
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 function Portfolio() {
+  // scroll animation
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1))
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    }
+  }, [location])
+
   // const dispatch = useDispatch();
   // const projects = useSelector(selectProjects);
 

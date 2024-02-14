@@ -35,7 +35,7 @@ function AutomotiveService() {
 
   return (
     <motion.section
-      className='section '
+      className='section'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
@@ -71,7 +71,6 @@ function AutomotiveService() {
               }}
               backData={{
                 paragraph: "Capture the essence of your vehicle with our personalized photoshoots. Our experienced photographers will ensure it looks stunning, whether for personal enjoyment or professional purposes."
-
               }}
               size="vertical"
             />

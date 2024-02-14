@@ -12,8 +12,22 @@ import { motion } from "framer-motion";
 import AnimatedComponent from "../../Components/WrapperComponents/AnimatedComponent";
 import PageBanner from "../../Components/PageBanner";
 import cityImg from "../../img/gallery/city.jpeg"
+import { useLocation } from "react-router-dom";
 
 const Gallery = () => {
+  // scroll animation
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1))
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    }
+  }, [location])
+
   const dispatch = useDispatch();
   const products = useSelector(selectProducts);
 

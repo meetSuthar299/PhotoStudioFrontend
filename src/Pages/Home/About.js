@@ -2,6 +2,7 @@ import React from 'react';
 import TypingHeading from '../../Components/typingHeadding';
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent';
 import { GiMountaintop } from "react-icons/gi";
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
 
@@ -37,8 +38,12 @@ const About = () => {
                 Trust Arktic to be your partner in achieving your vision and reaching new heights of success.
               </p>
               <div className='flex'>
-                <a href='#contact' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded hover:'>Contact us</a>
-                <a href='/aboutTeam/' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded'>Our Story</a>
+                <NavLink to='/#contact' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded hover:'>
+                  Contact us
+                </NavLink>
+                <NavLink to='/aboutTeam/' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded'>
+                  Our Story
+                </NavLink>
               </div>
             </AnimatedComponent>
           </div>
