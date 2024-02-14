@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'; // Import NavLink
 
 function ServiceCard({ img, title, offerings, link }) {
   return (
-    <div className="group relative overflow-hidden transition-all duration-400 transform cursor-pointer rounded shadow-md md:h-[50vh] lg:h-[75vh]">
+    <div className="group relative overflow-hidden transition-all duration-400 transform rounded shadow-md md:h-[50vh] lg:h-[75vh]">
       {/* Image */}
       <img
         loading="lazy"
