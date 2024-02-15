@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
-const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
+const HeaderDropdown = ({ dropdownTitle, dropdownLink, links}) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const handleToggleDropdown = () => {
@@ -48,7 +48,7 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                             exit={{ opacity: 0, y: -75, scale: 0, }}
 
                         >
-                            {links.map(({ name, link }, index) => (
+                            {links.map(({ name, link, clickAction}, index) => (
                                 <React.Fragment key={link}>
                                     {/* <a
                                         href={link}
@@ -57,8 +57,9 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links }) => {
                                         {name}
                                     </a> */}
                                     <NavLink
-                                        to={link}
+                                        to={link? link : ""}
                                         className="z-50 block px-4 py-2 hover:scale-[1.05] text-center text-xl rounded-md transition-all duration-200 bg-zinc-100 text-gray-500 hover:text-black"
+                                        onClick={clickAction? clickAction : ""}
                                     >
                                         {name}
                                     </NavLink>

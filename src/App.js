@@ -15,6 +15,7 @@ import ScrollToTopButton from './Components/ScrollToTopButton';
 import Login from './Pages/Auth/login';
 import AboutTeam from './Pages/AboutTeam';
 import RequestAccount from './Pages/Auth/RequestAccount';
+import Account from './Pages/Account/Account';
 
 const App = () => {
   // const location = useLocation();
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/personalService" element={<PersonalService />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Login />} />
           <Route path="/requestAccount" element={<RequestAccount />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />

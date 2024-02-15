@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const TermsOfService = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1))
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    }
+  }, [location])
   return (
     <div className="mx-auto pt-32 px-28 pb-20">
       <h1 className="text-6xl font-bold mb-6">Arktic Studios Terms of Service</h1>

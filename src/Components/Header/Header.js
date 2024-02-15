@@ -1,13 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import Socials from "../SocialMediaLinks";
 import Logo from '../Logo';
 import MobileNav from "./MobileNav";
 import HeaderDropdown from './HeaderDropdown';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import ShowOnLogin, { ShowOnLogout } from "../../helpers/hiddenLink";
+import { useDispatch, useSelector } from "react-redux";
+import { RESET_AUTH, logout, getUser, selectUser} from "../../redux/Auth/AuthSlice";
+import { shortenText } from '../../helpers/functions';
+import { UserName } from '../../Pages/Account/Account';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
+  const { isLoading, user } = useSelector((state) => state.auth);
+  const [profile, setProfile] = useState({
+    name: user?.name || "",
+    email: user?.email || "",
+    role: user?.role || "",
+  });
+
+  // get user from redux store
+  useEffect(() => {
+    if (!user) {
+      dispatch(getUser());
+    }
+  }, [dispatch, user]);
+  // get user from redux store and set profile state
+  useEffect(() => {
+    if (user) {
+      setProfile({
+        name: user.name || "",
+        email: user.email || "",
+        phone: user.phone || "",
+        role: user.role || "",
+        address: user.address || {},
+      });
+    }
+  }, [user]);
+
+
+  // scroll event listener to change header background color
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -20,14 +54,20 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-
     // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+
+  const logoutUser = async () => {
+    dispatch(RESET_AUTH());
+    await dispatch(logout());
+    //navigate("/login");
+    window.location.reload();
+  };
 
   return (
     <header className={`fixed w-full px-10 z-30 h-20 flex items-center shadow-lg ${isScrolled ? 'bg-white text-black' : 'bg-[rgba(8,10,19,0.27)] text-white'} backdrop-blur-sm transition-all duration-700 border-b border-gray-500`}>
@@ -66,7 +106,7 @@ const Header = () => {
           </NavLink>
         </nav>
 
-        <nav className='hidden lg:flex absolute right-16 gap-x-12 font-semibold text-2xl'>
+        <nav className='hidden lg:flex absolute right-16 gap-x-8 font-semibold text-2xl'>
           <NavLink
             to='/portfolio'
             key='/portfolio'
@@ -79,12 +119,30 @@ const Header = () => {
             className='cursor-pointer hover:scale-110'>
             Gallery
           </NavLink>
-          <NavLink
-            to='/login'
-            key='/login'
-            className='cursor-pointer hover:scale-110'>
-            Login
-          </NavLink>
+          <ShowOnLogin>
+            {/* <NavLink
+              onClick={logoutUser}
+              className='cursor-pointer hover:scale-110'>
+              Logout
+            </NavLink> */}
+            <HeaderDropdown
+              dropdownTitle={<UserName />}
+              dropdownLink="/account/"
+              links={[
+                { name: 'Account', link: '/account/' },
+                { name: 'Cart', link: '/account/#cart' },
+                { name: 'Logout', link: '/login', clickAction: logoutUser },
+              ]}
+            />
+          </ShowOnLogin>
+          <ShowOnLogout>
+            <NavLink
+              to='/login'
+              key='/login'
+              className='cursor-pointer hover:scale-110'>
+              Login
+            </NavLink>
+          </ShowOnLogout>
         </nav>
       </div>
       <MobileNav />
