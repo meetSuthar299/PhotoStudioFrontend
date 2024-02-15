@@ -5,6 +5,9 @@ import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
 import Socials from "../SocialMediaLinks"
 import HeaderDropdown from './HeaderDropdown';
+import ShowOnLogin, { ShowOnLogout } from '../../helpers/hiddenLink';
+import { UserName } from '../../Pages/Account/Account';
+import { useLogoutUser } from '../../helpers/functions';
 
 const menuVariants = {
   hidden: {
@@ -96,7 +99,20 @@ const MobileNav = () => {
             <NavLink to='/gallery/'>Gallery</NavLink>
           </li>
           <li>
-            <NavLink to='/login/'>Login</NavLink>
+            <ShowOnLogin>
+              <HeaderDropdown
+                dropdownTitle={<UserName />}
+                dropdownLink="/account/"
+                links={[
+                  { name: 'Account', link: '/account/' },
+                  { name: 'Cart', link: '/account/#cart' },
+                  { name: 'Logout', clickAction: useLogoutUser },
+                ]}
+              />
+            </ShowOnLogin>
+            <ShowOnLogout>
+              <NavLink to='/login/'>Login</NavLink>
+            </ShowOnLogout>
           </li>
           <Socials />
         </ul>

@@ -6,7 +6,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import ShowOnLogin, { ShowOnLogout } from "../../helpers/hiddenLink";
 import { useDispatch, useSelector } from "react-redux";
 import { RESET_AUTH, logout, getUser, selectUser} from "../../redux/Auth/AuthSlice";
-import { shortenText } from '../../helpers/functions';
+import { shortenText, useLogoutUser } from '../../helpers/functions';
 import { UserName } from '../../Pages/Account/Account';
 
 const Header = () => {
@@ -61,14 +61,6 @@ const Header = () => {
     };
   }, []);
 
-
-  const logoutUser = async () => {
-    dispatch(RESET_AUTH());
-    await dispatch(logout());
-    //navigate("/login");
-    window.location.reload();
-  };
-
   return (
     <header className={`fixed w-full px-10 z-30 h-20 flex items-center shadow-lg ${isScrolled ? 'bg-white text-black' : 'bg-[rgba(8,10,19,0.27)] text-white'} backdrop-blur-sm transition-all duration-700 border-b border-gray-500`}>
       <div className='font-primary flex lg:items-center w-full lg:justify-center'>
@@ -120,18 +112,13 @@ const Header = () => {
             Gallery
           </NavLink>
           <ShowOnLogin>
-            {/* <NavLink
-              onClick={logoutUser}
-              className='cursor-pointer hover:scale-110'>
-              Logout
-            </NavLink> */}
             <HeaderDropdown
               dropdownTitle={<UserName />}
               dropdownLink="/account/"
               links={[
                 { name: 'Account', link: '/account/' },
                 { name: 'Cart', link: '/account/#cart' },
-                { name: 'Logout', link: '/login', clickAction: logoutUser },
+                { name: 'Logout', clickAction: useLogoutUser },
               ]}
             />
           </ShowOnLogin>
