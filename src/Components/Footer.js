@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="bg-gray-900 text-white text-center sm:text-left transition-all">
       <div className="mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 px-10">
           <div className="flex flex-col space-y-6">
             <NavLink to="/" className="cursor-pointer text-5xl">
               <Logo />
@@ -27,7 +27,7 @@ function Footer() {
             </ul>
           </div>
           <div className="space-y-4">
-            <h1 className="text-xl font-semibold">About Arktic</h1>
+            <h1 className="text-xl font-semibold">About Us</h1>
             <ul className="text-gray-400">
               <li><NavLink to="/#about" className="hover:text-white hover:font-bold">About Us</NavLink></li>
               <li><NavLink to="/aboutTeam/" className="hover:text-white hover:font-bold">Our Story</NavLink></li>
@@ -36,17 +36,17 @@ function Footer() {
             </ul>
           </div>
           <div className="space-y-4">
-            <h1 className="text-xl font-semibold">Legal</h1>
-            <ul className="text-gray-400">
-              <li><NavLink to="/termsOfService" className="hover:text-white hover:font-bold">Terms of Service</NavLink></li>
-              <li><NavLink to="/privacyPolicy" className="hover:text-white hover:font-bold">Privacy Policy</NavLink></li>
-            </ul>
-          </div>
-          <div className="space-y-4">
             <h1 className="text-xl font-semibold">Account</h1>
             <ul className="text-gray-400">
               <li><NavLink to="/login/" className="hover:text-white hover:font-bold">Login</NavLink></li>
               <li><NavLink to="/requestAccount/" className="hover:text-white hover:font-bold">Request Account</NavLink></li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <h1 className="text-xl font-semibold">Legal</h1>
+            <ul className="text-gray-400">
+              <li><NavLink to="/termsOfService" className="hover:text-white hover:font-bold">Terms of Service</NavLink></li>
+              <li><NavLink to="/privacyPolicy" className="hover:text-white hover:font-bold">Privacy Policy</NavLink></li>
             </ul>
           </div>
           <div className="space-y-4">
