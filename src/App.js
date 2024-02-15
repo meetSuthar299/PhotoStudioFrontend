@@ -22,20 +22,23 @@ const App = () => {
   return (
     <Router>
       <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutTeam" element={<AboutTeam />} />
-          <Route path="/automotiveService" element={<AutomotiveService />} />
-          <Route path="/businessService" element={<BusinessService />} />
-          <Route path="/personalService" element={<PersonalService />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/requestAccount" element={<RequestAccount />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/termsOfService" element={<TermsOfService />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutTeam" element={<AboutTeam />} />
+        <Route path="/automotiveService" element={<AutomotiveService />} />
+        <Route path="/businessService" element={<BusinessService />} />
+        <Route path="/personalService" element={<PersonalService />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route
+          path="/account"
+          element={<Account />}
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/requestAccount" element={<RequestAccount />} />
+        <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/termsOfService" element={<TermsOfService />} />
+      </Routes>
       <ScrollToTopButton />
       <Footer />
     </Router>
