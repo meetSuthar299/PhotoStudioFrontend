@@ -18,14 +18,17 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links}) => {
         setIsDropdownOpen(false);
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            setIsDropdownOpen(!isDropdownOpen);
+        }
+    };
+
     return (
         <div className="relative text-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='flex'>
                 <div className='hover:scale-110'>
-                    {/* <a href={dropdownLink} className="font-semibold focus:outline-none ">
-                        {dropdownTitle}
-                    </a> */}
-                    <NavLink to={dropdownLink} className="font-semibold focus:outline-none ">
+                    <NavLink to={dropdownLink} className="font-semibold focus:outline-none " tabIndex={0} onKeyDown={handleKeyDown}>
                         {dropdownTitle}
                     </NavLink>
                     <motion.span
@@ -34,6 +37,10 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links}) => {
                         initial={{ rotate: 0 }}
                         animate={{ rotate: isDropdownOpen ? 180 : 0 }}
                         style={{ zIndex: 100 }}
+                        tabIndex={0}
+                        onKeyDown={handleKeyDown}
+                        role="button"
+                        aria-label="Toggle Dropdown"
                     >
                         <IoIosArrowDown />
                     </motion.span>
@@ -46,26 +53,23 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links}) => {
                             initial={{ opacity: 0, y: -75, scale: 0 }}
                             animate={{ opacity: 1, y: 0, scale: 1, }}
                             exit={{ opacity: 0, y: -75, scale: 0, }}
-
+                            role="menu"
+                            aria-label="Dropdown Menu"
                         >
                             {links.map(({ name, link, clickAction}, index) => (
                                 <React.Fragment key={link}>
-                                    {/* <a
-                                        href={link}
-                                        className="z-50 block px-4 py-2 hover:scale-[1.05] text-center text-xl rounded-md transition-all duration-200 bg-zinc-100 text-gray-500 hover:text-black"
-                                    >
-                                        {name}
-                                    </a> */}
                                     <NavLink
                                         to={link? link : ""}
                                         className="z-50 block px-4 py-2 hover:scale-[1.05] text-center text-xl rounded-md transition-all duration-200 bg-zinc-100 text-gray-500 hover:text-black"
                                         onClick={clickAction? clickAction : ""}
+                                        role="menuitem"
+                                        tabIndex={0}
+                                        onKeyDown={handleKeyDown}
                                     >
                                         {name}
                                     </NavLink>
                                 </React.Fragment>
                             ))}
-
                         </motion.div>
                     )}
                 </AnimatePresence>

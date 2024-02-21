@@ -72,7 +72,7 @@ function Login() {
                     ?
                     <Loader />
                     :
-                    <div className='bg-white px-5 py-10 rounded-lg shadow-md w-96'>
+                    <div className='bg-white px-5 py-10 rounded-lg shadow-md w-80'>
                         <h1 className='text-3xl font-semibold mb-4 text-center py-2'>Member Login</h1>
                         <form className='flex flex-col gap-4' onSubmit={handleLogin}>
                             <label className='text-gray-600'>Email:</label>
@@ -99,7 +99,7 @@ function Login() {
                         <p className='text-gray-600 text-center mt-4'>
                             Don't have an account?
                             <NavLink to='/requestAccount/' className='text-primary hover:font-bold'>
-                                Request one here
+                                Request here
                             </NavLink>
                         </p>
                     </div>
