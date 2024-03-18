@@ -67,7 +67,7 @@ function Footer() {
         </div>
         <hr className="my-4 border-t border-gray-600" />
         <div className="text-center text-gray-400 text-sm">
-          <p className='p-2'>Website developed and managed by Arktic Studios.</p>
+          <p className='p-2'>Website Developed and Managed by <strong>Meet Suthar</strong>.</p>
           <p>&copy; {new Date().getFullYear()} Arktic Studios. All rights reserved.</p>
         </div>
       </div>

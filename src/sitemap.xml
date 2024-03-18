@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- xmlns is a namespace protocall standard. using the sitemap v0.9 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://arkticstudios.com/</loc>
+      <priority>1.00</priority>
+   </url>
+   <url>
+      <loc>https://arkticstudios.com/aboutTeam/</loc>
+      <lastmod>2022-01-02</lastmod>
+   </url>
+   <url>
+      <loc>https://arkticstudios.com/gallery/</loc>
+      <lastmod>2022-01-03</lastmod>
+   </url>
+   <url>
+      <loc>https://arkticstudios.com/businessService/</loc>
+      <lastmod>2022-01-03</lastmod>
+   </url>
+   <url>
+      <loc>https://arkticstudios.com/automotiveService/</loc>
+      <lastmod>2022-01-03</lastmod>
+   </url>
+   <url>
+      <loc>https://arkticstudios.com/personalService/</loc>
+      <lastmod>2022-01-03</lastmod>
+   </url>
+</urlset>
