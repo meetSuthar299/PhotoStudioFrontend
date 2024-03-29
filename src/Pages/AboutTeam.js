@@ -23,12 +23,6 @@ function AboutTeam() {
 
     const teamMembers = [
         {
-            name: 'Fateh Sandhu',
-            role: 'Co-Founder',
-            description: 'With a passion for storytelling and a keen eye for detail, Fateh co-founded Arktic Studios to empower businesses through creative visual content. He brings years of experience in video production and a commitment to delivering exceptional results to every project.',
-            imageUrl: 'https://media.licdn.com/dms/image/D5603AQF4crga7fcM4A/profile-displayphoto-shrink_200_200/0/1684528537842?e=1713398400&v=beta&t=WcuZmjYFFdpAQFLroYvdRGzgnbO9noUzLzmB8IlV0AY', // Replace with actual image URL
-        },
-        {
             name: 'Meet Suthar',
             role: 'Co-Founder',
             description: 'As a visionary entrepreneur, Meet co-founded Arktic Studios with a mission to redefine the standard of visual storytelling. His expertise in photography and dedication to client satisfaction drive the studio\'s success, ensuring every project exceeds expectations.',
