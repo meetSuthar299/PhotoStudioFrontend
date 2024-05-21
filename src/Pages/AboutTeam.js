@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+ import React, { useEffect } from 'react';
 import PageBanner from '../Components/PageBanner';
 import AnimatedComponent from '../Components/WrapperComponents/AnimatedComponent';
 import { GiMountaintop } from 'react-icons/gi';
