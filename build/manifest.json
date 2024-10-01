@@ -1,0 +1,26 @@
+{
+  "short_name": "Arktic Studios",
+  "name": "Arktic Studios",
+  "author": "Meet Suthar",
+  "icons": [
+    {
+      "src": "ArktikLogo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "ArktikLogo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "ArktikLogo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

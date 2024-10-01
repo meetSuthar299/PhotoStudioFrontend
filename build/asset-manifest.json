@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6db34f2b.css",
+    "main.js": "/static/js/main.6f8fdcbe.js",
+    "static/media/forWebsite.mp4": "/static/media/forWebsite.695789dfb3e4083e8495.mp4",
+    "static/media/city.jpeg": "/static/media/city.a40a023703798fbf639d.jpeg",
+    "static/media/engagementPic.jpg": "/static/media/engagementPic.61015a508f8f68bf4a40.jpg",
+    "static/media/eventPic.jpg": "/static/media/eventPic.04438091bc8c2e2bb541.jpg",
+    "static/media/shapeCollage.jpg": "/static/media/shapeCollage.e0851f8a267b926e327f.jpg",
+    "static/media/SocialMedia.jpg": "/static/media/SocialMedia.5daa9b891e58977e7900.jpg",
+    "static/media/Auto3.jpg": "/static/media/Auto3.371d212b06c77838e652.jpg",
+    "static/media/Auto1.jpg": "/static/media/Auto1.ae23cd73c2d2547f4395.jpg",
+    "static/media/Print.jpg": "/static/media/Print.8f16f40707c5c7042374.jpg",
+    "static/media/Auto4.jpg": "/static/media/Auto4.7a8c64d2d73811d256a8.jpg",
+    "static/media/familyPic.jpg": "/static/media/familyPic.5049c9f50d0a9596bd0b.jpg",
+    "static/media/Drone.jpg": "/static/media/Drone.5b466339a2864f2dc115.jpg",
+    "static/media/CorporateHeadshots.jpg": "/static/media/CorporateHeadshots.6b5d5ce610f6b3dccf71.jpg",
+    "static/media/professionalPic.jpg": "/static/media/professionalPic.429c67e33cb062c32cc3.jpg",
+    "static/media/WebDesign.jpg": "/static/media/WebDesign.85672509008df85af039.jpg",
+    "static/media/corporateProduct.jpg": "/static/media/corporateProduct.4af3bfda384d0c111ecc.jpg",
+    "static/media/event-img.jpg": "/static/media/event-img.6a00db29b356bd89548b.jpg",
+    "static/media/CorporateVideo.jpg": "/static/media/CorporateVideo.660659a1705aa8d7a272.jpg",
+    "static/media/portrait-img.jpg": "/static/media/portrait-img.a55a8b32409914d18434.jpg",
+    "static/media/SEO.jpg": "/static/media/SEO.40c2d12f8049587dc083.jpg",
+    "index.html": "/index.html",
+    "main.6db34f2b.css.map": "/static/css/main.6db34f2b.css.map",
+    "main.6f8fdcbe.js.map": "/static/js/main.6f8fdcbe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6db34f2b.css",
+    "static/js/main.6f8fdcbe.js"
+  ]
+}
