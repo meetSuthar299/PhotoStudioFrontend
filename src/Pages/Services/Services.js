@@ -32,54 +32,58 @@ function Services() {
         </p>
       </ParalaxComponent>
       <div className='px-5 lg:px-16 pt-5 pb-24'>
-        <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
-          <AnimatedComponent>
-            <ServiceCard
-              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1704924907/B8B98E71-DCFC-4EFE-8F58-2A3E12B0F607_jrefnu.jpg"}
-              title={"Business"}
-              disc={""}
-              offerings={[
-                "Professional Corporate Headshots",
-                "Video Production",
-                "Product and Brand Photography",
-                "Website Design & Development",
-                "Social Media Marketing",
-                "Search Engine Optimization(SEO)",
-              ]}
-              link={"/businessService/"}
-            />
-          </AnimatedComponent>
-          <AnimatedComponent>
-            <ServiceCard
-              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704922335/IMG_7975_ataipw.jpg"}
-              title={"Automotive"}
-              disc={"We capture the elegance, power, and intricate details that unveil the unique personality of every vehicle, from sleek sports cars to vintage classics."}
-              offerings={[
-                "Private Vehicle Photoshoot",
-                "Detailed Vehicle Videos",
-                "Dealership Media",
-                "Aerial Drone Photography & Videography",
-                "Custom Prints and Wall Papers"
-              ]}
-              link={"/automotiveService/"}
-            />
-          </AnimatedComponent>
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
           <AnimatedComponent>
             <ServiceCard
               img={eventImg}
-              title={"Personal"}
-              disc={"Capture the memories of your wedding, parties, conferences, and other memorable occasions. From natural moments to atmosphere capture, we make sure every significant aspect is exquisitely captured on camera."}
+              title={"Software"}
+              disc={"Custom software and cloud solutions to enhance operational efficiency."}
               offerings={[
-                "Individual Portrait Photoshoots",
-                "Professional Head Shots",
-                "Family Portrait Sessions",
-                "Engagement & Couple Portrait Sessions",
-                "Event Photography & Videography",
+                "Website Development",
+                "Software Development",
+                "Mobile Application Development",
+                "Cloud Computing Solutions",
+                "API Integration Services",
+                "Data Analytics and Reporting",
               ]}
-              link={"/personalService/"}
+              link={"/customSoftwareServices/"}
+            />
+          </AnimatedComponent>
+
+          <AnimatedComponent>
+            <ServiceCard
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_30/v1704924907/B8B98E71-DCFC-4EFE-8F58-2A3E12B0F607_jrefnu.jpg"}
+              title={"Marketing"}
+              disc={"Elevating your brand through strategic marketing and creative design."}
+              offerings={[
+                "Comprehensive Brand Strategy",
+                "Digital Marketing & Advertising",
+                "Search Engine Optimization (SEO)",
+                "Graphic Design & Branding",
+                "Content Marketing Strategy",
+              ]}
+              link={"/strategicBusinessServices/"}
+            />
+          </AnimatedComponent>
+
+          <AnimatedComponent>
+            <ServiceCard
+              img={"https://res.cloudinary.com/ddp8ln1ts/image/upload/v1704922335/IMG_7975_ataipw.jpg"}
+              title={"Media"}
+              disc={"Capturing impactful moments with professional photography and videography."}
+              offerings={[
+                "Professional Photography & Videography",
+                "Promotional Video Production",
+                "Aerial Photography & Videography",
+                "Custom Vehicle Branding Solutions",
+                "Dealership Marketing Materials",
+              ]}
+              link={"/automotiveMediaServices/"}
             />
           </AnimatedComponent>
         </div>
+
+
       </div>
     </section>
   )

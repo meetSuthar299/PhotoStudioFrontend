@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom';
 const About = () => {
 
   const services = [
-    "Video Production",
-    "Photography",
-    "Graphic Design",
     "Web Development",
     "Search Engine Optimization",
     "Social Media Marketing",
+    "Video Production",
+    "Photography",
+    "Graphic Design",
     "Corporate Headshots",
     "Product Photography",
     "Event Photography",
@@ -24,22 +24,19 @@ const About = () => {
       <div className='mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
           <div className='text-center lg:text-left'>
-            <h1 className='text-lg font-bold'>We are arktic.</h1>
-            <h1 className='text-4xl lg:text-5xl font-bold mb-4'>Your all-in-one destination for</h1>
+            <h1 className='text-2xl font-bold'>MIT</h1>
+            <h1 className='text-3xl lg:text-4xl font-bold mb-4'>Your all-in-one destination for</h1>
             <TypingHeading headings={services} />
             <AnimatedComponent>
-              <p className='text-lg text-gray-700 my-8'>
-                Our goal is to help your business thrive through creative visual solutions.
-                Our team is dedicated to delivering exceptional results, whether it's crafting compelling narratives
-                through captivating storytelling or designing innovative digital experiences.
-                We pride ourselves on our ability to understand your unique goals and bring them to life with
-                precision and creativity. From enhancing your online presence to creating memorable brand experiences,
-                we are committed to exceeding your expectations and helping you succeed in today's competitive landscape.
-                Trust Arktic to be your partner in achieving your vision and reaching new heights of success.
+              <p className='text-xl text-gray-700 my-8'>
+                Unlock your brand's potential with bold, creative visual solutions. We turn ideas into
+                compelling stories and innovative digital experiences that captivate audiences. Whether
+                enhancing your online presence or crafting memorable brand moments, we're dedicated to
+                delivering results that elevate your business and set you apart from the competition.
               </p>
               <div className='flex'>
-                <NavLink to='/#contact' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded hover:'>
-                  Contact us
+                <NavLink to='/portfolio/' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded hover:'>
+                  Portfolio
                 </NavLink>
                 <NavLink to='/aboutTeam/' className='btn text-md hover:w-[120%] w-[50%] m-1 rounded'>
                   Our Story

@@ -60,7 +60,7 @@ const MobileNav = () => {
         initial={'hidden'}
         animate={openMenu ? 'show' : 'hidden'}
         exit="exit"
-        className='bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20 text-primary'
+        className='bg-white text-black shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20 text-primary'
       >
         <div className='text-4xl absolute z-30 left-4 top-14 cursor-pointer ' onClick={() => setOpenMenu(false)}>
           <IoMdClose />
@@ -73,8 +73,8 @@ const MobileNav = () => {
               dropdownLink="/#about"
               links={[
                 { name: 'Our Story', link: '/aboutTeam/#ourStory' },
-                { name: 'Our Team', link: '/aboutTeam/#ourTeam' },
-                { name: 'Our Values', link: '/aboutTeam/#values' }
+                { name: 'Our Values', link: '/aboutTeam/#values' },
+                { name: 'Our Success', link: '/aboutTeam/#success' }
               ]}
             />
           </li>
@@ -83,9 +83,9 @@ const MobileNav = () => {
               dropdownTitle="Services"
               dropdownLink="/#services"
               links={[
-                { name: 'Business', link: '/businessService/' },
-                { name: 'Automotive', link: '/automotiveService/' },
-                { name: 'Personal', link: '/personalService/' },
+                { name: 'Software', link: '/businessService/' },
+                { name: 'Marketing', link: '/automotiveService/' },
+                { name: 'Media', link: '/personalService/' },
               ]}
             />
           </li>

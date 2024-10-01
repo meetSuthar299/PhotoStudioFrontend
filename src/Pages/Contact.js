@@ -158,7 +158,7 @@ const Contact = () => {
                 </div>
               </label>
               {/* budget */}
-              <label className="block mb-6 relative">
+              {/* <label className="block mb-6 relative">
                 <span className="text-xl">Your budget</span>
                 <input
                   type="range"
@@ -181,7 +181,7 @@ const Contact = () => {
                   <span className="text-lg font-semibold">$</span>
                   <span className="text-lg font-semibold">{formData.budget}</span>
                 </div>
-              </label>
+              </label> */}
               {/* message */}
               <label className="block mb-6">
                 <span className="">Message</span>

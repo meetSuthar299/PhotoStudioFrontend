@@ -1,10 +1,8 @@
- import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PageBanner from '../Components/PageBanner';
 import AnimatedComponent from '../Components/WrapperComponents/AnimatedComponent';
 import { GiMountaintop } from 'react-icons/gi';
 import Contact from '../Pages/Contact';
-import { RiTeamLine } from 'react-icons/ri';
-import FlipCard from '../Components/FlipCard';
 import { useLocation } from 'react-router-dom';
 
 function AboutTeam() {
@@ -33,86 +31,75 @@ function AboutTeam() {
     return (
         <div id='aboutTeam'>
             <PageBanner
-                text={'We are Arktic Studios'}
+                text={'About M.I.T  Solutions'}
                 backgroundImage={"https://res.cloudinary.com/ddp8ln1ts/image/upload/q_50/v1705297846/colorCheck1_j8ucjm.jpg"}
                 links={[
                     { name: 'Our Story', link: '/aboutTeam/#ourStory' },
-                    { name: 'Our Team', link: '/aboutTeam/#\ourTeam' },
-                    { name: 'Our Values', link: '/aboutTeam/#values' }
+                    { name: 'Our Values', link: '/aboutTeam/#values' },
+                    { name: 'Our Success Stories', link: '/aboutTeam/#success' }
                 ]}
             />
             <div id="ourStory" className='py-40 px-10 md:px-20 bg-gray-100 transition-all'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>
-                    <div className='flex justify-center items-center text-[400px]'>
-                        {/* <img src={homeImg} alt='Arktic Studios' className='object-cover h-96 rounded-lg' /> */}
+                    <div className='flex justify-center items-center text-[200px] lg:text-[400px] pb-10'>
                         <GiMountaintop />
                     </div>
                     <div className='text-center lg:text-left'>
-                        <h1 className='text-xl font-bold'>The </h1>
-                        <h1 className='text-4xl lg:text-5xl font-bold mb-2'>Arktic Story</h1>
+                        <h1 className='text-2xl font-bold'>The </h1>
+                        <h1 className='text-4xl lg:text-5xl font-bold mb-2'>M.I.T Story</h1>
                         <AnimatedComponent>
                             <p className='text-lg text-gray-700 my-8'>
-                                Arktic Studios emerged from the collaborative vision of Meet Suthar and Fateh Sandhu, fueled by a shared
-                                passion for transformative visual storytelling. Our journey began with a deep longing for careers aligned
-                                with our creative spirits. We embarked humbly, crafting video narratives for entrepreneurs and small
-                                businesses, embracing challenges and nurturing our innovative instincts despite modest budgets.
+                                M.I.T. Solutions was founded by a passion for harnessing the power of technology and creativity to elevate businesses. Our journey began with a desire to empower brands through innovative digital experiences and strategic marketing solutions. Starting with small projects, we focused on delivering impactful results for entrepreneurs and small businesses, turning challenges into opportunities for growth.
                                 <br />
                                 <br />
-                                Today, Arktic Studios stands as a testament to our unwavering commitment to surpassing expectations and
-                                building lasting connections with our clients. Empowered by state-of-the-art equipment and an unyielding passion,
-                                we approach every project with boundless creativity and an unwavering dedication to excellence.
+                                Today, M.I.T. Solutions exemplifies our commitment to exceeding client expectations and forging lasting partnerships. Equipped with cutting-edge technology and a relentless drive for excellence, we approach every project with creativity and precision.
                                 <br />
                                 <br />
-                                Beyond conventional storytelling, our mission at Arktic Studios is to inspire hope and catalyze transformative
-                                change through the powerful medium of visual expression. We are champions of inspiration, dedicated to making a
-                                meaningful impact in the world.
+                                Our mission goes beyond just delivering services; we aim to inspire transformation and drive positive change in the digital landscape. At M.I.T. Solutions, we believe in the potential of every brand to shine brightly, and we are dedicated to helping you unlock that potential.
                             </p>
                             <a href='#contact' className='btn text-lg hover:scale-105'>Get in Touch</a>
                         </AnimatedComponent>
                     </div>
                 </div>
-                <section id="ourTeam" className="our-team py-40">
-                    <h1 className='text-4xl lg:text-5xl font-bold pb-10'>Our Team</h1>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8'>
-                        {teamMembers.map((member, index) => (
-                            <FlipCard
-                                key={index}
-                                title={member.name}
-                                frontData={{
-                                    icon: <RiTeamLine />,
-                                    img: member.imageUrl
-                                }}
-                                backData={{
-                                    paragraph: member.description,
-                                    //   bulletPoints: [
-                                    //     'Professional executive portraits',
-                                    //     'Dynamic team photos',
-                                    //     'Impactful marketing imagery'
-                                    //   ]
-                                }}
-                                size="vertical"
-                            />
-                        ))}
+
+                <section id='values' className="py-20">
+                    <h1 className='text-2xl font-bold'>The </h1>
+                    <h1 className='text-4xl lg:text-5xl font-bold mb-2 pb-10'>M.I.T Values</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-gray-800 text-white p-6 rounded-lg transition-all">
+                            <h1 className="text-lg font-bold mb-2">Innovation</h1>
+                            <p className="text-sm">We harness cutting-edge technology to deliver exceptional results that elevate your brand.</p>
+                        </div>
+                        <div className="bg-gray-800 text-white p-6 rounded-lg transition-all">
+                            <h1 className="text-lg font-bold mb-2">Commitment</h1>
+                            <p className="text-sm">Dedicated to understanding your needs, we tailor solutions that drive impact and success.</p>
+                        </div>
+                        <div className="bg-gray-800 text-white p-6 rounded-lg transition-all">
+                            <h1 className="text-lg font-bold mb-2">Collaboration</h1>
+                            <p className="text-sm">Building trust through open communication, we create lasting partnerships for mutual growth.</p>
+                        </div>
                     </div>
                 </section>
-                <section id='values' className="py-20">
-                    <h1 className='text-4xl lg:text-5xl font-bold pb-10'>Our Values</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-gray-800 text-white p-6 rounded-lg hover:scale-105 transition-all">
-                            <h1 className="text-lg font-bold mb-2">Quality and Creativity</h1>
-                            <p className="text-sm">At Arktic Studios, we prioritize the delivery of unparalleled quality and boundless creativity. From inception to realization, we strive to craft visually mesmerizing content that not only captivates but also endures in the minds of our clients and their audience.</p>
+                <section id='success' className="py-20">
+                    <h1 className='text-4xl lg:text-5xl font-bold pb-10'>Client Success Stories</h1>
+                    <AnimatedComponent>
+                        <p className='text-lg text-gray-700 mb-8'>
+                            We take pride in our client partnerships and the success we’ve achieved together. Here are a few stories that showcase the impact of our work:
+                        </p>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                            <div className='bg-white p-6 rounded-lg shadow-lg'>
+                                <h2 className='font-bold text-lg'>Transforming a Local Business</h2>
+                                <p className='text-sm text-gray-600'>We helped a local retail store revamp their online presence, resulting in a 30% increase in sales within three months.</p>
+                            </div>
+                            <div className='bg-white p-6 rounded-lg shadow-lg'>
+                                <h2 className='font-bold text-lg'>Streamlining Operations</h2>
+                                <p className='text-sm text-gray-600'>Our custom software solution enabled a small business to reduce operational costs by 25% and improve efficiency.</p>
+                            </div>
                         </div>
-                        <div className="bg-gray-800 text-white p-6 rounded-lg hover:scale-105 transition-all">
-                            <h1 className="text-lg font-bold mb-2">Dedication</h1>
-                            <p className="text-sm">Dedication is the cornerstone of our work ethos at Arktic Studios. Our team is driven by an unwavering commitment to excellence in every facet of our endeavors. We pledge to exceed expectations, pouring passion and precision into every project to ensure optimal results.</p>
-                        </div>
-                        <div className="bg-gray-800 text-white p-6 rounded-lg hover:scale-105 transition-all">
-                            <h1 className="text-lg font-bold mb-2">Relationship Driven</h1>
-                            <p className="text-sm">At Arktic Studios, we cherish genuine connections with our clients and collaborators. We embrace teamwork, fostering an environment of open communication and mutual respect. Our partnerships are forged on shared values, creating a foundation of trust, transparency, and shared success.</p>
-                        </div>
-                    </div>
+                    </AnimatedComponent>
                 </section>
             </div>
+
             <Contact />
         </div>
     );

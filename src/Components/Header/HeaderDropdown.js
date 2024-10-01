@@ -27,8 +27,8 @@ const HeaderDropdown = ({ dropdownTitle, dropdownLink, links}) => {
     return (
         <div className="relative text-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='flex'>
-                <div className='hover:scale-110'>
-                    <NavLink to={dropdownLink} className="font-semibold focus:outline-none " tabIndex={0} onKeyDown={handleKeyDown}>
+                <div className=''>
+                    <NavLink to={dropdownLink} className="focus:outline-none " tabIndex={0} onKeyDown={handleKeyDown}>
                         {dropdownTitle}
                     </NavLink>
                     <motion.span

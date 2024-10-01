@@ -5,7 +5,7 @@ import HeaderDropdown from './HeaderDropdown';
 import { NavLink, useNavigate } from 'react-router-dom';
 import ShowOnLogin, { ShowOnLogout } from "../../helpers/hiddenLink";
 import { useDispatch, useSelector } from "react-redux";
-import { RESET_AUTH, logout, getUser, selectUser} from "../../redux/Auth/AuthSlice";
+import { RESET_AUTH, logout, getUser, selectUser } from "../../redux/Auth/AuthSlice";
 import { shortenText, useLogoutUser } from '../../helpers/functions';
 import { UserName } from '../../Pages/Account/Account';
 
@@ -71,23 +71,23 @@ const Header = () => {
             dropdownLink="/#about"
             links={[
               { name: 'Our Story', link: '/aboutTeam/#ourStory' },
-              { name: 'Our Team', link: '/aboutTeam/#ourTeam' },
-              { name: 'Our Values', link: '/aboutTeam/#values' }
+              { name: 'Our Values', link: '/aboutTeam/#values' },
+              { name: 'Our Success', link: '/aboutTeam/#success' }
             ]}
           />
           <HeaderDropdown
             dropdownTitle="Services"
             dropdownLink="/#services"
             links={[
-              { name: 'Business', link: '/businessService/' },
-              { name: 'Automotive', link: '/automotiveService/' },
-              { name: 'Personal', link: '/personalService/' },
+              { name: 'Software', link: '/software/' },
+              { name: 'Marketing', link: '/marketing/' },
+              { name: 'Media', link: '/media/' },
             ]}
           />
           <NavLink
             to='/#contact'
             key='/#contact'
-            className='cursor-pointer hover:scale-110'>
+          >
             Contact
           </NavLink>
         </nav>
@@ -98,17 +98,17 @@ const Header = () => {
           </NavLink>
         </nav>
 
-        <nav className='hidden lg:flex absolute right-16 gap-x-8 font-semibold text-2xl'>
+        <nav className='hidden lg:flex absolute right-16 gap-x-8 text-2xl'>
           <NavLink
             to='/portfolio'
             key='/portfolio'
-            className='cursor-pointer hover:scale-110'>
+          >
             Portfolio
           </NavLink>
           <NavLink
             to='/gallery/'
             key='/gallery'
-            className='cursor-pointer hover:scale-110'>
+          >
             Gallery
           </NavLink>
           <ShowOnLogin>

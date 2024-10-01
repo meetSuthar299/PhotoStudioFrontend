@@ -3,6 +3,7 @@ import { LogoStudio } from "../../Components/Logo"
 import video from "../../img/gallery/forWebsite.mp4"
 import SocialMediaLinks from '../../Components/SocialMediaLinks';
 import AnimatedComponent from '../../Components/WrapperComponents/AnimatedComponent';
+import { NavLink } from 'react-router-dom';
 
 function Hero() {
     return (
@@ -14,20 +15,22 @@ function Hero() {
                     class="w-full h-full object-cover absolute top-0 z-0"
                 />`,
             }}></div>
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-1 text-white backdrop-brightness-75">
-
-                <a className='text-6xl items-center justify-center hover:cursor-pointer hover:scale-105' href='/#about'>
-                    <AnimatedComponent>
-                        <LogoStudio />
-                    </AnimatedComponent>
-                </a>
-
-                <div className="w-[50%] my-6 mx-auto h-[2px] bg-gradient-to-r from-[rgb(255,255,255,0)] via-[rgb(255,255,255)] to-[rgba(255,255,255,0)] rounded-full"></div>
+            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10 text-white backdrop-brightness-75 text-center p-4">
                 <AnimatedComponent>
-                    <SocialMediaLinks />
+                    <h1 className="text-7xl font-extrabold leading-tight text-lightGoldText"><LogoStudio /></h1>
+                    <h2 className="text-2xl font-light leading-tight mt-4 mb-6 max-w-xl mx-auto">
+                        Supporting your success with our Marketing Intelligence & Technology Solutions
+                    </h2>
+                    <div className="w-1/2 my-6 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent rounded-full mx-auto"></div>
+                    <div className="flex justify-center w-full">
+                        <NavLink to="/#about" className="btn hover:scale-105 w-3/4 shadow-lg bg-[rgba(46,46,46,0.7)] hover:bg-[rgba(194,194,194,0.2)] rounded-lg text-xl transition-all backdrop-blur-md p-3">
+                            Learn More
+                        </NavLink>
+                    </div>
+                    {/* <SocialMediaLinks /> */}
                 </AnimatedComponent>
-                <a href='#services' className="btn w-72 py-4 absolute bottom-10 hover:scale-110 bg-[rgba(16,19,27,0.48)] backdrop-blur-lg rounded border border-zinc-600">Explore Our Services</a>
             </div>
+
         </div>
 
     )

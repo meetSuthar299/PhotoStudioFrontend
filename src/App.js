@@ -16,6 +16,7 @@ import Login from './Pages/Auth/login';
 import AboutTeam from './Pages/AboutTeam';
 import RequestAccount from './Pages/Auth/RequestAccount';
 import Account from './Pages/Account/Account';
+import SoftwareSolutions from './Pages/Services/SoftwareSolutions';
 
 const App = () => {
   // const location = useLocation();
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/automotiveService" element={<AutomotiveService />} />
         <Route path="/businessService" element={<BusinessService />} />
         <Route path="/personalService" element={<PersonalService />} />
+        <Route path="/software" element={<SoftwareSolutions />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route
